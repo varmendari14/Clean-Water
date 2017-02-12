@@ -25,13 +25,6 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
-        //Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
-
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        //TextView logoutButton = (TextView) findViewById(R.id.welcome_loginbutton_textView);
-        //logoutButton.setTypeface(font);
-
         Button logoutButton = (Button) findViewById(R.id.logout_button);
 
         logoutButton.setOnClickListener(new View.OnClickListener() {
