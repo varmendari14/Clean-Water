@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 /**
  * Created by maryprouty on 2/12/17.
+ * Authors: Mary, Violet
  */
 
 public class AppActivity extends Activity {
@@ -25,16 +26,16 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
-        //Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
 
         //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-        //TextView logoutButton = (TextView) findViewById(R.id.welcome_loginbutton_textView);
-        //logoutButton.setTypeface(font);
+        TextView logoutButton = (TextView) findViewById(R.id.logout_button);
+        logoutButton.setTypeface(font);
 
-        Button logoutButton = (Button) findViewById(R.id.logout_button);
+        Button logoutButtonPress = (Button) findViewById(R.id.logout_button);
 
-        logoutButton.setOnClickListener(new View.OnClickListener() {
+        logoutButtonPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), WelcomeActivity.class));
