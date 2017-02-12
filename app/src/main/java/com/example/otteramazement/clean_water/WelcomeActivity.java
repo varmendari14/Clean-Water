@@ -30,7 +30,7 @@ public class WelcomeActivity extends Activity{
         TextView registerButton = (TextView) findViewById(R.id.welcome_registerbutton_textView);
         registerButton.setTypeface(font);
 
-        // Set up the login form.
+        // Set up the login form
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
