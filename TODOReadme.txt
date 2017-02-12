@@ -6,10 +6,11 @@ NeedTODO:
 *Edit LoginActivity UI
 *Program LoginActivity Functionality
  --Back button OR back on phone goes back and nothing saved
- --enters vaild user and pass
- --enters valid user invalid pass
- --enters invalid user
+ --enters vaild user and pass goes to app
+ --enters valid user invalid pass displays warning
+ --enters invalid user displays warning
  --logout button logs out and returns to welcome
+ *Add a screen that says somthing like "u logged in" with a logout button on the top as the going to app
 
 
 DoneDone:
