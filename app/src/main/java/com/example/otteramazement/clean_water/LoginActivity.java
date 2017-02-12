@@ -36,7 +36,6 @@ import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
-
 //Otter Amazement (Team 11)
 
 /**
@@ -66,6 +65,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private Button mCancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +103,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        mCancelButton = (Button) findViewById(R.id.login_backbutton);
+
+        mCancelButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cancelLogin();
+            }
+        });
     }
 
     private void populateAutoComplete() {
@@ -222,6 +230,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
+    /**
+     * Supplies back button functionality!
+     */
+    void cancelLogin() {
+        Intent intent = new Intent(LoginActivity.this,WelcomeActivity.class);
+        startActivity(intent);
+    }
     /**
      * Shows the progress UI and hides the login form.
      */
@@ -369,4 +384,3 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 }
-
