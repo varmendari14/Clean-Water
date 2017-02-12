@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Author: Violet Armendariz -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView android:id="@+id/splashscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/welcome_screen_bkg2"
+        android:layout_gravity="center"
+        android:background="@drawable/welcome_screen_bkg2" />
+
+    <Button
+        android:text="Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome_login"
+        android:alpha=".75"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@android:drawable/alert_dark_frame" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".75"
+        android:layout_marginTop="28dp"
+        android:id="@+id/welcome_register"
+        android:layout_below="@+id/welcome_login"
+        android:layout_alignStart="@+id/welcome_login"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@android:drawable/alert_dark_frame" />
+
+
+</RelativeLayout>
