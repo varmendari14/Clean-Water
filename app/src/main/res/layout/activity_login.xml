@@ -9,11 +9,6 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context="com.example.otteramazement.clean_water.LoginActivity">
-    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
-    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
-    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
-    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
-    <!--tools:context="com.example.otteramazement.clean_water.LoginActivity">-->
 
     <ImageView android:id="@+id/loginscreen"
         android:layout_width="match_parent"
@@ -30,6 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
+
+
 
     <ScrollView
         android:id="@+id/login_form"
@@ -76,9 +73,9 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/email_sign_in_button"
+                android:id="@+id/login_loginButton"
                 style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="@string/action_sign_in"
@@ -86,4 +83,81 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/login_backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/buttonLayout"
+        android:layout_alignRight="@+id/buttonLayout"
+        android:background="@drawable/back_button"/>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_backbutton_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:alpha=".75"/>
+
+    <Button
+        android:id="@+id/email_sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_alignLeft="@+id/buttonLayout"
+        android:layout_alignRight="@+id/buttonLayout"
+        android:background="@drawable/button_phases"/>
+
+    <LinearLayout
+        android:id="@+id/loginbuttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/login_loginimageView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/button_phases"
+        android:alpha=".75"
+        android:layout_marginEnd="126dp"
+        android:layout_alignTop="@+id/login_backbuttonimageView"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/login_backbuttonimageView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/back_button"
+        android:alpha=".75"
+        android:layout_marginBottom="73dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/login_loginbutton_textView"
+        android:layout_marginStart="11dp" />
+
+    <TextView
+        android:id="@+id/login_loginbutton_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="Login"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:alpha=".75"
+        android:layout_marginEnd="33dp"
+        android:layout_alignTop="@+id/login_loginimageView"
+        android:layout_toStartOf="@+id/login_backbutton_textView" />
+
 </RelativeLayout>
