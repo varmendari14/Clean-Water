@@ -12,7 +12,7 @@
     <ImageView android:id="@+id/welcomescreenbkg"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/welcome_screen_bkg5"
+        android:src="@drawable/welcome_screen_bkg7"
         android:layout_gravity="center"
         android:scaleType="fitXY"/>
     <ImageView android:id="@+id/welcomescreenover"
