@@ -3,18 +3,23 @@
 <!-- Author: Violet Armendariz -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    tools:context="com.example.otteramazement.clean_water.LoginActivity">
 
-    <ImageView android:id="@+id/welcomescreen"
-        android:layout_width="match_parent"
+    <ImageView android:id="@+id/welcomescreenbkg"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/welcome_screen_bkg1"
+        android:src="@drawable/welcome_screen_bkg5"
         android:layout_gravity="center"
-        android:background="@drawable/welcome_screen_bkg1" />
+        android:scaleType="fitXY"/>
+    <ImageView android:id="@+id/welcomescreenover"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/welcome_screen_over"
+        android:layout_gravity="center"/>
 
     <!--<Button-->
         <!--android:text="Login"-->
