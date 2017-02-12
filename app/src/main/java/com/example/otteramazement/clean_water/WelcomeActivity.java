@@ -32,6 +32,13 @@ public class WelcomeActivity extends Activity{
 
         // Set up the login form.
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), LoginActivity.class));
+            }
+        });
+
 
 
 //        mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
