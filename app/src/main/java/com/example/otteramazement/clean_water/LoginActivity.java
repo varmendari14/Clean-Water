@@ -29,6 +29,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 //Otter Amazement (Team 11)
+//Authors Mary, Avery
 
 /**
  * A login screen that offers login via email/password.
@@ -93,7 +95,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button mEmailSignInButton = (Button) findViewById(R.id.email_sign_in_button);
+        ImageView mEmailSignInButton = (ImageView) findViewById(R.id.email_sign_in_button_imageView);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
