@@ -38,7 +38,7 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 //Otter Amazement (Team 11)
-//Authors Mary, Avery
+//Authors Mary, Avery, Cat, Violet
 
 /**
  * A login screen that offers login via email/password.
