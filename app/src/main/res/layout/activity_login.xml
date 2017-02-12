@@ -72,15 +72,6 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/login_loginButton"
-                style="?android:textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
-
         </LinearLayout>
     </ScrollView>
 
@@ -127,7 +118,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/login_loginimageView"
+        android:id="@+id/email_sign_in_button_imageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:src="@drawable/button_phases"
@@ -156,8 +147,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#ffffff"
         android:alpha=".75"
-        android:layout_marginEnd="33dp"
-        android:layout_alignTop="@+id/login_loginimageView"
+        android:layout_marginEnd="30dp"
+        android:layout_alignTop="@+id/email_sign_in_button_imageView"
         android:layout_toStartOf="@+id/login_backbutton_textView" />
 
 </RelativeLayout>
