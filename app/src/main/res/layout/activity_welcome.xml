@@ -12,9 +12,9 @@
     <ImageView android:id="@+id/welcomescreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/welcome_screen_bkg2"
+        android:src="@drawable/welcome_screen_bkg1"
         android:layout_gravity="center"
-        android:background="@drawable/welcome_screen_bkg2" />
+        android:background="@drawable/welcome_screen_bkg1" />
 
     <!--<Button-->
         <!--android:text="Login"-->
