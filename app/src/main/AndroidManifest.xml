@@ -40,6 +40,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/app_name">
+            android:theme="@android:style/Full_Background"
             <intent-filter>
                 <action android:name="com.example.otteramazement.clean_water.LOGINACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
