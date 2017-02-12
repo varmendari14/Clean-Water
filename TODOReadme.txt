@@ -1,16 +1,6 @@
 NeedTODO:
-*Add list of Authors for every File we make, authors being people who have edited said file.
-*Edit LoginActivity UI
-*Program LoginActivity Functionality
- --Back button OR back on phone goes back and nothing saved
- --enters vaild user and pass goes to app
- --enters valid user invalid pass displays warning
- --enters invalid user displays warning
- --logout button logs out and returns to welcome
- *Add a screen that says somthing like "u logged in" with a logout button on the top as the going to app
-
- OptionalTODO:
- Make the buttons change when pressed
+*Edit LoginActivity UI -- still kinda ugly but can be dealt with later
+*MEMORY??? maybe done maybe not
 
 
 DoneDone:
@@ -24,3 +14,14 @@ DoneDone:
 *DONE Program WelcomeActivity Functionality DONE
  --Login button takes you to login activity
  --register button does nothing for the moment
+*DONE Add a screen that says somthing like "u logged in" with a logout button on the top as the going to app DONE
+*Done  --enters vaild user and pass goes to app
+       --enters valid user invalid pass displays warning
+       --enters invalid user displays warning
+       --logout button logs out and returns to welcome DONE
+*DONE *Program LoginActivity Functionality
+       --Back button OR back on phone goes back and nothing saved
+
+       OptionalTODO:
+       Make the buttons change when pressed DONE
+
