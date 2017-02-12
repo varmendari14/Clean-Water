@@ -10,9 +10,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="Splash_Background" parent = "@android:style/Theme.NoTitleBar">
+    <style name="Full_Background" parent = "@android:style/Theme.NoTitleBar">
         <item name = "android:windowBackground"> @android:color/black </item>
         <item name = "android:windowNoTitle">true</item>
     </style>
+
+    <!--<style name="papyrusButton" parent="@android:style/Widget.Button">-->
+        <!--<item name="com.example.otteramazement.clean_water:font">fonts/PAPYRUS.TTF</item>-->
+    <!--</style>-->
 
 </resources>
