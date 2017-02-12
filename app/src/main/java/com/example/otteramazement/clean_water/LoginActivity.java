@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private Button mCancelButton;
+    private ImageView mCancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,12 +105,19 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-        mCancelButton = (Button) findViewById(R.id.login_backbutton);
+        mCancelButton = (ImageView) findViewById(R.id.login_backbuttonimageView);
 
         mCancelButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 cancelLogin();
+            }
+        });
+
+        mCancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), WelcomeActivity.class));
             }
         });
     }
