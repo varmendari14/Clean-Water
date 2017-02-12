@@ -1,9 +1,15 @@
 NeedTODO:
 *Add list of Authors for every File we make, authors being people who have edited said file.
-*Program Welcome Screen Login Button to take you to the LoginActivity
-*LoginActivity Bkg
+*Program WelcomeActivity Functionality
+ --Login button takes you to login activity
+ --register button does nothing for the moment
 *Edit LoginActivity UI
 *Program LoginActivity Functionality
+ --Back button OR back on phone goes back and nothing saved
+ --enters vaild user and pass
+ --enters valid user invalid pass
+ --enters invalid user
+ --logout button logs out and returns to welcome
 
 
 DoneDone:
@@ -13,3 +19,4 @@ DoneDone:
 *DONE Program Splash Screen - Violet DONE
 *DONE Create Welcome Screen DONE
 *DONE Edit Welcome Screen UI DONE
+*DONE LoginActivity Bkg DONE
