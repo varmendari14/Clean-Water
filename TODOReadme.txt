@@ -12,6 +12,9 @@ NeedTODO:
  --logout button logs out and returns to welcome
  *Add a screen that says somthing like "u logged in" with a logout button on the top as the going to app
 
+ OptionalTODO:
+ Make the buttons change when pressed
+
 
 DoneDone:
 *DONE Program Launcher Icon - Violet DONE
@@ -21,3 +24,6 @@ DoneDone:
 *DONE Create Welcome Screen DONE
 *DONE Edit Welcome Screen UI DONE
 *DONE LoginActivity Bkg DONE
+*DONE Program WelcomeActivity Functionality DONE
+ --Login button takes you to login activity
+ --register button does nothing for the moment
