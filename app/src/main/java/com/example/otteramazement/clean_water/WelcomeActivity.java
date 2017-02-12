@@ -11,6 +11,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 /**
  * Created by Violet on 2/11/2017.
@@ -32,7 +33,9 @@ public class WelcomeActivity extends Activity{
 
         // Set up the login form
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        ImageView loginPressButton = (ImageView) findViewById(R.id.login_imageView);
+
+        loginPressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), LoginActivity.class));
