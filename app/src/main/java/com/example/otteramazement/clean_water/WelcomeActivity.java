@@ -25,9 +25,9 @@ public class WelcomeActivity extends Activity{
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
 
-        TextView loginButton = (TextView) findViewById(R.id.welcome_login);
+        TextView loginButton = (TextView) findViewById(R.id.welcome_loginbutton_textView);
         loginButton.setTypeface(font);
-        TextView registerButton = (TextView) findViewById(R.id.welcome_register);
+        TextView registerButton = (TextView) findViewById(R.id.welcome_registerbutton_textView);
         registerButton.setTypeface(font);
 
         // Set up the login form.
