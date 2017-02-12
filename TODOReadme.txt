@@ -1,8 +1,5 @@
 NeedTODO:
 *Add list of Authors for every File we make, authors being people who have edited said file.
-*Program WelcomeActivity Functionality
- --Login button takes you to login activity
- --register button does nothing for the moment
 *Edit LoginActivity UI
 *Program LoginActivity Functionality
  --Back button OR back on phone goes back and nothing saved
