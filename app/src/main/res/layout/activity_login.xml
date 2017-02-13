@@ -107,7 +107,8 @@
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
-        android:background="@drawable/button_phases"/>
+        android:background="@drawable/button_phases"
+        android:src="@drawable/button_phases"/>
 
     <LinearLayout
         android:id="@+id/loginbuttonLayout"
