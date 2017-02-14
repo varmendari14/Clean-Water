@@ -10,9 +10,9 @@
     <ImageView android:id="@+id/splashscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/splash_screen_bkg2"
+        android:src="@mipmap/splash_screen_bkg2"
         android:layout_gravity="center"
-        android:background="@drawable/splash_screen_bkg2" />
+        android:background="@mipmap/splash_screen_bkg2" />
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
