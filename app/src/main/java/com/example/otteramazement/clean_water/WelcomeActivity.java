@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 /**
  * Created by Violet on 2/11/2017.
- * Authors: Violet, Mary
+ * Authors: Violet, Mary, Emma
  */
 
 public class WelcomeActivity extends Activity{
@@ -25,7 +25,7 @@ public class WelcomeActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
-        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        Typeface font = Typeface.createFromAsset(getAssets(),"fonts/PAPYRUS.TTF");
 
         TextView loginButton = (TextView) findViewById(R.id.welcome_loginbutton_textView);
         loginButton.setTypeface(font);

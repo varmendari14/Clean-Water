@@ -34,12 +34,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
 //Otter Amazement (Team 11)
-//Authors Mary, Avery, Cat, Violet
+//Authors Mary, Avery, Cat, Violet, Emma
 
 /**
  * A login screen that offers login via email/password.
@@ -55,9 +56,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
      */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
+    private static final HashMap<String,String> DUMMY_CREDENTIALS = new HashMap<String,String>();
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -83,7 +83,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-
+        DUMMY_CREDENTIALS.put("ollie@otter.com", "I<3water");
+        DUMMY_CREDENTIALS.put("oswald@otter.com","Oth3rOtter");
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -225,7 +226,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isEmailValid(String email) {
-        if (email.equals("user")) {
+        if (DUMMY_CREDENTIALS.containsKey(email)) {
             return true;
         } else {
             return false;
@@ -233,7 +234,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isPasswordValid(String password) {
-        if (password.equals("pass")) {
+        if (DUMMY_CREDENTIALS.containsValue(password)) {
             return true;
         } else {
             return false;
@@ -360,14 +361,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 return false;
-            }
-
-            for (String credential : DUMMY_CREDENTIALS) {
-                String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
-                    // Account exists, return true if the password matches.
-                    return pieces[1].equals(mPassword);
-                }
             }
 
             // TODO: register the new account here.
