@@ -81,7 +81,8 @@
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
-        android:background="@drawable/back_button"/>
+        android:background="@drawable/back_button"
+        android:src="@drawable/backbutton_phases"/>
 
     <LinearLayout
         android:id="@+id/buttonLayout"
@@ -132,7 +133,7 @@
         android:id="@+id/login_backbuttonimageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:src="@drawable/back_button"
+        android:src="@drawable/backbutton_phases"
         android:alpha=".75"
         android:layout_marginBottom="73dp"
         android:layout_alignParentBottom="true"
