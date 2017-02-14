@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 /**
  * Created by Violet on 2/11/2017.
- * Authors: Violet, Mary, Emma
+ * Authors: Violet, Mary
  */
 
 public class WelcomeActivity extends Activity{
