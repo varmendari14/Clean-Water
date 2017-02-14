@@ -1,5 +1,4 @@
 NeedTODO:
-*Edit LoginActivity UI -- still kinda ugly but can be dealt with later
 *MEMORY??? maybe done maybe not
 
 
@@ -24,4 +23,5 @@ DoneDone:
 
        OptionalTODO:
        Make the buttons change when pressed DONE
+*DONE Edit LoginActivity UI -- still kinda ugly but can be dealt with later DONE
 
