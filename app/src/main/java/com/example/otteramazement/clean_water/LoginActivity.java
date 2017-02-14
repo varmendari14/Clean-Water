@@ -194,7 +194,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
-        } else if (!isPasswordValid(password)) {
+        } else if (!isPasswordValid(password, email)) {
             mPasswordView.setError(getString(R.string.error_incorrect_password));
             focusView = mPasswordView;
             cancel = true;
@@ -233,8 +233,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
     }
 
-    private boolean isPasswordValid(String password) {
-        if (DUMMY_CREDENTIALS.containsValue(password)) {
+    private boolean isPasswordValid(String password, String email) {
+        if (DUMMY_CREDENTIALS.containsValue(password) && DUMMY_CREDENTIALS.get(email).equals(password)) {
             return true;
         } else {
             return false;
