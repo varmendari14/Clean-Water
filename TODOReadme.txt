@@ -1,8 +1,15 @@
 NeedTODO:
-*MEMORY??? maybe done maybe not
+*Reg UI design
+*Reg bkg
+*Reg Implementation
 
 
-DoneDone:
+M5 DoneDone:
+*DONE Reg activity DONE
+*DONE Register button on Welcome screen works DONE
+*DONE Reg .xml DONE
+
+M4 DoneDone:
 *DONE Program Launcher Icon - Violet DONE
 *DONE Add everyone to this GitHub Repository DONE
 *DONE Make Splash Screen Image - Violet DONE
@@ -24,4 +31,5 @@ DoneDone:
        OptionalTODO:
        Make the buttons change when pressed DONE
 *DONE Edit LoginActivity UI -- still kinda ugly but can be dealt with later DONE
+*DONE MEMORY??? maybe done maybe not DONE
 
