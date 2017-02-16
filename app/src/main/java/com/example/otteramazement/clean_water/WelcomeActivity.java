@@ -32,7 +32,7 @@ public class WelcomeActivity extends Activity{
         TextView registerButton = (TextView) findViewById(R.id.welcome_registerbutton_textView);
         registerButton.setTypeface(font);
 
-        // Set up the login form
+        // Set up the login button
 
         ImageView loginPressButton = (ImageView) findViewById(R.id.login_imageView);
 
@@ -40,6 +40,17 @@ public class WelcomeActivity extends Activity{
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), LoginActivity.class));
+            }
+        });
+
+        //Set up Register button
+
+        ImageView registerPressButton = (ImageView) findViewById(R.id.register_imageView);
+
+        registerPressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), RegisterActivity.class));
             }
         });
     }
