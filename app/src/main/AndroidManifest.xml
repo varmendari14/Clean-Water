@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Authors: Violet Armendariz -->
+<!-- Authors: Violet Armendariz, Mary Prouty-->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.otteramazement.clean_water">
@@ -43,6 +43,16 @@
             android:theme="@android:style/Full_Background"
             <intent-filter>
                 <action android:name="com.example.otteramazement.clean_water.LOGINACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Clean-Water">
+            android:theme="@android:style/Full_Background"
+            <intent-filter>
+                <action android:name="com.example.otteramazement.clean_water.REGISTERACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
