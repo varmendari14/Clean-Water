@@ -5,6 +5,10 @@ NeedTODO:
 *activity_profile.xml
 *Profile UI Design
 *Profile Implementation
+*in register activity, register button takes u directly to create a profile
+*in app activity, there is an edit profile button
+*AppActivity bkg
+*SppActivity UI design
 
 
 M5 DoneDone:
