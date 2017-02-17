@@ -1,13 +1,18 @@
 NeedTODO:
 *Reg UI design
-*Reg bkg
 *Reg Implementation
+*ProfileActivity
+*activity_profile.xml
+*Profile UI Design
+*Profile Implementation
 
 
 M5 DoneDone:
 *DONE Reg activity DONE
 *DONE Register button on Welcome screen works DONE
 *DONE Reg .xml DONE
+*DONE Reg bkg DONE
+*DONE Profile bkg DONE
 
 M4 DoneDone:
 *DONE Program Launcher Icon - Violet DONE
