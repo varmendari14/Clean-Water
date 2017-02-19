@@ -3,14 +3,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:text="Logout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.otteramazement.clean_water.AppActivity">
+
+    <ImageView android:id="@+id/appscreen"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/app_activity_bkg3"
+        android:scaleType="centerCrop"/>
+
+    <Button
+        android:id="@+id/app_logout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/buttonLayout"
+        android:layout_alignRight="@+id/buttonLayout"
+        android:background="@drawable/button_phases"/>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/logout_button"
-        android:layout_below="@+id/afterLogin"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="138dp" />
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/app_logout_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/button_phases"
+        android:alpha=".75"
+        android:layout_marginStart="157dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/afterLogin" />
+
+    <Button
+        android:id="@+id/app_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/buttonLayout"
+        android:layout_alignRight="@+id/buttonLayout"
+        android:background="@drawable/button_phases"/>
+
+    <ImageView
+        android:id="@+id/app_profile_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:src="@drawable/button_phases"
+        android:alpha=".75"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/app_logout_imageView"
+        android:layout_alignStart="@+id/app_logout_imageView" />
 
     <TextView
         android:text="Login Successful!"
@@ -18,7 +67,37 @@
         android:layout_height="wrap_content"
         android:id="@+id/afterLogin"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-        android:layout_marginTop="118dp"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/app_profile_imageView"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/app_profile_textView"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:text="Edit Profile"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:alpha=".75"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignBottom="@+id/app_profile_imageView"
+        android:layout_toEndOf="@+id/afterLogin"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/app_logoutButton_textView"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:text="Logout"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:alpha=".75"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_alignEnd="@+id/app_profile_textView"
+        android:layout_below="@+id/buttonLayout"
+        android:layout_above="@+id/app_profile_imageView" />
+
 </RelativeLayout>
