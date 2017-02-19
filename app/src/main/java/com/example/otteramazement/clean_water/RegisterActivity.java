@@ -125,6 +125,10 @@ public class RegisterActivity extends Activity {
         }
     }
 
+    public HashMap<String,String> getUserMap(HashMap<String, String> userMap) {
+        return userMap;
+    }
+
     @Override
     protected void onPause() {
         super.onPause();
