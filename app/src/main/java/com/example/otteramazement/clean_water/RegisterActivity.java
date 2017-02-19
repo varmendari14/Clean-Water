@@ -57,6 +57,7 @@ public class RegisterActivity extends Activity {
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
 
+
         Spinner typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
 
 
