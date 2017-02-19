@@ -30,7 +30,7 @@ public class RegisterActivity extends Activity {
     private EditText passwordRedo;
     private Spinner typeSpinner;
 
-    private HashMap<String, String> userMap = new HashMap<>();
+    private static HashMap<String, String> userMap = new HashMap<>();
 
 
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
@@ -125,7 +125,7 @@ public class RegisterActivity extends Activity {
         }
     }
 
-    public HashMap<String,String> getUserMap(HashMap<String, String> userMap) {
+    public static HashMap<String,String> getUserMap() {
         return userMap;
     }
 

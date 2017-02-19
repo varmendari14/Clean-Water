@@ -57,7 +57,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
      */
-    private static final HashMap<String,String> DUMMY_CREDENTIALS = new HashMap<String,String>();
+    private HashMap<String,String> credentials = RegisterActivity.getUserMap();
 
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -84,8 +84,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-        DUMMY_CREDENTIALS.put("ollie@otter.com", "I<3water");
-        DUMMY_CREDENTIALS.put("oswald@otter.com","Oth3rOtter");
+        //DUMMY_CREDENTIALS.put("ollie@otter.com", "I<3water");
+        //DUMMY_CREDENTIALS.put("oswald@otter.com","Oth3rOtter");
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -227,7 +227,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isEmailValid(String email) {
-        if (DUMMY_CREDENTIALS.containsKey(email)) {
+        if (credentials.containsKey(email)) {
             return true;
         } else {
             return false;
@@ -235,7 +235,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isPasswordValid(String password, String email) {
-        if (DUMMY_CREDENTIALS.containsValue(password) && DUMMY_CREDENTIALS.get(email).equals(password)) {
+        if (credentials.containsValue(password) && credentials.get(email).equals(password)) {
             return true;
         } else {
             return false;
