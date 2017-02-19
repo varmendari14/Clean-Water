@@ -12,6 +12,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -26,19 +27,30 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
 
+        //Font Set up
+
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-
-        TextView logoutButton = (TextView) findViewById(R.id.logout_button);
+        TextView logoutButton = (TextView) findViewById(R.id.app_logoutButton_textView);
         logoutButton.setTypeface(font);
+        TextView editprofileButton = (TextView) findViewById(R.id.app_profile_textView);
+        editprofileButton.setTypeface(font);
 
-        Button logoutButtonPress = (Button) findViewById(R.id.logout_button);
+        //Button Set Up
 
+        ImageView logoutButtonPress = (ImageView) findViewById(R.id.app_logout_imageView);
         logoutButtonPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), WelcomeActivity.class));
+            }
+        });
+
+        ImageView profileButtonPress = (ImageView) findViewById(R.id.app_profile_imageView);
+        profileButtonPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ProfileActivity.class));
             }
         });
 
