@@ -38,6 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 
 import static android.Manifest.permission.READ_CONTACTS;
+import android.widget.ImageView;
 
 //Otter Amazement (Team 11)
 //Authors Mary, Avery, Cat, Violet, Emma
