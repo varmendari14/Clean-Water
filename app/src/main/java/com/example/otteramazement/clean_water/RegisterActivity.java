@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Created by Violet on 2/16/2017.
- * Authors: Violet, Avery
+ * Authors: Violet, Avery, Mary
  */
 
 public class RegisterActivity extends Activity {
