@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Created by Violet on 2/16/2017.
- * Authors: Violet, Avery, Mary
+ * Authors: Violet, Avery, Mary, Cat
  */
 
 public class RegisterActivity extends Activity {
@@ -30,11 +30,11 @@ public class RegisterActivity extends Activity {
     private EditText passwordRedo;
     private Spinner typeSpinner;
 
-    private static HashMap<String, String> userMap = new HashMap<>();
+    private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
 
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
-                ProfileType.MANAGER, ProfileType.ADMIN);
+            ProfileType.MANAGER, ProfileType.ADMIN);
 
 
     @Override
@@ -109,7 +109,11 @@ public class RegisterActivity extends Activity {
         if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
                 && usernameInput.getText().toString().length() >= 3
                 && nameInput.getText().toString().length() >= 1) {
-            userMap.put(usernameInput.getText().toString(), passwordInput.getText().toString());
+            userMap.put(usernameInput.getText().toString(), new UserProfile(
+                    (ProfileType) typeSpinner.getSelectedItem(),
+                    nameInput.getText().toString(),
+                    usernameInput.getText().toString(),
+                    passwordInput.getText().toString()));
             startActivity(new Intent(getBaseContext(), ProfileActivity.class));
         } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
@@ -125,8 +129,8 @@ public class RegisterActivity extends Activity {
         }
     }
 
-    public static HashMap<String,String> getUserMap() {
-        return userMap;
+    public static HashMap<String,UserProfile> getUserMap() {
+        return RegisterActivity.userMap;
     }
 
     @Override

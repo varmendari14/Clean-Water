@@ -57,7 +57,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
      */
-    private HashMap<String,String> credentials = RegisterActivity.getUserMap();
+    private HashMap<String, UserProfile> credentials = RegisterActivity.getUserMap();
 
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -235,7 +235,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isPasswordValid(String password, String email) {
-        if (credentials.containsValue(password) && credentials.get(email).equals(password)) {
+        if (credentials.containsKey(email)
+                && credentials.get(email).getPassword().equals(password)) {
             return true;
         } else {
             return false;
