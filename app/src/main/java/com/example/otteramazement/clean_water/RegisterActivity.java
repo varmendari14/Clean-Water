@@ -30,7 +30,7 @@ public class RegisterActivity extends Activity {
     private EditText passwordRedo;
     private Spinner typeSpinner;
 
-    private HashMap<String, String> userMap = new HashMap<>();
+    private static HashMap<String, String> userMap = new HashMap<>();
 
 
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
@@ -123,6 +123,10 @@ public class RegisterActivity extends Activity {
             nameProblem.setMessage("Your name or username isn't long enough");
             nameProblem.show();
         }
+    }
+
+    public static HashMap<String,String> getUserMap() {
+        return userMap;
     }
 
     @Override
