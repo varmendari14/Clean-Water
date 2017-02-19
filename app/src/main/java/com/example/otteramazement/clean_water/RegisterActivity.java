@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.util.HashMap;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
 
 /**
