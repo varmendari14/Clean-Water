@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- Author: Violet Armendariz -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,5 +20,289 @@
         android:layout_gravity="center"
         android:src="@mipmap/profile_bkg"
         android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:text="Profile Picture:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile_profilePic_textView"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textColorLink="@android:color/holo_green_light"
+                android:textColor="#FF152A25"
+                android:layout_alignParentBottom="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/pic_bkg"
+                android:id="@+id/profile_profilePic"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Name:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_name_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/profile_name_input"
+                    android:textSize="18sp"
+                    android:hint="Name"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Title:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_title_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/profile_title_input"
+                    android:textSize="18sp"
+                    android:hint="Title"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Email:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_email_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/profile_email_input"
+                    android:layout_weight="0.56"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true"
+                    android:hint="Email Address" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Street Address:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_staddress_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/profile_name_textView" />
+
+                <!--<EditText-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:inputType="textPersonName"-->
+                    <!--android:ems="10"-->
+                    <!--android:id="@+id/profile_staddress_input"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:hint="Street Address"-->
+                    <!--android:textAlignment="textStart"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_toEndOf="@+id/profile_staddress_textView" />-->
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/profile_staddress_input"
+                    android:layout_weight="1"
+                    android:hint="Street Address" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="City:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_city_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/profile_name_textView" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/profile_city_input"
+                    android:textSize="18sp"
+                    android:hint="City"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/profile_city_textView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="State:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_state_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/profile_name_textView" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/profile_state_input"
+                    android:textSize="18sp"
+                    android:hint="State"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/profile_state_textView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Country:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_country_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/profile_name_textView" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress"
+                    android:ems="10"
+                    android:id="@+id/profile_country_input"
+                    android:textSize="18sp"
+                    android:hint="Country"
+                    android:textAlignment="textStart"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/profile_country_textView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Phone:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profile_phone_textView"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:textColorLink="@android:color/holo_green_light"
+                    android:textColor="#FF152A25"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/profile_name_textView" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:hint="Phone Number (9999999999)"
+                    android:ems="10"
+                    android:id="@+id/profile_phone_editText"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
