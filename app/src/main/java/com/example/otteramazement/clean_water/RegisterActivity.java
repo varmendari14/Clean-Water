@@ -5,11 +5,15 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Violet on 2/16/2017.
@@ -18,10 +22,14 @@ import android.widget.TextView;
 
 public class RegisterActivity extends Activity {
 
-    private EditText registerButton;
+    private EditText nameInput;
     private EditText usernameInput;
     private EditText passwordInput;
     private EditText passwordRedo;
+    private Spinner typeSpinner;
+
+    private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
+                ProfileType.MANAGER, ProfileType.ADMIN);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,27 +46,29 @@ public class RegisterActivity extends Activity {
         registerButton.setTypeface(font1);
         TextView namePrompt = (TextView) findViewById(R.id.register_name_textView);
         namePrompt.setTypeface(font);
-        EditText nameInput = (EditText) findViewById(R.id.register_name_input);
+        nameInput = (EditText) findViewById(R.id.register_name_input);
         nameInput.setTypeface(font);
         TextView usernamePrompt = (TextView) findViewById(R.id.register_username_textView);
         usernamePrompt.setTypeface(font);
-        EditText usernameInput = (EditText) findViewById(R.id.register_username_input);
+        usernameInput = (EditText) findViewById(R.id.register_username_input);
         usernameInput.setTypeface(font);
         TextView passwordPrompt = (TextView) findViewById(R.id.register_password_textView);
         passwordPrompt.setTypeface(font);
-        EditText passwordInput = (EditText) findViewById(R.id.register_password_input);
+        passwordInput = (EditText) findViewById(R.id.register_password_input);
         passwordInput.setTypeface(font);
         TextView passwordRedoPrompt1 = (TextView) findViewById(R.id.register_retype_textView);
         passwordRedoPrompt1.setTypeface(font);
         TextView passwordRedoPrompt2 = (TextView) findViewById(R.id.register_retypepass_textView);
         passwordRedoPrompt2.setTypeface(font);
-        EditText passwordRedo = (EditText) findViewById(R.id.register_retypepassword_input);
+        passwordRedo = (EditText) findViewById(R.id.register_retypepassword_input);
         passwordRedo.setTypeface(font);
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
 
-
-        Spinner typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
+        typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
+        ArrayAdapter<String> typeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, ProfileAdapter);
+        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(typeAdapter);
 
 
         //Done Setting Fonts
