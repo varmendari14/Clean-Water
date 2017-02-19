@@ -71,11 +71,6 @@ public class RegisterActivity extends Activity {
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
 
-        typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
-        ArrayAdapter<String> typeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, ProfileAdapter);
-        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        typeSpinner.setAdapter(typeAdapter);
-
 
         //Done Setting Fonts
 
@@ -96,6 +91,13 @@ public class RegisterActivity extends Activity {
                 startActivity(new Intent(getBaseContext(), WelcomeActivity.class));
             }
         });
+
+        //Spinner
+
+        typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
+        ArrayAdapter<String> typeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, ProfileAdapter);
+        typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        typeSpinner.setAdapter(typeAdapter);
 
     }
 
