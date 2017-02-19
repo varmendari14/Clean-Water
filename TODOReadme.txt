@@ -1,14 +1,9 @@
 NeedTODO:
-*Reg UI design
 *Reg Implementation
-*ProfileActivity
-*activity_profile.xml
 *Profile UI Design
 *Profile Implementation
-*in register activity, register button takes u directly to create a profile
-*in app activity, there is an edit profile button
-*AppActivity bkg
-*SppActivity UI design
+*editing a profile shows what u already had in it before
+*AppActivity UI design
 
 
 M5 DoneDone:
@@ -17,6 +12,13 @@ M5 DoneDone:
 *DONE Reg .xml DONE
 *DONE Reg bkg DONE
 *DONE Profile bkg DONE
+*DONE ProfileActivity DONE
+*DONE activity_profile.xml DONE
+*DONE AppActivity bkg DONE
+*DONE Reg UI design DONE
+*DONE in register activity, register button takes u directly to create a profile DONE
+*DONE in app activity, there is an edit profile button; DONE
+*DONE AppActivity UI design DONE (for this iteration)
 
 M4 DoneDone:
 *DONE Program Launcher Icon - Violet DONE
