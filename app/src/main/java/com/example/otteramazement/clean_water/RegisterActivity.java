@@ -1,6 +1,7 @@
 package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -11,8 +12,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import java.util.HashMap;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -28,8 +31,12 @@ public class RegisterActivity extends Activity {
     private EditText passwordRedo;
     private Spinner typeSpinner;
 
+    private HashMap<String, String> userMap = new HashMap<>();
+
+
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
                 ProfileType.MANAGER, ProfileType.ADMIN);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +107,23 @@ public class RegisterActivity extends Activity {
      */
 
     private void attemptRegistration() {
-        startActivity(new Intent(getBaseContext(), ProfileActivity.class));
+        if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
+                && usernameInput.getText().toString().length() >= 3
+                && nameInput.getText().toString().length() >= 1) {
+            userMap.put(usernameInput.getText().toString(), passwordInput.getText().toString());
+            startActivity(new Intent(getBaseContext(), ProfileActivity.class));
+        } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
+            alert.setTitle("Invalid Registration");
+            alert.setMessage("Your passwords do not match");
+            alert.show();
+        } else if (usernameInput.getText().toString().length() < 3 ||
+                nameInput.getText().toString().length() == 0) {
+            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+            nameProblem.setTitle("Invalid Registration");
+            nameProblem.setMessage("Your name or username isn't long enough");
+            nameProblem.show();
+        }
     }
 
     @Override
