@@ -7,21 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 /**
  * Created by Violet on 2/16/2017.
- * Authors: Violet, Avery
+ * Authors: Violet
  */
 
 public class RegisterActivity extends Activity {
-
-    private EditText registerButton;
-    private EditText usernameInput;
-    private EditText passwordInput;
-    private EditText passwordRedo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +49,6 @@ public class RegisterActivity extends Activity {
         passwordRedo.setTypeface(font);
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
-
-
-        Spinner typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
 
 
         //Done Setting Fonts
