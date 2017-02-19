@@ -32,26 +32,36 @@
             android:orientation="vertical"
             android:gravity="center_horizontal">
 
-            <TextView
-                android:text="Profile Picture:"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/profile_profilePic_textView"
-                android:gravity="center"
-                android:textSize="18sp"
-                android:textStyle="normal|bold"
-                android:textColorLink="@android:color/holo_green_light"
-                android:textColor="#FF152A25"
-                android:layout_alignParentBottom="true" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@mipmap/pic_bkg"
-                android:id="@+id/profile_profilePic"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:layout_weight="1" />
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:text="Profile Picture:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/profile_profilePic_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColorLink="@android:color/holo_green_light"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@mipmap/pic_bkg"
+                        android:id="@+id/profile_profilePic"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1" />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -301,6 +311,47 @@
                     android:layout_weight="1" />
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/button_phases"
+                    android:id="@+id/profile_acceptbutton_imageView"
+                    android:layout_marginEnd="167dp"
+                    android:alpha=".75"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:text="Accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:fontFamily="sans-serif"
+                    android:textSize="30sp"
+                    android:textColor="#ffffff"
+                    android:layout_marginEnd="55dp"
+                    android:alpha=".75"
+                    android:layout_centerVertical="true"
+                    android:layout_alignEnd="@+id/profile_acceptbutton_imageView" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/backbutton_phases"
+                    android:id="@+id/profile_backbutton_imageView"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/textView"
+                    android:alpha=".75"
+                    android:layout_marginStart="34dp" />
+
+
+            </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>
