@@ -3,7 +3,6 @@ NeedTODO:
 *Profile UI Design
 *Profile Implementation
 *editing a profile shows what u already had in it before
-*AppActivity UI design
 
 
 M5 DoneDone:
