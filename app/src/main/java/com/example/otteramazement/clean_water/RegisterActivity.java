@@ -55,21 +55,21 @@ public class RegisterActivity extends Activity {
         TextView namePrompt = (TextView) findViewById(R.id.register_name_textView);
         namePrompt.setTypeface(font);
         nameInput = (EditText) findViewById(R.id.register_name_input);
-        nameInput.setTypeface(font);
+        nameInput.setTypeface(font1);
         TextView usernamePrompt = (TextView) findViewById(R.id.register_username_textView);
         usernamePrompt.setTypeface(font);
         usernameInput = (EditText) findViewById(R.id.register_username_input);
-        usernameInput.setTypeface(font);
+        usernameInput.setTypeface(font1);
         TextView passwordPrompt = (TextView) findViewById(R.id.register_password_textView);
         passwordPrompt.setTypeface(font);
         passwordInput = (EditText) findViewById(R.id.register_password_input);
-        passwordInput.setTypeface(font);
+        passwordInput.setTypeface(font1);
         TextView passwordRedoPrompt1 = (TextView) findViewById(R.id.register_retype_textView);
         passwordRedoPrompt1.setTypeface(font);
         TextView passwordRedoPrompt2 = (TextView) findViewById(R.id.register_retypepass_textView);
         passwordRedoPrompt2.setTypeface(font);
         passwordRedo = (EditText) findViewById(R.id.register_retypepassword_input);
-        passwordRedo.setTypeface(font);
+        passwordRedo.setTypeface(font1);
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
 
