@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Represents a User's profile.
  * Created by Cat on 2/19/2017.
- * Authors: Cat, Mary
+ * Authors: Cat, Mary Prouty
  */
 
 public class UserProfile implements Serializable {
