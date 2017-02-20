@@ -47,35 +47,35 @@ public class ProfileActivity extends Activity{
         TextView namePrompt = (TextView) findViewById(R.id.profile_name_textView);
         namePrompt.setTypeface(font);
         nameInput = (EditText) findViewById(R.id.profile_name_input);
-        nameInput.setTypeface(font);
+        nameInput.setTypeface(font1);
         TextView titlePrompt = (TextView) findViewById(R.id.profile_title_textView);
         titlePrompt.setTypeface(font);
         titleInput = (EditText) findViewById(R.id.profile_title_input);
-        titleInput.setTypeface(font);
+        titleInput.setTypeface(font1);
         TextView emailPrompt = (TextView) findViewById(R.id.profile_email_textView);
         emailPrompt.setTypeface(font);
         emailInput = (EditText) findViewById(R.id.profile_email_input);
-        emailInput.setTypeface(font);
+        emailInput.setTypeface(font1);
         TextView streetAddress = (TextView) findViewById(R.id.profile_staddress_textView);
         streetAddress.setTypeface(font);
         streetAddressInput = (EditText) findViewById(R.id.profile_staddress_input);
-        streetAddressInput.setTypeface(font);
+        streetAddressInput.setTypeface(font1);
         TextView cityPrompt = (TextView) findViewById(R.id.profile_city_textView);
         cityPrompt.setTypeface(font);
         cityInput = (EditText) findViewById(R.id.profile_city_input);
-        cityInput.setTypeface(font);
+        cityInput.setTypeface(font1);
         TextView statePrompt = (TextView) findViewById(R.id.profile_state_textView);
         statePrompt.setTypeface(font);
         stateInput = (EditText) findViewById(R.id.profile_state_input);
-        stateInput.setTypeface(font);
+        stateInput.setTypeface(font1);
         TextView countryPrompt = (TextView) findViewById(R.id.profile_country_textView);
         countryPrompt.setTypeface(font);
         countryInput = (EditText) findViewById(R.id.profile_country_input);
-        countryInput.setTypeface(font);
+        countryInput.setTypeface(font1);
         TextView phonePrompt = (TextView) findViewById(R.id.profile_phone_textView);
         phonePrompt.setTypeface(font);
         phoneInput = (EditText) findViewById(R.id.profile_phone_editText);
-        phoneInput.setTypeface(font);
+        phoneInput.setTypeface(font1);
 
         //Done Setting Fonts
 
