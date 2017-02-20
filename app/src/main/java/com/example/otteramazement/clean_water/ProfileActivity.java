@@ -132,6 +132,7 @@ public class ProfileActivity extends Activity{
         _user.setPhoneNumber(phoneInput.getText().toString());
         _user.setEmail(emailInput.getText().toString());
         _user.setTitle(titleInput.getText().toString());
+        RegisterActivity.getUserMap().put(_user.getUsername(), _user);
         Intent profIntent = new Intent(getBaseContext(), AppActivity.class);
         profIntent.putExtra(ProfileActivity.ARG_USER, _user);
         startActivity(profIntent);

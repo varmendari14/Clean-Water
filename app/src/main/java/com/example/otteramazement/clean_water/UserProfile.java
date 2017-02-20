@@ -36,13 +36,6 @@ public class UserProfile implements Serializable {
         this.name = name;
         this.username = username;
         this.password = password;
-        //email = "";
-        //address = "";
-        //city = "";
-        //state = "";
-        //country = "";
-        //phoneNumber = "";
-        //title = "";
     }
 
     /**
