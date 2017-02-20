@@ -1,11 +1,14 @@
 NeedTODO:
-*Reg Implementation
-*Profile UI Design
-*Profile Implementation
-*editing a profile shows what u already had in it before
+
+
+
 
 
 M5 DoneDone:
+*DONE Reg Implementation
+*DONE Profile UI Design
+*DONE Profile Implementation
+*DONE editing a profile shows what u already had in it before
 *DONE Reg activity DONE
 *DONE Register button on Welcome screen works DONE
 *DONE Reg .xml DONE
