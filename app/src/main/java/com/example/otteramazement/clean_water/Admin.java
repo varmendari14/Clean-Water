@@ -2,6 +2,8 @@ package com.example.otteramazement.clean_water;
 
 /**
  * Created by Emma on 2/20/2017.
+ * Represents the Admin, a subclass of UserProfile
+ * Authors: Emma
  */
 
 public class Admin extends UserProfile {
