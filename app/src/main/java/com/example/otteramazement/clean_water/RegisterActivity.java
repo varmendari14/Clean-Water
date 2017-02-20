@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * Created by Violet on 2/16/2017.
- * Authors: Violet, Avery, Mary, Cat
+ * Authors: Violet, Avery, Mary, Cat, Emma
  */
 
 public class RegisterActivity extends Activity {
@@ -52,24 +52,29 @@ public class RegisterActivity extends Activity {
 
         TextView registerButton = (TextView) findViewById(R.id.register_registerbutton_textView);
         registerButton.setTypeface(font1);
+
         TextView namePrompt = (TextView) findViewById(R.id.register_name_textView);
         namePrompt.setTypeface(font);
         nameInput = (EditText) findViewById(R.id.register_name_input);
         nameInput.setTypeface(font1);
+
         TextView usernamePrompt = (TextView) findViewById(R.id.register_username_textView);
         usernamePrompt.setTypeface(font);
         usernameInput = (EditText) findViewById(R.id.register_username_input);
         usernameInput.setTypeface(font1);
+
         TextView passwordPrompt = (TextView) findViewById(R.id.register_password_textView);
         passwordPrompt.setTypeface(font);
         passwordInput = (EditText) findViewById(R.id.register_password_input);
         passwordInput.setTypeface(font1);
+
         TextView passwordRedoPrompt1 = (TextView) findViewById(R.id.register_retype_textView);
         passwordRedoPrompt1.setTypeface(font);
         TextView passwordRedoPrompt2 = (TextView) findViewById(R.id.register_retypepass_textView);
         passwordRedoPrompt2.setTypeface(font);
         passwordRedo = (EditText) findViewById(R.id.register_retypepassword_input);
         passwordRedo.setTypeface(font1);
+
         TextView typePrompt = (TextView) findViewById(R.id.register_type_textView);
         typePrompt.setTypeface(font);
 
@@ -113,21 +118,27 @@ public class RegisterActivity extends Activity {
         if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
                 && usernameInput.getText().toString().length() >= 3
                 && nameInput.getText().toString().length() >= 1) {
+
             UserProfile newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
                     nameInput.getText().toString(),
                     usernameInput.getText().toString(),
                     passwordInput.getText().toString());
+
             userMap.put(usernameInput.getText().toString(), newUser);
             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
             intent.putExtra(RegisterActivity.ARG_USER, newUser);
             startActivity(intent);
+
         } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
+
             AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
             alert.setTitle("Invalid Registration");
             alert.setMessage("Your passwords do not match");
             alert.show();
+
         } else if (usernameInput.getText().toString().length() < 3 ||
                 nameInput.getText().toString().length() == 0) {
+
             AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
             nameProblem.setTitle("Invalid Registration");
             nameProblem.setMessage("Your name or username isn't long enough");
@@ -136,7 +147,7 @@ public class RegisterActivity extends Activity {
     }
 
     public static HashMap<String,UserProfile> getUserMap() {
-        return RegisterActivity.userMap;
+        return userMap;
     }
 
     @Override
