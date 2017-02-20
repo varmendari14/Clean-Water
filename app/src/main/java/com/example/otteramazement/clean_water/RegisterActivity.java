@@ -32,6 +32,8 @@ public class RegisterActivity extends Activity {
 
     private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
+    public static final String ARG_USER = "user";
+
 
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
             ProfileType.MANAGER, ProfileType.ADMIN);
@@ -111,12 +113,14 @@ public class RegisterActivity extends Activity {
         if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
                 && usernameInput.getText().toString().length() >= 3
                 && nameInput.getText().toString().length() >= 1) {
-            userMap.put(usernameInput.getText().toString(), new UserProfile(
-                    (ProfileType) typeSpinner.getSelectedItem(),
+            UserProfile newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
                     nameInput.getText().toString(),
                     usernameInput.getText().toString(),
-                    passwordInput.getText().toString()));
-            startActivity(new Intent(getBaseContext(), ProfileActivity.class));
+                    passwordInput.getText().toString());
+            userMap.put(usernameInput.getText().toString(), newUser);
+            Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
+            intent.putExtra(RegisterActivity.ARG_USER, newUser);
+            startActivity(intent);
         } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
             AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
             alert.setTitle("Invalid Registration");

@@ -1,12 +1,17 @@
 package com.example.otteramazement.clean_water;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
 /**
  * Represents a User's profile.
  * Created by Cat on 2/19/2017.
- * Authors: Cat
+ * Authors: Cat, Mary
  */
 
-public class UserProfile {
+public class UserProfile implements Serializable {
     private ProfileType profileType;
     private String name;
     private String username;
@@ -145,4 +150,48 @@ public class UserProfile {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+
+    //These methods are required by Parcelable
+
+    private UserProfile(Parcel in) {
+        profileType = (ProfileType) in.readSerializable();
+        name = in.readString();
+        username = in.readString();
+        email = in.readString();
+        password = in.readString();
+        address = in.readString();
+        city = in.readString();
+        state = in.readString();
+        country = in.readString();
+        phoneNumber = in.readString();
+    }
+
+    public int describeContents() {
+        return 0;
+    }
+
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeString(username);
+        dest.writeString(email);
+        dest.writeSerializable(profileType);
+        dest.writeString(password);
+        dest.writeString(address);
+        dest.writeString(city);
+        dest.writeString(state);
+        dest.writeString(country);
+        dest.writeString(phoneNumber);
+    }
+
+    public static final Parcelable.Creator<UserProfile> CREATOR
+            = new Parcelable.Creator<UserProfile>() {
+        public UserProfile createFromParcel(Parcel in) {
+            return new UserProfile(in);
+        }
+
+        public UserProfile[] newArray(int size) {
+            return new UserProfile[size];
+        }
+    };
 }

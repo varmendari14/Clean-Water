@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 /**
  * Created by Violet on 2/18/2017.
- * Authors: Violet
+ * Authors: Violet, Mary
  */
 
 public class ProfileActivity extends Activity{
@@ -65,6 +65,14 @@ public class ProfileActivity extends Activity{
         phoneInput.setTypeface(font);
 
         //Done Setting Fonts
+
+        //Setting Name input provided by user
+
+        UserProfile _user = (UserProfile) getIntent().getSerializableExtra(RegisterActivity.ARG_USER);
+        if (_user != null) {
+            nameInput.setText(_user.getName());
+        }
+
 
         //Setting Button Functions
 
