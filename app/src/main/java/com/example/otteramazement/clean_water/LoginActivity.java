@@ -86,8 +86,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-        //DUMMY_CREDENTIALS.put("ollie@otter.com", "I<3water");
-        //DUMMY_CREDENTIALS.put("oswald@otter.com","Oth3rOtter");
+        RegisterActivity.getUserMap().put("Ollie", new UserProfile(ProfileType.USER, "Ollie", "Ollie", "I<3water"));
+
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -209,7 +209,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             focusView = mEmailView;
             cancel = true;
         } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
+            mEmailView.setError("This user is invalid");
             focusView = mEmailView;
             cancel = true;
         }
