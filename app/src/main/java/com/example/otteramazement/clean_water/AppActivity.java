@@ -22,10 +22,19 @@ import android.widget.TextView;
 
 public class AppActivity extends Activity {
 
+    UserProfile _user;
+
+    public static final String ARG_USER = "user";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
+
+        _user = (UserProfile) getIntent().getSerializableExtra(ProfileActivity.ARG_USER);
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(LoginActivity.ARG_USER);
+        }
 
         //Font Set up
 
@@ -50,7 +59,9 @@ public class AppActivity extends Activity {
         profileButtonPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), ProfileActivity.class));
+                Intent updateIntent = new Intent(getBaseContext(), ProfileActivity.class);
+                updateIntent.putExtra(AppActivity.ARG_USER, _user);
+                startActivity(updateIntent);
             }
         });
 

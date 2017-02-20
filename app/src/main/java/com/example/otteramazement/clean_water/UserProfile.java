@@ -22,6 +22,7 @@ public class UserProfile implements Serializable {
     private String state;
     private String country;
     private String phoneNumber;
+    private String title;
 
     /**
      * Constructor for basic profile, barring additional info such as address, city, etc.
@@ -35,12 +36,13 @@ public class UserProfile implements Serializable {
         this.name = name;
         this.username = username;
         this.password = password;
-        email = "";
-        address = "";
-        city = "";
-        state = "";
-        country = "";
-        phoneNumber = "";
+        //email = "";
+        //address = "";
+        //city = "";
+        //state = "";
+        //country = "";
+        //phoneNumber = "";
+        //title = "";
     }
 
     /**
@@ -55,10 +57,11 @@ public class UserProfile implements Serializable {
      * @param state         State
      * @param country       Country
      * @param phoneNumber   Phone Number
+     * @param title         Title
      */
     public UserProfile(ProfileType profileType, String name, String username, String password,
                        String email, String address, String city, String state, String country,
-                       String phoneNumber) {
+                       String phoneNumber, String title) {
         this(profileType, name, username, password);
         this.email = email;
         this.address = address;
@@ -66,6 +69,7 @@ public class UserProfile implements Serializable {
         this.state = state;
         this.country = country;
         this.phoneNumber = phoneNumber;
+        this.title = title;
     }
 
     /*
@@ -151,6 +155,10 @@ public class UserProfile implements Serializable {
         this.phoneNumber = phoneNumber;
     }
 
+    public String getTitle() { return title; }
+
+    public void setTitle(String aTitle) { this.title = aTitle; }
+
 
     //These methods are required by Parcelable
 
@@ -165,6 +173,7 @@ public class UserProfile implements Serializable {
         state = in.readString();
         country = in.readString();
         phoneNumber = in.readString();
+        title = in.readString();
     }
 
     public int describeContents() {
@@ -182,6 +191,7 @@ public class UserProfile implements Serializable {
         dest.writeString(state);
         dest.writeString(country);
         dest.writeString(phoneNumber);
+        dest.writeString(title);
     }
 
     public static final Parcelable.Creator<UserProfile> CREATOR

@@ -53,9 +53,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
+    public static final String ARG_USER = "user";
+
     /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
+     * A HashMap of Credentials containing known user names and passwords.
+     *
      */
     private HashMap<String, UserProfile> credentials = RegisterActivity.getUserMap();
 
@@ -213,16 +215,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
 
         if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
             focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
-            //showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
-            startActivity(new Intent(getBaseContext(), AppActivity.class));
+            Intent logIntent = new Intent(getBaseContext(), AppActivity.class);
+            logIntent.putExtra(LoginActivity.ARG_USER, credentials.get(email));
+            System.out.println(credentials.get(email).getAddress());
+            startActivity(logIntent);
         }
     }
 
