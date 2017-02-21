@@ -6,6 +6,7 @@ OptionalTODO:
 *Persistance of users
 *Checking to make sure new users cannot take a previous user's name
 *Profile pic size
+*center registration spinner
 
 
 M5 DoneDone:
