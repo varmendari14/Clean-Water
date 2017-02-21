@@ -96,8 +96,8 @@
         android:alpha=".75"
         android:layout_height="wrap_content"
         android:textSize="18sp"
-        android:layout_alignEnd="@+id/app_profile_textView"
-        android:layout_below="@+id/buttonLayout"
-        android:layout_above="@+id/app_profile_imageView" />
+        android:layout_above="@+id/app_profile_imageView"
+        android:layout_alignStart="@+id/app_profile_textView"
+        android:layout_below="@+id/buttonLayout" />
 
 </RelativeLayout>
