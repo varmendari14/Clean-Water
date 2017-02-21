@@ -76,6 +76,8 @@ public class ProfileActivity extends Activity{
         phonePrompt.setTypeface(font);
         phoneInput = (EditText) findViewById(R.id.profile_phone_editText);
         phoneInput.setTypeface(font1);
+        TextView profilePicPrompt = (TextView) findViewById(R.id.profile_profilePic_textView);
+        profilePicPrompt.setTypeface(font);
 
         //Done Setting Fonts
 
@@ -99,14 +101,6 @@ public class ProfileActivity extends Activity{
 
         ImageView acceptButtonImage = (ImageView) findViewById(R.id.profile_acceptbutton_imageView);
         acceptButtonImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveProfileData();
-            }
-        });
-
-        TextView acceptButtonText = (TextView) findViewById(R.id.profile_acceptbutton_tetView);
-        acceptButtonText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveProfileData();
