@@ -52,13 +52,12 @@
                         android:layout_alignParentBottom="true" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/pic_bkg"
+                        android:layout_width="220dp"
+                        android:layout_height="205dp"
+                        android:src="@mipmap/pic_bkg"
                         android:id="@+id/profile_profilePic"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitXY"
-                        android:layout_weight="1" />
+                        android:scaleType="fitXY" />
 
             </LinearLayout>
 
@@ -319,12 +318,22 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
-                    app:srcCompat="@drawable/button_phases"
+                    android:src="@drawable/button_phases"
                     android:id="@+id/profile_acceptbutton_imageView"
                     android:layout_marginEnd="167dp"
                     android:alpha=".75"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:src="@drawable/backbutton_phases"
+                    android:id="@+id/profile_backbutton_imageView"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/profile_acceptbutton_tetView"
+                    android:alpha=".75"
+                    android:layout_marginStart="34dp" />
 
                 <TextView
                     android:text="Accept"
@@ -335,20 +344,10 @@
                     android:fontFamily="sans-serif"
                     android:textSize="30sp"
                     android:textColor="#ffffff"
-                    android:layout_marginEnd="55dp"
+                    android:layout_marginEnd="41dp"
                     android:alpha=".75"
                     android:layout_centerVertical="true"
                     android:layout_alignEnd="@+id/profile_acceptbutton_imageView" />
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    app:srcCompat="@drawable/backbutton_phases"
-                    android:id="@+id/profile_backbutton_imageView"
-                    android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/profile_acceptbutton_tetView"
-                    android:alpha=".75"
-                    android:layout_marginStart="34dp" />
 
 
             </RelativeLayout>

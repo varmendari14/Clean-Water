@@ -21,20 +21,6 @@
         android:src="@mipmap/welcome_screen_over"
         android:layout_gravity="center"/>
 
-    <!--<Button-->
-        <!--android:text="Login"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/welcome_login"-->
-        <!--android:alpha=".75"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:adjustViewBounds="true"-->
-        <!--android:cropToPadding="false"-->
-        <!--style="@style/Widget.AppCompat.Button.Colored"-->
-        <!--android:background="@drawable/button_phases"-->
-        <!--android:scaleType="fitXY"/>-->
-
     <Button
         android:id="@+id/welcome_loginbutton"
         android:layout_width="wrap_content"
@@ -42,14 +28,6 @@
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
         android:background="@drawable/button_phases"/>
-
-    <LinearLayout
-        android:id="@+id/buttonLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/login_imageView"

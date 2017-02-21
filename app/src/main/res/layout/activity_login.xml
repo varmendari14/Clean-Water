@@ -4,18 +4,10 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.otteramazement.clean_water.LoginActivity">
-
-    <ImageView android:id="@+id/loginscreen"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:src="@mipmap/login_screen_bkg2"
-        android:scaleType="centerCrop"/>
 
     <!-- Login progress -->
     <ProgressBar
@@ -26,7 +18,12 @@
         android:layout_marginBottom="8dp"
         android:visibility="gone" />
 
-
+    <ImageView android:id="@+id/loginscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/login_screen_bkg2"
+        android:scaleType="centerCrop"/>
 
     <ScrollView
         android:id="@+id/login_form"

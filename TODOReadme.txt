@@ -1,7 +1,11 @@
 NeedTODO:
+*fix the back button/null input on profile screen error
 
-
-
+OptionalTODO:
+*Profile Pic Implementation
+*Persistance of users
+*Checking to make sure new users cannot take a previous user's name
+*Profile pic size
 
 
 M5 DoneDone:
@@ -21,6 +25,7 @@ M5 DoneDone:
 *DONE in register activity, register button takes u directly to create a profile DONE
 *DONE in app activity, there is an edit profile button; DONE
 *DONE AppActivity UI design DONE (for this iteration)
+*DONE Profile back button
 
 M4 DoneDone:
 *DONE Program Launcher Icon - Violet DONE
