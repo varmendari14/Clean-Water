@@ -21,6 +21,7 @@ M5 DoneDone:
 *DONE in register activity, register button takes u directly to create a profile DONE
 *DONE in app activity, there is an edit profile button; DONE
 *DONE AppActivity UI design DONE (for this iteration)
+*DONE Profile back button
 
 M4 DoneDone:
 *DONE Program Launcher Icon - Violet DONE

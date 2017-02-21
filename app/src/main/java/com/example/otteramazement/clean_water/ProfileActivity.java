@@ -111,7 +111,9 @@ public class ProfileActivity extends Activity{
         backButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), AppActivity.class));
+                Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
+                backIntent.putExtra(ProfileActivity.ARG_USER, _user);
+                startActivity(backIntent);
             }
         });
 
