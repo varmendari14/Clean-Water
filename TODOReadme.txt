@@ -1,7 +1,11 @@
 NeedTODO:
+*fix the back button/null input on profile screen error
 
-
-
+OptionalTODO:
+*Profile Pic Implementation
+*Persistance of users
+*Checking to make sure new users cannot take a previous user's name
+*Profile pic size
 
 
 M5 DoneDone:
