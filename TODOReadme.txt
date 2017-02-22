@@ -1,15 +1,17 @@
 NeedTODO:
 *fix the back button/null input on profile screen error
+*Update App UI
+*M6 stuff
 
 OptionalTODO:
 *Profile Pic Implementation
 *Persistance of users
 *Checking to make sure new users cannot take a previous user's name
-*Profile pic size
 *center registration spinner
 
 
 M5 DoneDone:
+*DONE Profile pic size
 *DONE Reg Implementation
 *DONE Profile UI Design
 *DONE Profile Implementation
