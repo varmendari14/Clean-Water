@@ -40,10 +40,16 @@ public class AppActivity extends Activity {
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
 
-        TextView logoutButton = (TextView) findViewById(R.id.app_logoutButton_textView);
+        TextView logoutButton = (TextView) findViewById(R.id.app_logout_textView);
         logoutButton.setTypeface(font);
         TextView editprofileButton = (TextView) findViewById(R.id.app_profile_textView);
         editprofileButton.setTypeface(font);
+        TextView waterButton = (TextView) findViewById(R.id.app_water_textView);
+        waterButton.setTypeface(font);
+        TextView historicalButton = (TextView) findViewById(R.id.app_historical_textView);
+        historicalButton.setTypeface(font);
+        TextView manageButton = (TextView) findViewById(R.id.app_manage_textView);
+        manageButton.setTypeface(font);
 
         //Button Set Up
 
