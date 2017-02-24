@@ -1,6 +1,12 @@
 NeedTODO:
-*fix the back button/null input on profile screen error
-*Update App UI
+*Water Report Screen Violet
+*Water Report xml Violet
+*Water Report button on APP Violet
+*Source Report Screen Violet
+*Source Report xml Violet
+*Source Report button on Water Report Violet
+*SR icons- normal and toggle Violet
+*Icons toggle xml Violet
 *M6 stuff
 
 OptionalTODO:
@@ -9,8 +15,12 @@ OptionalTODO:
 *Checking to make sure new users cannot take a previous user's name
 *center registration spinner
 
+M6 DoneDone:
+
 
 M5 DoneDone:
+*DONE fix the back button/null input on profile screen error
+*DONE Update App UI
 *DONE Profile pic size
 *DONE Reg Implementation
 *DONE Profile UI Design
