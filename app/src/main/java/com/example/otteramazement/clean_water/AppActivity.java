@@ -71,6 +71,14 @@ public class AppActivity extends Activity {
             }
         });
 
+        ImageView waterButtonPress = (ImageView) findViewById(R.id.app_water_imageView);
+        waterButtonPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), WaterReportActivity.class));
+            }
+        });
+
     }
 
 }
