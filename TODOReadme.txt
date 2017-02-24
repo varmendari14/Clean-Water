@@ -1,7 +1,5 @@
 NeedTODO:
-*Water Report Screen Violet
 *Water Report xml Violet
-*Water Report button on APP Violet
 *Source Report Screen Violet
 *Source Report xml Violet
 *Source Report button on Water Report Violet
@@ -20,6 +18,8 @@ OptionalTODO:
 *center registration spinner EMMA
 
 M6 DoneDone:
+*DONE Water Report Screen Violet
+*DONE Water Report button on APP Violet
 
 
 M5 DoneDone:

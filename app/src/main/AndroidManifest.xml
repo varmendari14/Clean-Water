@@ -77,6 +77,16 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".WaterReportActivity"
+            android:label="Clean-Water">
+            android:theme="@android:style/Full_Background"
+            <intent-filter>
+                <action android:name="com.example.otteramazement.clean_water.WATERREPORTACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
