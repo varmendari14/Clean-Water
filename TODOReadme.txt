@@ -8,12 +8,16 @@ NeedTODO:
 *SR icons- normal and toggle Violet
 *Icons toggle xml Violet
 *M6 stuff
+*M7 stuff:
+    *google maps EMMA
+    *GPS for google maps so users don't have to self insert lat and long EMMA
+    *give option to click on map where you want to make report for EMMA
 
 OptionalTODO:
-*Profile Pic Implementation
+*Profile Pic Implementation EMMA but might need help so sign up here if still interested
 *Persistance of users
-*Checking to make sure new users cannot take a previous user's name
-*center registration spinner
+*Checking to make sure new users cannot take a previous user's name EMMA
+*center registration spinner EMMA
 
 M6 DoneDone:
 
