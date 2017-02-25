@@ -1,8 +1,4 @@
 NeedTODO:
-*Water Report xml Violet
-*Source Report Screen Violet
-*Source Report xml Violet
-*Source Report button on Water Report Violet
 *SR icons- normal and toggle Violet
 *Icons toggle xml Violet
 *Automatic report number generator
@@ -23,6 +19,10 @@ OptionalTODO:
 M6 DoneDone:
 *DONE Water Report Screen Violet
 *DONE Water Report button on APP Violet
+*DONE Water Report xml Violet
+*DONE Source Report Screen Violet
+*DONE Source Report xml Violet
+*DONE Source Report button on Water Report Violet
 
 
 M5 DoneDone:
