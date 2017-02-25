@@ -5,6 +5,7 @@ NeedTODO:
 *Source Report button on Water Report Violet
 *SR icons- normal and toggle Violet
 *Icons toggle xml Violet
+*Automatic report number generator
 *M6 stuff
 *M7 stuff:
     *google maps EMMA
@@ -12,6 +13,8 @@ NeedTODO:
     *give option to click on map where you want to make report for EMMA
 
 OptionalTODO:
+*Automatic Date and Time for source report
+*automatic user for source report
 *Profile Pic Implementation EMMA but might need help so sign up here if still interested
 *Persistance of users
 *Checking to make sure new users cannot take a previous user's name EMMA

@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Author: Violet Armendariz-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.otteramazement.clean_water.SourceReportActivity">
+
+    <ImageView android:id="@+id/waterreportscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/profile_bkg"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <com.example.otteramazement.clean_water.PapyrusTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source Report"
+                android:id="@+id/sourceReport_title"
+                android:fontFamily="sans-serif"
+                android:textSize="30sp"
+                android:textColor="#000000"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Date:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_date_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:ems="10"
+                        android:id="@+id/sourceReport_date_input"
+                        android:textSize="18sp"
+                        android:hint="Date"
+                        android:textAlignment="textStart"
+                        android:layout_alignParentBottom="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="Time:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_time_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:id="@+id/sourceReport_time_input"
+                        android:textSize="18sp"
+                        android:hint="Time"
+                        android:textAlignment="textStart"
+                        android:layout_alignParentBottom="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Report Number:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_reportNumber_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                    <TextView
+                        android:hint="Report Number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_reportNumber_generation"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Reporter:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_reporter_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/sourceReport_reporter_input"
+                        android:textSize="18sp"
+                        android:hint="UserName"
+                        android:textAlignment="textStart"
+                        android:layout_alignParentBottom="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:text="Location:"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sourceReport_location_textView"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="#FF152A25"
+                            android:layout_alignParentBottom="true" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:ems="10"
+                            android:id="@+id/sourceReport_location_input"
+                            android:textSize="18sp"
+                            android:hint="Lat-Long"
+                            android:textAlignment="textStart"
+                            android:layout_alignParentBottom="true" />
+
+                    </LinearLayout>
+
+                    <!--Possible place for map-->
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_mapholder_imageView"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Stream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_stream_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignStart="@+id/sourceReport_stream_imageView"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/sourceReport_stream_imageView" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_well_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_stream_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="26dp" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_bottle_imageView"
+                        android:layout_marginStart="36dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                            android:text="Bottled"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sourceReport_bottled_textView"
+                            android:gravity="center"
+                            android:textSize="18sp"
+                            android:textStyle="normal|bold"
+                            android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/sourceReport_bottle_imageView" />
+
+                    <TextView
+                        android:text="Well"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_well_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/sourceReport_well_imageView" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Spring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_spring_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignStart="@+id/sourceReport_spring_imageView"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/sourceReport_spring_imageView" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_spring_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+                    <TextView
+                        android:text="Lake"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_lake_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="43dp" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_lake_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="31dp" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_other_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="23dp" />
+
+                    <TextView
+                        android:text="Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_other_textView"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignStart="@+id/sourceReport_other_imageView" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Waste"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_waste_textView"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignStart="@+id/sourceReport_waste_imageView"
+                        android:layout_below="@+id/sourceReport_waste_imageView" />
+
+                    <TextView
+                        android:text="Treatable-\nMuddy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_treatable_muddy_textView"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_marginEnd="89dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/sourceReport_treatable_muddy_imageView"/>
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_treatable_muddy_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/sourceReport_treatable_muddy_textView" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_waste_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/sourceReport_treatable_muddy_textView"
+                        android:layout_marginEnd="65dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Potable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_potable_textView"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_alignStart="@+id/sourceReport_potable_imageView"
+                        android:layout_below="@+id/sourceReport_potable_imageView" />
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_potable_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="101dp" />
+
+
+                    <ImageView
+                        android:layout_width="61dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/icon_holder"
+                        android:id="@+id/sourceReport_treatable_clear_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/sourceReport_treatable_clear_textView" />
+
+                    <TextView
+                        android:text="Treatable-\nClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_treatable_clear_textView"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="#FF152A25"
+                        android:layout_marginEnd="58dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_toStartOf="@+id/sourceReport_potable_textView"
+                        android:layout_below="@+id/sourceReport_treatable_clear_imageView"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:src="@drawable/button_phases"
+                        android:id="@+id/sourceReport_acceptbutton_imageView"
+                        android:layout_marginEnd="167dp"
+                        android:alpha=".75"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:src="@drawable/backbutton_phases"
+                        android:id="@+id/sourceReport_backbutton_imageView"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/sourceReport_acceptbutton_tetView"
+                        android:alpha=".75"
+                        android:layout_marginStart="34dp" />
+
+                    <TextView
+                        android:text="Accept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sourceReport_acceptbutton_tetView"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:fontFamily="sans-serif"
+                        android:textSize="30sp"
+                        android:textColor="#ffffff"
+                        android:layout_marginEnd="24dp"
+                        android:alpha=".75"
+                        android:layout_centerVertical="true"
+                        android:layout_alignEnd="@+id/sourceReport_acceptbutton_imageView" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+    </ScrollView>
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:src="@drawable/backbutton_phases"-->
+        <!--android:id="@+id/sourceReport_backbutton_imageView"-->
+        <!--android:alpha=".75"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+    <!---->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Source Report"-->
+        <!--android:id="@+id/sourceReport_title"-->
+        <!--android:fontFamily="sans-serif"-->
+        <!--android:textSize="30sp"-->
+        <!--android:textColor="#000000"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+
+    <!--<EditText-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="date"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/sourceReport_date_input"-->
+        <!--android:layout_below="@+id/sourceReport_title"-->
+        <!--android:layout_alignEnd="@+id/sourceReport_title" />-->
+
+    <!--<TextView-->
+        <!--android:text="Date:"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/profile_date_textView"-->
+        <!--android:gravity="center"-->
+        <!--android:textSize="24sp"-->
+        <!--android:textStyle="normal|bold"-->
+        <!--android:textColor="#FF152A25"-->
+        <!--android:layout_alignBottom="@+id/sourceReport_date_input"-->
+        <!--android:layout_toStartOf="@+id/sourceReport_date_input" />-->
+
+</RelativeLayout>
