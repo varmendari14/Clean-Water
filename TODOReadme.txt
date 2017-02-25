@@ -1,6 +1,4 @@
 NeedTODO:
-*SR icons- normal and toggle Violet
-*Icons toggle xml Violet
 *Automatic report number generator
 *M6 stuff
 *M7 stuff:
@@ -17,6 +15,8 @@ OptionalTODO:
 *center registration spinner EMMA
 
 M6 DoneDone:
+*DONE Icons toggle xml Violet
+*DONE SR icons- normal and toggle Violet
 *DONE Water Report Screen Violet
 *DONE Water Report button on APP Violet
 *DONE Water Report xml Violet
