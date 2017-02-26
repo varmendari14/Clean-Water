@@ -75,7 +75,9 @@ public class AppActivity extends Activity {
         waterButtonPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), WaterReportActivity.class));
+                Intent reportIntent = new Intent(getBaseContext(), WaterReportActivity.class);
+                reportIntent.putExtra(AppActivity.ARG_USER, _user);
+                startActivity(reportIntent);
             }
         });
 
