@@ -14,8 +14,15 @@ import android.widget.TextView;
 public class SourceReportActivity extends Activity {
 
     UserProfile _user;
+    WaterSourceReport _report = new WaterSourceReport();
 
     public static final String ARG_USER = "user";
+
+    private EditText dateInput;
+    private EditText reporterInput;
+    private EditText locationInput;
+    private TextView reportNumberText;
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,19 +40,19 @@ public class SourceReportActivity extends Activity {
         title.setTypeface(font);
         TextView datePrompt = (TextView) findViewById(R.id.sourceReport_date_textView);
         datePrompt.setTypeface(font);
-        EditText dateInput = (EditText) findViewById(R.id.sourceReport_date_input);
+        dateInput = (EditText) findViewById(R.id.sourceReport_date_input);
         dateInput.setTypeface(font1);
         TextView reportNumberPrompt = (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
-        TextView reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
+        reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
         reportNumberText.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.sourceReport_reporter_textView);
         reporterPrompt.setTypeface(font);
-        EditText reporterInput = (EditText) findViewById(R.id.sourceReport_reporter_input);
+        reporterInput = (EditText) findViewById(R.id.sourceReport_reporter_input);
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.sourceReport_location_textView);
         locationPrompt.setTypeface(font);
-        EditText locationInput = (EditText) findViewById(R.id.sourceReport_location_input);
+        locationInput = (EditText) findViewById(R.id.sourceReport_location_input);
         locationInput.setTypeface(font1);
         TextView bottlePrompt = (TextView) findViewById(R.id.sourceReport_bottled_textView);
         bottlePrompt.setTypeface(font);
@@ -78,6 +85,9 @@ public class SourceReportActivity extends Activity {
 //        TextView reportNumber = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
 //        reportNumber.setText("the number will go here");
 
+        _report.setReporter(_user.getUsername());
+        reporterInput.setText(_report.getReporter());
+        reportNumberText.setText(_report.getReportNumber());
     }
 
     @Override
