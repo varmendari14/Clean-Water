@@ -1,7 +1,6 @@
 NeedTODO:
 *Automatic report number generator
 *M6 stuff:
-    *Login/registration/profile still work (aka send user info to new activities) MARY
     *Create list of water source reports MARY
 *M7 stuff:
     *google maps EMMA
@@ -25,6 +24,7 @@ M6 DoneDone:
 *DONE Source Report Screen Violet
 *DONE Source Report xml Violet
 *DONE Source Report button on Water Report Violet
+*DONE User data sent to new activities so profile still works Mary
 
 
 M5 DoneDone:
