@@ -1,6 +1,8 @@
 NeedTODO:
 *Automatic report number generator
-*M6 stuff
+*M6 stuff:
+    *Login/registration/profile still work (aka send user info to new activities) MARY
+    *Create list of water source reports MARY
 *M7 stuff:
     *google maps EMMA
     *GPS for google maps so users don't have to self insert lat and long EMMA
