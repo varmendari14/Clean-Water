@@ -10,11 +10,21 @@ import android.widget.TextView;
 
 /**
  * Created by Violet on 2/24/2017.
+ * Authors: Violet, Mary
  */
 
 public class WaterReportActivity extends Activity {
 
+    UserProfile _user;
+
+    public static final String ARG_USER = "user";
+
     protected void onCreate(Bundle savedInstanceState) {
+
+        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_report);
@@ -39,7 +49,9 @@ public class WaterReportActivity extends Activity {
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), SourceReportActivity.class));
+                Intent sourceIntent = new Intent(getBaseContext(), SourceReportActivity.class);
+                sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                startActivity(sourceIntent);
             }
         });
 
@@ -47,7 +59,9 @@ public class WaterReportActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getBaseContext(), AppActivity.class));
+                Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
+                backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                startActivity(backIntent);
             }
         });
 
