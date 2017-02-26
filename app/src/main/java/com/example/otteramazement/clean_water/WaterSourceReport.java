@@ -56,7 +56,7 @@ public class WaterSourceReport {
         return location;
     }
 
-    public int getReportNumber() {
-        return reportNum;
+    public String getReportNumber() {
+        return Integer.toString(reportNum);
     }
 }
