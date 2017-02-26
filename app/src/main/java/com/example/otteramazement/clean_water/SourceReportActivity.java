@@ -8,11 +8,18 @@ import android.widget.TextView;
 
 /**
  * Created by Violet on 2/24/2017.
+ * Authors: Violet, Mary
  */
 
 public class SourceReportActivity extends Activity {
 
+    UserProfile _user;
+
+    public static final String ARG_USER = "user";
+
     protected void onCreate(Bundle savedInstanceState) {
+
+        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
