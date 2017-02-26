@@ -1,7 +1,9 @@
 NeedTODO:
-*Automatic report number generator
 *M6 stuff:
-    *Create list of water source reports MARY
+    *Create list of water source reports
+    *Update water source reports to include type of water
+    *Make view of list of completed source reports
+    *Automatic report number generator
 *M7 stuff:
     *google maps EMMA
     *GPS for google maps so users don't have to self insert lat and long EMMA
