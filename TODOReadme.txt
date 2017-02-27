@@ -5,17 +5,21 @@ NeedTODO:
     *Make view of list of completed source reports
     *Automatic report number generator
 *M7 stuff:
-    *google maps EMMA
+    *link google maps stuff to app
     *GPS for google maps so users don't have to self insert lat and long EMMA
     *give option to click on map where you want to make report for EMMA
 
 OptionalTODO:
+*server EMMA
 *Automatic Date and Time for source report
 *automatic user for source report
 *Profile Pic Implementation EMMA but might need help so sign up here if still interested
 *Persistance of users
 *Checking to make sure new users cannot take a previous user's name EMMA
 *center registration spinner EMMA
+
+M7 DoneDone:
+*DONE google maps EMMA
 
 M6 DoneDone:
 *DONE Icons toggle xml Violet
