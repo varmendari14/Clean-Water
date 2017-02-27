@@ -9,57 +9,60 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 2/24/2017.
- * Authors: Violet, Mary
+ * Created by Violet on 2/26/2017.
  */
 
-public class WaterReportActivity extends Activity {
+public class SourceReportChoiceActivity extends Activity {
 
     //UserProfile _user;
+    //WaterSourceReport _report = new WaterSourceReport();
 
-    //public static final String ARG_USER = "user";
+    public static final String ARG_USER = "user";
 
     protected void onCreate(Bundle savedInstanceState) {
 
-//        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
-//        if (_user == null) {
-//            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
-//        }
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_water_report);
+        setContentView(R.layout.activity_source_report_choice);
 
         Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
 
-        TextView sourceButton = (TextView) findViewById(R.id.waterReport_sourceReport_textView);
+        TextView sourceButton = (TextView) findViewById(R.id.sourceReportChoice_newSourceReport);
         sourceButton.setTypeface(font1);
-        TextView availabilityButton = (TextView) findViewById(R.id.waterReport_avalabilityReport_textView);
-        availabilityButton.setTypeface(font1);
-        TextView purityButton = (TextView) findViewById(R.id.waterReport_purityReport_textView);
-        purityButton.setTypeface(font1);
+        TextView listButton = (TextView) findViewById(R.id.sourceReportChoice_reportLists);
+        listButton.setTypeface(font1);
         TextView title = (TextView) findViewById(R.id.sourceReportChoice_title);
         title.setTypeface(font);
 
 
         //button functionalities
-        ImageView sourceButtonImage = (ImageView) findViewById(R.id.waterReport_sourceReport_imageView);
+        ImageView sourceButtonImage = (ImageView) findViewById(R.id.sourceReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                Intent sourceIntent = new Intent(getBaseContext(), SourceReportActivity.class);
                 //sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
                 startActivity(sourceIntent);
             }
         });
 
-        ImageView backButton = (ImageView) findViewById(R.id.waterReport_backbutton_imageView);
+        ImageView listButtonImage = (ImageView) findViewById(R.id.sourceReportChoice_listReports_imageView);
+        listButtonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sourceIntent = new Intent(getBaseContext(), SourceReportListActivity.class);
+                //sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                startActivity(sourceIntent);
+            }
+        });
+
+        ImageView backButton = (ImageView) findViewById(R.id.sourceReportChoice_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
+                Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
                 //backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }

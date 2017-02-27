@@ -4,6 +4,11 @@ NeedTODO:
     *Update water source reports to include type of water
     *Make view of list of completed source reports
     *Automatic report number generator
+    *CHANGED FILES:
+        *Source Report Activity
+        *SourceReportChoiceActivity
+        *WaterReportActivity
+        *SourceReportListActivity
 *M7 stuff:
     *link google maps stuff to app
     *GPS for google maps so users don't have to self insert lat and long EMMA

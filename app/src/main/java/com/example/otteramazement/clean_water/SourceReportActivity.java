@@ -1,9 +1,12 @@
 package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -26,7 +29,7 @@ public class SourceReportActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
+        //_user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
@@ -77,17 +80,34 @@ public class SourceReportActivity extends Activity {
         TextView acceptButton = (TextView) findViewById(R.id.sourceReport_acceptbutton_tetView);
         acceptButton.setTypeface(font);
 
+        //setting buttons
+//        ImageView backButton = (ImageView) findViewById(R.id.waterReport_backbutton_imageView);
+//        backButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
+//                backIntent.putExtra(SourceReportChoiceActivity.ARG_USER, _user);
+//                startActivity(backIntent);
+//            }
+//        });
+        ImageView backButton = (ImageView) findViewById(R.id.sourceReport_backbutton_imageView);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                //backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                startActivity(backIntent);
+            }
+        });
+
         //Below is how we automatically put the generated report number onto the screen for the user to see
         //we can also use this for filling in the reporter blank, if we decide that whoever is logged in is responsible for reporting
         //also can be used for the date and time if we auto generate that
         //if we auto generate all of the above, i only need to change their types from EditTexts to TextViews
 
-//        TextView reportNumber = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
-//        reportNumber.setText("the number will go here");
-
-        _report.setReporter(_user.getUsername());
-        reporterInput.setText(_report.getReporter());
-        reportNumberText.setText(_report.getReportNumber());
+        //_report.setReporter(_user.getUsername());
+        //reporterInput.setText(_report.getReporter());
+        //reportNumberText.setText(_report.getReportNumber());
     }
 
     @Override
