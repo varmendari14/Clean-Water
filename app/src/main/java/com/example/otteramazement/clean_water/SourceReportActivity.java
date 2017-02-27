@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import java.util.LinkedList;
 
 /**
  * Created by Violet on 2/24/2017.
@@ -27,9 +28,10 @@ public class SourceReportActivity extends Activity {
     private TextView reportNumberText;
 
 
+
     protected void onCreate(Bundle savedInstanceState) {
 
-        //_user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
+        _user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
@@ -95,7 +97,7 @@ public class SourceReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                //backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -105,9 +107,9 @@ public class SourceReportActivity extends Activity {
         //also can be used for the date and time if we auto generate that
         //if we auto generate all of the above, i only need to change their types from EditTexts to TextViews
 
-        //_report.setReporter(_user.getUsername());
-        //reporterInput.setText(_report.getReporter());
-        //reportNumberText.setText(_report.getReportNumber());
+        _report.setReporter(_user.getUsername());
+        reporterInput.setText(_report.getReporter());
+        reportNumberText.setText(_report.getReportNumber());
     }
 
     @Override
