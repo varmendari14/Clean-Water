@@ -105,7 +105,7 @@ public class SourceReportActivity extends Activity {
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
                 backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
-                //add it to the list of source reports
+                WaterReportList.waterSourceList.add(_report);
                 startActivity(backIntent);
             }
         });

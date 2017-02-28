@@ -1,9 +1,7 @@
 NeedTODO:
 *M6 stuff:
-    *Create list of water source reports CAT
-    *Update water source reports to include type of water CAT
-    *Make view of list of completed source reports EMMA
-    *Automatic report number generator CAT
+    *list length is report number CAT
+    *print list to view
 
 *M7 stuff:
     *link google maps stuff to app
@@ -22,6 +20,7 @@ M7 DoneDone:
 *DONE google maps EMMA
 
 M6 DoneDone:
+*DONE Make view of list of completed source reports EMMA
 *DONE Update water source reports to include type of water Violet
 *DONE Checking to make sure new users cannot take a previous user's name EMMA
 *DONE Icons toggle xml Violet
