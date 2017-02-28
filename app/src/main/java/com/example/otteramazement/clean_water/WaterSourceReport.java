@@ -15,6 +15,8 @@ public class WaterSourceReport {
     private String time;
     private String reporter;
     private String location;
+    private WaterType type;
+    private WaterCondition condition;
 
     //No-arg constructor creates random number for report
 
@@ -23,6 +25,12 @@ public class WaterSourceReport {
     }
 
     //Getters and setters for report data
+
+    public void setType(WaterType aType) { type = aType; }
+
+    public WaterType getType() {return type;}
+
+    public void setCondition(WaterCondition aCondition) { condition = aCondition; }
 
     public void setDate(String aDate) {
         date = aDate;
