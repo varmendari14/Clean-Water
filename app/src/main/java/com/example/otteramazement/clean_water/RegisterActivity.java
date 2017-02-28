@@ -117,7 +117,8 @@ public class RegisterActivity extends Activity {
     private void attemptRegistration() {
         if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
                 && usernameInput.getText().toString().length() >= 3
-                && nameInput.getText().toString().length() >= 1) {
+                && nameInput.getText().toString().length() >= 1
+                && !OurHashMap.userMap.containsKey(usernameInput.getText().toString())) {
 
             UserProfile newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
                     nameInput.getText().toString(),
@@ -142,6 +143,11 @@ public class RegisterActivity extends Activity {
             AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
             nameProblem.setTitle("Invalid Registration");
             nameProblem.setMessage("Your name or username isn't long enough");
+            nameProblem.show();
+        } else if (OurHashMap.userMap.containsKey(usernameInput.getText().toString())) {
+            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+            nameProblem.setTitle("Invalid Registration");
+            nameProblem.setMessage("This username is already being used.");
             nameProblem.show();
         }
     }

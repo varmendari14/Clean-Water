@@ -2,7 +2,7 @@ NeedTODO:
 *M6 stuff:
     *Create list of water source reports CAT
     *Update water source reports to include type of water CAT
-    *Make view of list of completed source reports
+    *Make view of list of completed source reports EMMA
     *Automatic report number generator CAT
     *CHANGED FILES:
         *Source Report Activity
@@ -20,13 +20,13 @@ OptionalTODO:
 *automatic user for source report
 *Profile Pic Implementation EMMA but might need help so sign up here if still interested
 *Persistance of users
-*Checking to make sure new users cannot take a previous user's name EMMA
 *center registration spinner EMMA
 
 M7 DoneDone:
 *DONE google maps EMMA
 
 M6 DoneDone:
+*DONE Checking to make sure new users cannot take a previous user's name EMMA
 *DONE Icons toggle xml Violet
 *DONE SR icons- normal and toggle Violet
 *DONE Water Report Screen Violet
