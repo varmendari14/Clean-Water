@@ -15,16 +15,16 @@ import android.widget.TextView;
 
 public class WaterReportActivity extends Activity {
 
-    //UserProfile _user;
+    UserProfile _user;
 
-    //public static final String ARG_USER = "user";
+    public static final String ARG_USER = "user";
 
     protected void onCreate(Bundle savedInstanceState) {
 
-//        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
-//        if (_user == null) {
-//            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
-//        }
+        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_report);
@@ -50,7 +50,7 @@ public class WaterReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent sourceIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                //sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
                 startActivity(sourceIntent);
             }
         });
@@ -60,7 +60,7 @@ public class WaterReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
-                //backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });

@@ -1,9 +1,9 @@
 NeedTODO:
 *M6 stuff:
-    *Create list of water source reports
-    *Update water source reports to include type of water
+    *Create list of water source reports CAT
+    *Update water source reports to include type of water CAT
     *Make view of list of completed source reports
-    *Automatic report number generator
+    *Automatic report number generator CAT
     *CHANGED FILES:
         *Source Report Activity
         *SourceReportChoiceActivity

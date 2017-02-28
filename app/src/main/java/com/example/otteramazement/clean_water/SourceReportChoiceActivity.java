@@ -14,12 +14,19 @@ import android.widget.TextView;
 
 public class SourceReportChoiceActivity extends Activity {
 
-    //UserProfile _user;
-    //WaterSourceReport _report = new WaterSourceReport();
+    UserProfile _user;
 
     public static final String ARG_USER = "user";
 
     protected void onCreate(Bundle savedInstanceState) {
+
+        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
+        }
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportListActivity.ARG_USER);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report_choice);
@@ -42,9 +49,9 @@ public class SourceReportChoiceActivity extends Activity {
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), SourceReportActivity.class);
-                //sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
-                startActivity(sourceIntent);
+                Intent reportIntent = new Intent(getBaseContext(), SourceReportActivity.class);
+                reportIntent.putExtra(SourceReportChoiceActivity.ARG_USER, _user);
+                startActivity(reportIntent);
             }
         });
 
@@ -52,9 +59,9 @@ public class SourceReportChoiceActivity extends Activity {
         listButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), SourceReportListActivity.class);
-                //sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
-                startActivity(sourceIntent);
+                Intent listIntent = new Intent(getBaseContext(), SourceReportListActivity.class);
+                listIntent.putExtra(SourceReportChoiceActivity.ARG_USER, _user);
+                startActivity(listIntent);
             }
         });
 
@@ -63,7 +70,7 @@ public class SourceReportChoiceActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
-                //backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                backIntent.putExtra(SourceReportChoiceActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
