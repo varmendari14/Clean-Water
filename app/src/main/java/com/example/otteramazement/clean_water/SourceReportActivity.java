@@ -19,6 +19,8 @@ public class SourceReportActivity extends Activity {
 
     UserProfile _user;
     WaterSourceReport _report = new WaterSourceReport();
+    WaterType type;
+    WaterCondition condition;
 
     public static final String ARG_USER = "user";
 
@@ -47,6 +49,10 @@ public class SourceReportActivity extends Activity {
         datePrompt.setTypeface(font);
         dateInput = (EditText) findViewById(R.id.sourceReport_date_input);
         dateInput.setTypeface(font1);
+        TextView timePrompt = (TextView) findViewById(R.id.sourceReport_time_textView);
+        timePrompt.setTypeface(font);
+        EditText timeInput = (EditText) findViewById(R.id.sourceReport_time_input);
+        timeInput.setTypeface(font1);
         TextView reportNumberPrompt = (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
         reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
@@ -83,15 +89,6 @@ public class SourceReportActivity extends Activity {
         acceptButton.setTypeface(font);
 
         //setting buttons
-//        ImageView backButton = (ImageView) findViewById(R.id.waterReport_backbutton_imageView);
-//        backButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
-//                backIntent.putExtra(SourceReportChoiceActivity.ARG_USER, _user);
-//                startActivity(backIntent);
-//            }
-//        });
         ImageView backButton = (ImageView) findViewById(R.id.sourceReport_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +96,97 @@ public class SourceReportActivity extends Activity {
                 Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
                 backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
+            }
+        });
+
+        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
+        acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
+                //add it to the list of source reports
+                startActivity(backIntent);
+            }
+        });
+
+        ImageView bottleImage = (ImageView) findViewById(R.id.sourceReport_bottle_imageView);
+        bottleImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.BOTTLED;
+            }
+        });
+
+        ImageView wellImage = (ImageView) findViewById(R.id.sourceReport_well_imageView);
+        wellImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.WELL;
+            }
+        });
+
+        ImageView streamImage = (ImageView) findViewById(R.id.sourceReport_stream_imageView);
+        streamImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.STREAM;
+            }
+        });
+
+        ImageView lakeImage = (ImageView) findViewById(R.id.sourceReport_lake_imageView);
+        lakeImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.LAKE;
+            }
+        });
+
+        ImageView springImage = (ImageView) findViewById(R.id.sourceReport_spring_imageView);
+        springImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.SPRING;
+            }
+        });
+
+        ImageView otherImage = (ImageView) findViewById(R.id.sourceReport_other_imageView);
+        otherImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                type = WaterType.OTHER;
+            }
+        });
+
+        ImageView wasteImage = (ImageView) findViewById(R.id.sourceReport_waste_imageView);
+        wasteImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                condition = WaterCondition.WASTE;
+            }
+        });
+
+        ImageView treatmuddImage = (ImageView) findViewById(R.id.sourceReport_treatable_muddy_imageView);
+        treatmuddImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                condition = WaterCondition.TREATABLE_MUDDY;
+            }
+        });
+
+        ImageView treatclearImage = (ImageView) findViewById(R.id.sourceReport_treatable_clear_imageView);
+        treatclearImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                condition = WaterCondition.TREATABLE_CLEAR;
+            }
+        });
+
+        ImageView potImage = (ImageView) findViewById(R.id.sourceReport_potable_imageView);
+        potImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                condition = WaterCondition.POTABLE;
             }
         });
 
@@ -110,6 +198,11 @@ public class SourceReportActivity extends Activity {
         _report.setReporter(_user.getUsername());
         reporterInput.setText(_report.getReporter());
         reportNumberText.setText(_report.getReportNumber());
+        _report.setCondition(condition);
+        _report.setType(type);
+        _report.setDate(dateInput.toString());
+        _report.setTime(timeInput.toString());
+        _report.setLocation(locationInput.toString());
     }
 
     @Override

@@ -32,6 +32,8 @@ public class WaterSourceReport {
 
     public void setCondition(WaterCondition aCondition) { condition = aCondition; }
 
+    public WaterCondition getCondition() {return condition;}
+
     public void setDate(String aDate) {
         date = aDate;
     }

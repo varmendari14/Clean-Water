@@ -1,14 +1,9 @@
 NeedTODO:
 *M6 stuff:
     *Create list of water source reports CAT
-    *Update water source reports to include type of water CAT
     *Make view of list of completed source reports
     *Automatic report number generator CAT
-    *CHANGED FILES:
-        *Source Report Activity
-        *SourceReportChoiceActivity
-        *WaterReportActivity
-        *SourceReportListActivity
+
 *M7 stuff:
     *link google maps stuff to app
     *GPS for google maps so users don't have to self insert lat and long EMMA
@@ -27,6 +22,7 @@ M7 DoneDone:
 *DONE google maps EMMA
 
 M6 DoneDone:
+*DONE Update water source reports to include type of water Violet
 *DONE Icons toggle xml Violet
 *DONE SR icons- normal and toggle Violet
 *DONE Water Report Screen Violet
