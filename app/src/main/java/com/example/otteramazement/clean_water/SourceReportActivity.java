@@ -197,6 +197,7 @@ public class SourceReportActivity extends Activity {
         });
     }
 
+    
     /**
      *  Updates the report class with the entered data.
      */
