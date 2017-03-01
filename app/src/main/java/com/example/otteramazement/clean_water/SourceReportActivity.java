@@ -1,6 +1,7 @@
 package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -189,10 +190,19 @@ public class SourceReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 updateReport();
-                Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
-                WaterReportList.waterSourceList.add(_report);
-                startActivity(backIntent);
+                if (_report.getCondition() != null && _report.getType() != null && _report.getTime().length() > 0
+                        && _report.getDate().length() > 0 && _report.getLocation().length() > 0) {
+                    Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                    backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
+                    WaterReportList.waterSourceList.add(_report);
+                    startActivity(backIntent);
+                } else {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(SourceReportActivity.this);
+                    alert.setTitle("Invalid Source Report");
+                    alert.setMessage("Please fill out all required fields");
+                    alert.show();
+                }
+
             }
         });
     }
