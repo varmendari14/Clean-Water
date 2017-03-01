@@ -1,6 +1,5 @@
 package com.example.otteramazement.clean_water;
 
-import java.util.Random;
 
 /**
  * Created by Mary Prouty on 2/26/17.
@@ -9,7 +8,6 @@ import java.util.Random;
 
 public class WaterSourceReport {
 
-    private Random rand = new Random();
     private int reportNum;
 
     private String date;
@@ -19,7 +17,7 @@ public class WaterSourceReport {
     private WaterType type;
     private WaterCondition condition;
 
-    //No-arg constructor creates random number for report
+    //No-arg constructor creates number for report
 
     public WaterSourceReport() {
         reportNum = WaterReportList.waterSourceList.size();
