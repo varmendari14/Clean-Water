@@ -28,6 +28,7 @@ public class SourceReportActivity extends Activity {
     private EditText reporterInput;
     private EditText locationInput;
     private TextView reportNumberText;
+    private EditText timeInput;
 
 
 
@@ -51,7 +52,7 @@ public class SourceReportActivity extends Activity {
         dateInput.setTypeface(font1);
         TextView timePrompt = (TextView) findViewById(R.id.sourceReport_time_textView);
         timePrompt.setTypeface(font);
-        EditText timeInput = (EditText) findViewById(R.id.sourceReport_time_input);
+        timeInput = (EditText) findViewById(R.id.sourceReport_time_input);
         timeInput.setTypeface(font1);
         TextView reportNumberPrompt = (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
@@ -95,17 +96,6 @@ public class SourceReportActivity extends Activity {
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
                 backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
-                startActivity(backIntent);
-            }
-        });
-
-        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
-        acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
-                WaterReportList.waterSourceList.add(_report);
                 startActivity(backIntent);
             }
         });
@@ -190,19 +180,32 @@ public class SourceReportActivity extends Activity {
             }
         });
 
-        //Below is how we automatically put the generated report number onto the screen for the user to see
-        //we can also use this for filling in the reporter blank, if we decide that whoever is logged in is responsible for reporting
-        //also can be used for the date and time if we auto generate that
-        //if we auto generate all of the above, i only need to change their types from EditTexts to TextViews
-
         _report.setReporter(_user.getUsername());
         reporterInput.setText(_report.getReporter());
         reportNumberText.setText(_report.getReportNumber());
+
+        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
+        acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateReport();
+                Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
+                WaterReportList.waterSourceList.add(_report);
+                startActivity(backIntent);
+            }
+        });
+    }
+
+    /**
+     *  Updates the report class with the entered data.
+     */
+    protected void updateReport() {
         _report.setCondition(condition);
         _report.setType(type);
-        _report.setDate(dateInput.toString());
-        _report.setTime(timeInput.toString());
-        _report.setLocation(locationInput.toString());
+        _report.setDate(dateInput.getText().toString());
+        _report.setTime(timeInput.getText().toString());
+        _report.setLocation(locationInput.getText().toString());
     }
 
     @Override

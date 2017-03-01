@@ -26,4 +26,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/sourceReportList_backbutton_imageView"
+        android:id="@+id/report_list" />
+
 </RelativeLayout>

@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * Created by Mary Prouty on 2/26/17.
+ * Authors: Mary, Cat
  */
 
 public class WaterSourceReport {
@@ -21,7 +22,7 @@ public class WaterSourceReport {
     //No-arg constructor creates random number for report
 
     public WaterSourceReport() {
-        reportNum = rand.nextInt(10000);
+        reportNum = WaterReportList.waterSourceList.size();
     }
 
     //Getters and setters for report data
@@ -68,5 +69,15 @@ public class WaterSourceReport {
 
     public String getReportNumber() {
         return Integer.toString(reportNum);
+    }
+
+    public String toString() {
+        return reportNum + ": " +
+                getDate() +
+                " " + getTime() +
+                "; type: " + WaterType.waterTypeToString(this.getType()) +
+                " condition: " + WaterCondition.waterContiditionToString(this.getCondition())
+                + " @ " + getLocation() +
+                " via " + getReporter();
     }
 }

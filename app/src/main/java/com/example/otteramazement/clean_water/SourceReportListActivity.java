@@ -5,11 +5,14 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 /**
  * Created by Violet on 2/26/2017.
+ * Authors: Violet, Cat
  */
 
 public class SourceReportListActivity extends Activity {
@@ -44,6 +47,13 @@ public class SourceReportListActivity extends Activity {
             }
         });
 
+
+        //list view
+        ListView listView = (ListView) findViewById(R.id.report_list);
+        assert listView != null;
+        ArrayAdapter reportAdapter =
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, WaterReportList.waterSourceList);
+        listView.setAdapter(reportAdapter);
     }
 
     @Override
