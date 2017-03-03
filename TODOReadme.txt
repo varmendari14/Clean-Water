@@ -1,12 +1,11 @@
 NeedTODO:
-*M6 stuff:
-    *list length is report number CAT
-    *print list to view
-
 *M7 stuff:
     *link google maps stuff to app
     *GPS for google maps so users don't have to self insert lat and long EMMA
     *give option to click on map where you want to make report for EMMA
+    *Actual google maps implementation
+    *Source report image Link
+    *Make a blank image for clickin
 
 OptionalTODO:
 *server EMMA
@@ -17,9 +16,15 @@ OptionalTODO:
 *center registration spinner EMMA
 
 M7 DoneDone:
-*DONE google maps EMMA
+*DONE google maps class EMMA
+*DONE Map Screen UI, manifest
+*DONE Map Screen UI, manifest
+*DONE Availability UI, xml, manifest
 
 M6 DoneDone:
+*DONE M6 stuff:
+*DONE list length is report number CAT
+*DONE print list to view
 *DONE Make view of list of completed source reports EMMA
 *DONE Update water source reports to include type of water Violet
 *DONE Checking to make sure new users cannot take a previous user's name EMMA

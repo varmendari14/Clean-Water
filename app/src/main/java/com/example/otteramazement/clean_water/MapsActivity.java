@@ -1,7 +1,12 @@
 package com.example.otteramazement.clean_water;
 
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -22,6 +27,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
+
+        //setting fonts
+        TextView title = (TextView) findViewById(R.id.map_title);
+        title.setTypeface(font);
+
+
+        //button functionalities
+
+        ImageView backButton = (ImageView) findViewById(R.id.map_backbutton_imageView);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
+                startActivity(backIntent);
+            }
+        });
+
     }
 
 
