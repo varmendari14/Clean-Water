@@ -1,20 +1,19 @@
 NeedTODO:
 *M7 stuff:
     *link google maps stuff to app
-    *GPS for google maps so users don't have to self insert lat and long EMMA
-    *give option to click on map where you want to make report for EMMA
-    *Actual google maps implementation
     *Source report image Link
 
 OptionalTODO:
+*GPS for google maps so users don't have to self insert lat and long EMMA
+*give option to click on map where you want to make report for EMMA
 *server EMMA
 *Automatic Date and Time for source report
 *automatic user for source report
-*Profile Pic Implementation EMMA but might need help so sign up here if still interested
+*Profile Pic Implementation
 *Persistance of users
 
 M7 DoneDone:
-*DONE Make a blank image for clickin
+*DONE Make a blank image for clicking
 *DONE google maps class EMMA
 *DONE Map Screen UI, manifest
 *DONE Map Screen UI, manifest
