@@ -5,7 +5,6 @@ NeedTODO:
     *give option to click on map where you want to make report for EMMA
     *Actual google maps implementation
     *Source report image Link
-    *Make a blank image for clickin
 
 OptionalTODO:
 *server EMMA
@@ -13,9 +12,9 @@ OptionalTODO:
 *automatic user for source report
 *Profile Pic Implementation EMMA but might need help so sign up here if still interested
 *Persistance of users
-*center registration spinner EMMA
 
 M7 DoneDone:
+*DONE Make a blank image for clickin
 *DONE google maps class EMMA
 *DONE Map Screen UI, manifest
 *DONE Map Screen UI, manifest

@@ -43,7 +43,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/icon_holder"
+        android:src="@drawable/globe_icon_large"
         android:id="@+id/water_availability_mapholder_imageView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
