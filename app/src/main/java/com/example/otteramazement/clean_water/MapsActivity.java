@@ -19,8 +19,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+    UserProfile _user;
+
+    public static final String ARG_USER = "user";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        _user = (UserProfile) getIntent().getSerializableExtra(WaterAvailabilityActivity.ARG_USER);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
@@ -43,6 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
+                backIntent.putExtra(MapsActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
