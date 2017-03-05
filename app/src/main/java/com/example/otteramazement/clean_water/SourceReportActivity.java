@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.LinkedList;
+import java.text.DateFormat;
+import java.util.Date;
 
 /**
  * Created by Violet on 2/24/2017.
@@ -183,6 +185,9 @@ public class SourceReportActivity extends Activity {
 
         _report.setReporter(_user.getUsername());
         reporterInput.setText(_report.getReporter());
+        Date date = new Date();
+        dateInput.setText(DateFormat.getDateInstance().format(date));
+        timeInput.setText(DateFormat.getTimeInstance().format(date));
         reportNumberText.setText(_report.getReportNumber());
 
         ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
