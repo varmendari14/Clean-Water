@@ -1,6 +1,9 @@
 NeedTODO:
 *M7 stuff:
     *link google maps stuff to app
+        ^^ I'm fairly sure we just need to authorize it bc I get the error
+           "Authentication failed on the server...Authorization failure...
+           Ensure that 'Google Maps Android API v2' is enabled"
     *Source report image Link
 
 OptionalTODO:
