@@ -196,11 +196,17 @@ public class SourceReportActivity extends Activity {
             public void onClick(View v) {
                 updateReport();
                 if (_report.getCondition() != null && _report.getType() != null && _report.getTime().length() > 0
-                        && _report.getDate().length() > 0 && _report.getLocation().length() > 0) {
+                        && _report.getDate().length() > 0 && _report.getLocation().length() > 0
+                        && _report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
                     backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                     WaterReportList.waterSourceList.add(_report);
                     startActivity(backIntent);
+                } else if (!_report.getLocation().contains("-")) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(SourceReportActivity.this);
+                    alert.setTitle("Invalid Source Report");
+                    alert.setMessage("Please include a valid location like '25-30'");
+                    alert.show();
                 } else {
                     AlertDialog.Builder alert = new AlertDialog.Builder(SourceReportActivity.this);
                     alert.setTitle("Invalid Source Report");
