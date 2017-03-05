@@ -25,6 +25,9 @@ public class WaterReportActivity extends Activity {
         if (_user == null) {
             _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
         }
+        if (_user == null) {
+            _user = (UserProfile) getIntent().getSerializableExtra(WaterAvailabilityActivity.ARG_USER);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_report);
