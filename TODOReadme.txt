@@ -18,7 +18,9 @@ M7 DoneDone:
 *DONE Map Screen UI, manifest
 *DONE Availability UI, xml, manifest
 *DONE Automatic Date and Time for source report
-*DONE Edit profile still works
+*DONE Edit profile still works MARY
+*DONE Markers for each report location MARY
+*DONE Marker's title provides info MARY
 
 M6 DoneDone:
 *DONE M6 stuff:
