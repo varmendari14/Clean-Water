@@ -20,10 +20,7 @@ public class WaterAvailabilityActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
-        if (_user == null) {
-            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
-        }
+        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_availability);
@@ -42,7 +39,7 @@ public class WaterAvailabilityActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
-                backIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                backIntent.putExtra(WaterAvailabilityActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -51,8 +48,9 @@ public class WaterAvailabilityActivity extends Activity {
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), MapsActivity.class);
-                startActivity(sourceIntent);
+                Intent mapIntent = new Intent(getBaseContext(), MapsActivity.class);
+                mapIntent.putExtra(WaterAvailabilityActivity.ARG_USER, _user);
+                startActivity(mapIntent);
             }
         });
 
