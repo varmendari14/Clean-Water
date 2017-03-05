@@ -9,6 +9,6 @@ import java.util.List;
 
 public class WaterReportList {
     static List waterAvailabilityList = new ArrayList();
-    static List waterSourceList = new ArrayList();
+    static List<WaterSourceReport> waterSourceList = new ArrayList();
     static List waterPurityList = new ArrayList();
 }
