@@ -7,7 +7,6 @@ OptionalTODO:
 *GPS for google maps so users don't have to self insert lat and long EMMA
 *give option to click on map where you want to make report for EMMA
 *server EMMA
-*Automatic Date and Time for source report
 *automatic user for source report
 *Profile Pic Implementation
 *Persistance of users
@@ -18,6 +17,7 @@ M7 DoneDone:
 *DONE Map Screen UI, manifest
 *DONE Map Screen UI, manifest
 *DONE Availability UI, xml, manifest
+*DONE Automatic Date and Time for source report
 
 M6 DoneDone:
 *DONE M6 stuff:
