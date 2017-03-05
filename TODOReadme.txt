@@ -18,6 +18,7 @@ M7 DoneDone:
 *DONE Map Screen UI, manifest
 *DONE Availability UI, xml, manifest
 *DONE Automatic Date and Time for source report
+*DONE Edit profile still works
 
 M6 DoneDone:
 *DONE M6 stuff:
