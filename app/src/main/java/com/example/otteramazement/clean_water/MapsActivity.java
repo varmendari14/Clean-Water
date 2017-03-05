@@ -15,6 +15,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.List;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -35,12 +37,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+
         Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
         TextView title = (TextView) findViewById(R.id.map_title);
         title.setTypeface(font);
+
 
 
         //button functionalities
@@ -75,5 +79,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+        // Add a marker for each water source report
+        List<WaterSourceReport> reportList = WaterReportList.waterSourceList;
+        for (int i = 0; i < reportList.size(); i++) {
+            String latlon = reportList.get(i).getLocation();
+            String[] fields = latlon.split("-");
+            int lat = Integer.parseInt(fields[0]);
+            int lon = Integer.parseInt(fields[1]);
+            LatLng reportLocation = new LatLng(lat, lon);
+            mMap.addMarker(new MarkerOptions().position(reportLocation).title(reportList.toString()));
+            mMap.moveCamera(CameraUpdateFactory.newLatLng(reportLocation));
+        }
     }
 }
