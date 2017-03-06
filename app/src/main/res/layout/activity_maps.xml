@@ -46,10 +46,11 @@ tools:context="com.example.otteramazement.clean_water.MapsActivity">
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_height="400dp"
         tools:context="com.example.otteramazement.clean_water.MapsActivity"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/map_backbutton_imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
 
 
 </RelativeLayout>
