@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
+//import android.support.design.widget.FloatingActionButton;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -20,6 +20,9 @@ import android.widget.TextView;
  * Authors: Mary, Violet
  */
 
+/**
+ * This activity controls the app
+ */
 public class AppActivity extends Activity {
 
     UserProfile _user;
