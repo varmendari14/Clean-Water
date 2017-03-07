@@ -73,11 +73,18 @@ public class WaterSourceReport {
 
     public String toString() {
         return reportNum + ": " +
-                getDate() +
-                " " + getTime() +
-                "; type: " + WaterType.waterTypeToString(this.getType()) +
-                " condition: " + WaterCondition.waterContiditionToString(this.getCondition())
-                + " @ " + getLocation() +
-                " via " + getReporter();
+                date +
+                "\n" + time +
+                "\nType: " + WaterType.waterTypeToString(type) +
+                "\nCondition: " + WaterCondition.waterContiditionToString(condition)
+                + "\n@Location: " + location +
+                "\nVia: " + reporter;
+    }
+
+    public String mapMarkerToString() {
+        return reportNum + ": " +
+                "\nType: " + WaterType.waterTypeToString(type) +
+                "\nCondition: " + WaterCondition.waterContiditionToString(condition) +
+                "\nVia: " + reporter;
     }
 }
