@@ -22,7 +22,7 @@ public class PurityReportActivity extends Activity {
 
     UserProfile _user;
     PurityReport _report = new PurityReport();
-    WaterCondition condition;
+    WaterPurityCondition condition;
 
     public static final String ARG_USER = "user";
 
@@ -100,7 +100,7 @@ public class PurityReportActivity extends Activity {
         safeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                condition = WaterCondition.POTABLE;
+                condition = WaterPurityCondition.SAFE;
             }
         });
 
@@ -108,7 +108,7 @@ public class PurityReportActivity extends Activity {
         treatImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                condition = WaterCondition.POTABLE;
+                condition = WaterPurityCondition.TREATABLE;
             }
         });
 
@@ -116,7 +116,7 @@ public class PurityReportActivity extends Activity {
         unsafeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                condition = WaterCondition.POTABLE;
+                condition = WaterPurityCondition.UNSAFE;
             }
         });
 
