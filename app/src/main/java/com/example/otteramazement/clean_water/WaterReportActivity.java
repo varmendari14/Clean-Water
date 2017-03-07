@@ -13,6 +13,9 @@ import android.widget.TextView;
  * Authors: Violet, Mary
  */
 
+/**
+ * controls creation of water reports
+ */
 public class WaterReportActivity extends Activity {
 
     UserProfile _user;
