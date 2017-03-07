@@ -9,6 +9,7 @@ NeedTODO:
     *Save should record report in the model
     *Manager should be able to view list of quality reports
     *Only workers and managers can create purity reports
+    *Write javadocs
 
 
 OptionalTODO:
