@@ -134,6 +134,36 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".PurityReportChoiceActivity"
+            android:label="Clean-Water">
+            android:theme="@android:style/Full_Background"
+            <intent-filter>
+                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTCHOICEACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PurityReportActivity"
+            android:label="Clean-Water">
+            android:theme="@android:style/Full_Background"
+            <intent-filter>
+                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PurityReportListActivity"
+            android:label="Clean-Water">
+            android:theme="@android:style/Full_Background"
+            <intent-filter>
+                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTLISTEACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <!--
      The API key for Google Maps-based APIs is defined as a string resource.
      (See the file "res/values/google_maps_api.xml").

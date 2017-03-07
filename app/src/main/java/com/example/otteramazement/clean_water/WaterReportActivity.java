@@ -68,6 +68,16 @@ public class WaterReportActivity extends Activity {
             }
         });
 
+        ImageView purityButtonImage = (ImageView) findViewById(R.id.waterReport_purityReport_imageView);
+        purityButtonImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sourceIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
+                sourceIntent.putExtra(WaterReportActivity.ARG_USER, _user);
+                startActivity(sourceIntent);
+            }
+        });
+
         ImageView backButton = (ImageView) findViewById(R.id.waterReport_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

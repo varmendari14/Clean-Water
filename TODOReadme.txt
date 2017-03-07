@@ -10,6 +10,8 @@ NeedTODO:
     *Manager should be able to view list of quality reports
     *Only workers and managers can create purity reports
     *Write javadocs
+    **PPM AND OTHER THING HAVE NOT BEEN ADDED ANYWHERE BUT XML
+    **The ENUM for the purity report is not right needs to be changed to the proper waterPurityCondition ENUM
 
 
 OptionalTODO:
