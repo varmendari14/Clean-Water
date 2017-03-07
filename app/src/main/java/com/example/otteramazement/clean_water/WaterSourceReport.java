@@ -6,6 +6,9 @@ package com.example.otteramazement.clean_water;
  * Authors: Mary, Cat
  */
 
+/**
+ * represents source reports
+ */
 public class WaterSourceReport {
 
     private int reportNum;
@@ -25,52 +28,108 @@ public class WaterSourceReport {
 
     //Getters and setters for report data
 
+    /**
+     * set type of water
+     * @param aType type of water
+     */
     public void setType(WaterType aType) { type = aType; }
 
+    /**
+     * getter for type of water
+     * @return watertype
+     */
     public WaterType getType() {return type;}
 
+    /**
+     * sets condition of water
+     * @param aCondition condition of water
+     */
     public void setCondition(WaterCondition aCondition) { condition = aCondition; }
 
+    /**
+     * getter for condition of water
+     * @return condition of water
+     */
     public WaterCondition getCondition() {return condition;}
 
+    /**
+     * sets date of report
+     * @param aDate date of report being made
+     */
     public void setDate(String aDate) {
         date = aDate;
     }
 
+    /**
+     * getter for date report was made
+     * @return date report was made
+     */
     public String getDate() {
         return date;
     }
 
+    /**
+     * set time report was made
+     * @param aTime time report was made
+     */
     public void setTime(String aTime) {
         time = aTime;
     }
 
+    /**
+     * getter for time report was made
+     * @return time report was made
+     */
     public String getTime() {
         return time;
     }
 
+    /**
+     * sets person who made report
+     * @param userName person making report
+     */
     public void setReporter(String userName) {
         reporter = userName;
     }
 
+    /**
+     * getter for who made report
+     * @return who made report
+     */
     public String getReporter() {
         return reporter;
     }
 
+    /**
+     * sets location of report
+     * @param loc location person making report is at
+     */
     public void setLocation(String loc) {
         location = loc;
     }
 
+    /**
+     * getter for location of report
+     * @return location report made at
+     */
     public String getLocation() {
         return location;
     }
 
+    /**
+     * getter for report number
+     * @return next numerically ordered number
+     */
     public String getReportNumber() {
         return Integer.toString(reportNum);
     }
 
     // ***
 
+    /**
+     * to string to print report neatly onto list
+     * @return string of report
+     */
     public String toString() {
         return reportNum + ": " +
                 date +
@@ -81,6 +140,10 @@ public class WaterSourceReport {
                 "\nVia: " + reporter;
     }
 
+    /**
+     * to string for map (instead of for list)
+     * @return string of report
+     */
     public String mapMarkerToString() {
         return reportNum + ": " +
                 "\nType: " + WaterType.waterTypeToString(type) +
