@@ -15,6 +15,9 @@ import android.widget.TextView;
  * Authors: Violet, Cat
  */
 
+/**
+ * This class controls the list to view the previously made source reports
+ */
 public class SourceReportListActivity extends Activity {
 
 

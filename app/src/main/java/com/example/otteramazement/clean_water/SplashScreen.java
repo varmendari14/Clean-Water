@@ -7,6 +7,9 @@ import android.os.Bundle;
  * Created by Violet on 2/11/2017.
  */
 
+/**
+ * splash screen that occurs when you launch the app
+ */
 public class SplashScreen extends Activity{
 
     /** Duration of wait **/

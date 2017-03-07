@@ -11,6 +11,20 @@ public class Worker extends UserProfile {
         super(profileType, name, username, password);
     }
 
+    /**
+     * constructor for worker
+     * @param profileType manager
+     * @param name name of user
+     * @param username username of user
+     * @param password password
+     * @param email email
+     * @param address street address
+     * @param city city address
+     * @param state state
+     * @param country country
+     * @param phoneNumber phone number
+     * @param title dr, mr, mrs, etc
+     */
     public Worker(ProfileType profileType, String name, String username, String password,
                  String email, String address, String city, String state, String country,
                  String phoneNumber, String title) {

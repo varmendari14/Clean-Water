@@ -8,9 +8,12 @@ import java.io.Serializable;
 /**
  * Represents a User's profile.
  * Created by Cat on 2/19/2017.
- * Authors: Cat, Mary Prouty, Violet Armendariz
+ * Authors: Cat, Mary Prouty, Violet Armendariz, Emma
  */
 
+/**
+ * represents user
+ */
 public class UserProfile implements Serializable {
     private ProfileType profileType;
     private String name;

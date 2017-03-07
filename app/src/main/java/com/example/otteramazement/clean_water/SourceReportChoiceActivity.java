@@ -12,6 +12,9 @@ import android.widget.TextView;
  * Created by Violet on 2/26/2017.
  */
 
+/**
+ * a way to view the list for source report versus make a new one
+ */
 public class SourceReportChoiceActivity extends Activity {
 
     UserProfile _user;

@@ -12,6 +12,9 @@ import android.widget.TextView;
  * Created by Violet on 3/3/2017.
  */
 
+/**
+ * controls creation of water availability report
+ */
 public class WaterAvailabilityActivity extends Activity {
 
     UserProfile _user;

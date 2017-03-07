@@ -23,6 +23,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * Created by Violet on 3/6/2017.
  */
 
+/**
+ * This class makes it so the location can be recorded from the user
+ */
 public class LocationMapInputActivity extends FragmentActivity {
 
         private GoogleMap mMap;

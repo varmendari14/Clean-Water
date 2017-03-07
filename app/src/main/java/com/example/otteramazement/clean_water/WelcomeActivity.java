@@ -18,6 +18,9 @@ import android.widget.ImageView;
  * Authors: Violet, Mary
  */
 
+/**
+ * controls activity that helps sign or register a user up/log them in
+ */
 public class WelcomeActivity extends Activity{
 
     @Override
