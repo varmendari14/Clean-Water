@@ -49,7 +49,8 @@ tools:context="com.example.otteramazement.clean_water.MapsActivity">
         android:layout_height="400dp"
         tools:context="com.example.otteramazement.clean_water.MapsActivity"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/map_backbutton_imageView" />
 
 
 </RelativeLayout>
