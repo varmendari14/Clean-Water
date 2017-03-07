@@ -18,6 +18,9 @@ import java.util.Date;
  * Authors: Violet, Mary
  */
 
+/**
+ * THis class controls the creation of source reports
+ */
 public class SourceReportActivity extends Activity {
 
     UserProfile _user;
@@ -34,7 +37,10 @@ public class SourceReportActivity extends Activity {
     private EditText timeInput;
 
 
-
+    /**
+     * sets up all needed fields of source report
+     * @param savedInstanceState instance state at start of creation
+     */
     protected void onCreate(Bundle savedInstanceState) {
 
         _user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
