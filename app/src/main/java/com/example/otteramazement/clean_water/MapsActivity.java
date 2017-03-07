@@ -2,16 +2,20 @@ package com.example.otteramazement.clean_water;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -20,6 +24,16 @@ import java.util.List;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+
+    private GoogleApiClient mGoogleApiClient;
+    private Location mCurrentLocation;
+
+    private final int[] MAP_TYPES = { GoogleMap.MAP_TYPE_SATELLITE,
+            GoogleMap.MAP_TYPE_NORMAL,
+            GoogleMap.MAP_TYPE_HYBRID,
+            GoogleMap.MAP_TYPE_TERRAIN,
+            GoogleMap.MAP_TYPE_NONE };
+    private int curMapTypeIndex = 0;
 
     UserProfile _user;
 
@@ -58,6 +72,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(backIntent);
             }
         });
+
+
 
     }
 

@@ -10,7 +10,6 @@ OptionalTODO:
 *GPS for google maps so users don't have to self insert lat and long EMMA
 *give option to click on map where you want to make report for EMMA
 *server EMMA
-*automatic user for source report
 *Profile Pic Implementation
 *Persistance of users
 
@@ -27,6 +26,7 @@ M7 DoneDone:
 
 M6 DoneDone:
 *DONE M6 stuff:
+*DONE automatic user for source report
 *DONE list length is report number CAT
 *DONE print list to view
 *DONE Make view of list of completed source reports EMMA
