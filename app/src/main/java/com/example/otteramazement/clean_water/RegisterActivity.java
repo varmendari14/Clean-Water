@@ -22,6 +22,9 @@ import java.util.List;
  * Authors: Violet, Avery, Mary, Cat, Emma
  */
 
+/**
+ * This class controls the registration of new users
+ */
 public class RegisterActivity extends Activity {
 
     private EditText nameInput;
@@ -152,6 +155,10 @@ public class RegisterActivity extends Activity {
         }
     }
 
+    /**
+     * This is a getter for the hashmap that holds all of the users info
+     * @return hash map of users and passwords
+     */
     public static HashMap<String,UserProfile> getUserMap() {
         return OurHashMap.userMap;
     }
