@@ -59,6 +59,18 @@
         android:layout_marginTop="47dp" />
 
     <TextView
+        android:text="New Source Report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sourceReportChoice_newSourceReport"
+        android:layout_marginBottom="24dp"
+        android:textColor="@android:color/background_light"
+        android:alpha=".75"
+        android:textSize="18sp"
+        android:layout_above="@+id/sourceReportChoice_listReports_imageView"
+        android:layout_alignStart="@+id/sourceReportChoice_reportLists" />
+
+    <TextView
         android:text="Source Report Lists"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,20 +80,8 @@
         android:textSize="18sp"
         android:textColor="#ffffff"
         android:alpha=".75"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="22dp"
         android:layout_alignBottom="@+id/sourceReportChoice_listReports_imageView"
         android:layout_alignEnd="@+id/sourceReportChoice_backbutton_imageView" />
-
-    <TextView
-        android:text="New Source Report"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sourceReportChoice_newSourceReport"
-        android:layout_marginBottom="31dp"
-        android:textColor="@android:color/background_light"
-        android:layout_above="@+id/sourceReportChoice_listReports_imageView"
-        android:layout_alignStart="@+id/sourceReportChoice_reportLists"
-        android:alpha=".75"
-        android:textSize="18sp" />
 
 </RelativeLayout>
