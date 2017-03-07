@@ -16,6 +16,9 @@ import android.widget.TextView;
  * Authors: Violet, Mary
  */
 
+/**
+ * This class controls the profile creating and editing
+ */
 public class ProfileActivity extends Activity{
 
     UserProfile _user;
