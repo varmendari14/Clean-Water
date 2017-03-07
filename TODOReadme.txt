@@ -1,10 +1,15 @@
 NeedTODO:
 *M7 stuff:
-    *link google maps stuff to app
-        ^^ I'm fairly sure we just need to authorize it bc I get the error
-           "Authentication failed on the server...Authorization failure...
-           Ensure that 'Google Maps Android API v2' is enabled"
     *Source report image Link
+*M8 stuff:
+    *Change registration to instantiate user/worker/manager/admin class
+    *Way to navigate to water purity report screen
+    *Ensure screen requests all required info - source report info + ppm stuff
+    *Cancel screen should not save data
+    *Save should record report in the model
+    *Manager should be able to view list of quality reports
+    *Only workers and managers can create purity reports
+
 
 OptionalTODO:
 *GPS for google maps so users don't have to self insert lat and long EMMA
@@ -23,6 +28,7 @@ M7 DoneDone:
 *DONE Edit profile still works MARY
 *DONE Markers for each report location MARY
 *DONE Marker's title provides info MARY
+*DONE Link google maps stuff to app
 
 M6 DoneDone:
 *DONE M6 stuff:
