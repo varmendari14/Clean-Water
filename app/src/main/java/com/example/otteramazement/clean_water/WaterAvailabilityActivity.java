@@ -17,13 +17,8 @@ import android.widget.TextView;
  */
 public class WaterAvailabilityActivity extends Activity {
 
-    UserProfile _user;
-
-    public static final String ARG_USER = "user";
-
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_availability);
@@ -42,7 +37,6 @@ public class WaterAvailabilityActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
-                backIntent.putExtra(WaterAvailabilityActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -52,7 +46,6 @@ public class WaterAvailabilityActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent mapIntent = new Intent(getBaseContext(), MapsActivity.class);
-                mapIntent.putExtra(WaterAvailabilityActivity.ARG_USER, _user);
                 startActivity(mapIntent);
             }
         });
