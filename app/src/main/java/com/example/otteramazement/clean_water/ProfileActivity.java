@@ -21,9 +21,8 @@ import android.widget.TextView;
  */
 public class ProfileActivity extends Activity{
 
-    UserProfile _user;
-
-    public static final String ARG_USER = "user";
+    UserProfile _user = CurrentUser.currentUser.get(0);
+            //OurHashMap.userMap.get(CurrentUser.currentUser.get(0).getUsername());
 
     private EditText nameInput;
     private EditText titleInput;
@@ -85,10 +84,10 @@ public class ProfileActivity extends Activity{
         //Done Setting Fonts
 
         //Setting Name and other various inputs provided by user
-        _user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
-        if (_user == null) {
-            _user = (UserProfile) getIntent().getSerializableExtra(RegisterActivity.ARG_USER);
-        }
+        //_user = (UserProfile) getIntent().getSerializableExtra(AppActivity.ARG_USER);
+        //if (_user == null) {
+        //    _user = (UserProfile) getIntent().getSerializableExtra(RegisterActivity.ARG_USER);
+        //}
         nameInput.setText(_user.getName());
         streetAddressInput.setText(_user.getAddress());
         cityInput.setText(_user.getCity());
@@ -97,7 +96,7 @@ public class ProfileActivity extends Activity{
         countryInput.setText(_user.getCountry());
         emailInput.setText(_user.getEmail());
         titleInput.setText(_user.getTitle());
-
+        RegisterActivity.getUserMap().put(_user.getUsername(), _user);
 
 
         //Setting Button Functions
@@ -115,7 +114,7 @@ public class ProfileActivity extends Activity{
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), AppActivity.class);
-                backIntent.putExtra(ProfileActivity.ARG_USER, _user);
+                //backIntent.putExtra(ProfileActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -133,7 +132,7 @@ public class ProfileActivity extends Activity{
         _user.setTitle(titleInput.getText().toString());
         RegisterActivity.getUserMap().put(_user.getUsername(), _user);
         Intent profIntent = new Intent(getBaseContext(), AppActivity.class);
-        profIntent.putExtra(ProfileActivity.ARG_USER, _user);
+        //profIntent.putExtra(ProfileActivity.ARG_USER, _user);
         startActivity(profIntent);
     }
 
