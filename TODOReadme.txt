@@ -3,14 +3,9 @@ NeedTODO:
     *Source report image Link
 *M8 stuff:
     *Change registration to instantiate user/worker/manager/admin class
-    *Way to navigate to water purity report screen
-    *Ensure screen requests all required info - source report info + ppm stuff
-    *Cancel screen should not save data
-    *Save should record report in the model
     *Manager should be able to view list of quality reports
     *Only workers and managers can create purity reports
     *Write javadocs
-    **PPM AND OTHER THING HAVE NOT BEEN ADDED ANYWHERE BUT XML
     **The ENUM for the purity report is not right needs to be changed to the proper waterPurityCondition ENUM
 
 
@@ -20,6 +15,15 @@ OptionalTODO:
 *server EMMA
 *Profile Pic Implementation
 *Persistance of users
+
+M8 DoneDone:
+*DONE Create xml for purity report activity
+*DONE Create xml for purity report choice activity
+*DONE Create xml for purity report list activity
+*DONE Ensure screen requests all required info
+*DONE Cancel screen does not save data
+*DONE Save records report in the model
+*DONE PPM added to purity report
 
 M7 DoneDone:
 *DONE Make a blank image for clicking
