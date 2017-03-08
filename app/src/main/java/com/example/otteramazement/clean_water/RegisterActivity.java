@@ -35,8 +35,6 @@ public class RegisterActivity extends Activity {
 
     //private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
-    public static final String ARG_USER = "user";
-
 
     private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
             ProfileType.MANAGER, ProfileType.ADMIN);
@@ -128,9 +126,10 @@ public class RegisterActivity extends Activity {
                     usernameInput.getText().toString(),
                     passwordInput.getText().toString());
 
+            CurrentUser.currentUser.add(newUser);
             OurHashMap.userMap.put(usernameInput.getText().toString(), newUser);
             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
-            intent.putExtra(RegisterActivity.ARG_USER, newUser);
+            //intent.putExtra(RegisterActivity.ARG_USER, newUser);
             startActivity(intent);
 
         } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
