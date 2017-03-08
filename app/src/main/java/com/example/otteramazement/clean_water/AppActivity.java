@@ -25,19 +25,10 @@ import android.widget.TextView;
  */
 public class AppActivity extends Activity {
 
-    UserProfile _user;
-
-    public static final String ARG_USER = "user";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_app);
-
-        _user = (UserProfile) getIntent().getSerializableExtra(ProfileActivity.ARG_USER);
-        if (_user == null) {
-            _user = (UserProfile) getIntent().getSerializableExtra(LoginActivity.ARG_USER);
-        }
 
         //Font Set up
 
@@ -60,6 +51,7 @@ public class AppActivity extends Activity {
         logoutButtonPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CurrentUser.currentUser.remove();
                 startActivity(new Intent(getBaseContext(), WelcomeActivity.class));
             }
         });
@@ -69,7 +61,6 @@ public class AppActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent updateIntent = new Intent(getBaseContext(), ProfileActivity.class);
-                updateIntent.putExtra(AppActivity.ARG_USER, _user);
                 startActivity(updateIntent);
             }
         });
@@ -79,7 +70,6 @@ public class AppActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent reportIntent = new Intent(getBaseContext(), WaterReportActivity.class);
-                reportIntent.putExtra(AppActivity.ARG_USER, _user);
                 startActivity(reportIntent);
             }
         });
