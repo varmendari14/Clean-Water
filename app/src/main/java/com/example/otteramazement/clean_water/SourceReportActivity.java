@@ -23,12 +23,10 @@ import java.util.Date;
  */
 public class SourceReportActivity extends Activity {
 
-    UserProfile _user;
     WaterSourceReport _report = new WaterSourceReport();
     WaterType type;
     WaterCondition condition;
 
-    public static final String ARG_USER = "user";
 
     private EditText dateInput;
     private EditText reporterInput;
@@ -43,7 +41,6 @@ public class SourceReportActivity extends Activity {
      */
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
@@ -104,7 +101,6 @@ public class SourceReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -189,7 +185,7 @@ public class SourceReportActivity extends Activity {
             }
         });
 
-        _report.setReporter(_user.getUsername());
+        _report.setReporter(CurrentUser.currentUser.get(0).getName());
         reporterInput.setText(_report.getReporter());
         Date date = new Date();
         dateInput.setText(DateFormat.getDateInstance().format(date));
@@ -205,7 +201,6 @@ public class SourceReportActivity extends Activity {
                         && _report.getDate().length() > 0 && _report.getLocation().length() > 0
                         && _report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                    backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                     WaterReportList.waterSourceList.add(_report);
                     startActivity(backIntent);
                 } else if (!_report.getLocation().contains("-")) {
