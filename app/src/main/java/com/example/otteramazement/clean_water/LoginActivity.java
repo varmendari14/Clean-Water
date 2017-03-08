@@ -54,7 +54,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    public static final String ARG_USER = "user";
 
     /**
      * A HashMap of Credentials containing known user names and passwords.
@@ -222,9 +221,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         } else {
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
+            CurrentUser.currentUser.add(credentials.get(email));
             Intent logIntent = new Intent(getBaseContext(), AppActivity.class);
-            logIntent.putExtra(LoginActivity.ARG_USER, credentials.get(email));
-            System.out.println(credentials.get(email).getAddress());
+            //logIntent.putExtra(LoginActivity.ARG_USER, credentials.get(email));
+            //System.out.println(credentials.get(email).getAddress());
             startActivity(logIntent);
         }
     }
