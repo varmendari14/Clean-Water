@@ -145,9 +145,7 @@ public class WaterSourceReport {
      * @return string of report
      */
     public String mapMarkerToString() {
-        return reportNum + ": " +
-                "\nType: " + WaterType.waterTypeToString(type) +
-                "\nCondition: " + WaterCondition.waterContiditionToString(condition) +
-                "\nVia: " + reporter;
+        return "Type: " + WaterType.waterTypeToString(type) +
+                "Condition: " + WaterCondition.waterContiditionToString(condition);
     }
 }
