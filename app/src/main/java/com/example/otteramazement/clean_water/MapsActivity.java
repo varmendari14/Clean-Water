@@ -107,7 +107,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             int lat = Integer.parseInt(fields[0]);
             int lon = Integer.parseInt(fields[1]);
             LatLng reportLocation = new LatLng(lat, lon);
-            mMap.addMarker(new MarkerOptions().position(reportLocation).title(reportList.toString()));
+
+            MarkerOptions myMarker = new MarkerOptions();
+            myMarker.position(reportLocation);
+            myMarker.title("Reported by " + reportList.get(i).getReporter());
+            myMarker.snippet(reportList.get(i).mapMarkerToString());
+            mMap.addMarker(myMarker);
             mMap.moveCamera(CameraUpdateFactory.newLatLng(reportLocation));
         }
     }
