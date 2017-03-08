@@ -20,11 +20,11 @@ import java.util.Date;
 
 public class PurityReportActivity extends Activity {
 
-    UserProfile _user;
+    //UserProfile _user;
     PurityReport _report = new PurityReport();
     WaterPurityCondition condition;
 
-    public static final String ARG_USER = "user";
+    //public static final String ARG_USER = "user";
 
     private EditText dateInput;
     private EditText reporterInput;
@@ -36,7 +36,7 @@ public class PurityReportActivity extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
+        //_user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purity_report);
@@ -91,7 +91,7 @@ public class PurityReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
-                backIntent.putExtra(PurityReportActivity.ARG_USER, _user);
+                //backIntent.putExtra(PurityReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -120,7 +120,7 @@ public class PurityReportActivity extends Activity {
             }
         });
 
-        _report.setReporter(_user.getUsername());
+        _report.setReporter(CurrentUser.currentUser.get(0).getName());
         reporterInput.setText(_report.getReporter());
         Date date = new Date();
         dateInput.setText(DateFormat.getDateInstance().format(date));
@@ -136,7 +136,7 @@ public class PurityReportActivity extends Activity {
                         && _report.getDate().length() > 0 && _report.getLocation().length() > 0
                         && _report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                    backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
+                    //backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
                     WaterReportList.waterPurityList.add(_report);
                     startActivity(backIntent);
                 } else if (!_report.getLocation().contains("-")) {
