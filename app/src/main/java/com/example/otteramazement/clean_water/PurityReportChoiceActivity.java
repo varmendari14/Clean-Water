@@ -14,19 +14,19 @@ import android.widget.TextView;
 
 public class PurityReportChoiceActivity extends Activity {
 
-    UserProfile _user;
+    //UserProfile _user;
 
-    public static final String ARG_USER = "user";
+    //public static final String ARG_USER = "user";
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        _user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
-        if (_user == null) {
-            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
-        }
-        if (_user == null) {
-            _user = (UserProfile) getIntent().getSerializableExtra(SourceReportListActivity.ARG_USER);
-        }
+        //_user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);
+        //if (_user == null) {
+        //    _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
+        //}
+        //if (_user == null) {
+        //    _user = (UserProfile) getIntent().getSerializableExtra(SourceReportListActivity.ARG_USER);
+        //}
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purity_report_choice);
@@ -50,7 +50,7 @@ public class PurityReportChoiceActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent reportIntent = new Intent(getBaseContext(), PurityReportActivity.class);
-                reportIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
+                //reportIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
                 startActivity(reportIntent);
             }
         });
@@ -60,7 +60,7 @@ public class PurityReportChoiceActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent listIntent = new Intent(getBaseContext(), PurityReportListActivity.class);
-                listIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
+                //listIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
                 startActivity(listIntent);
             }
         });
@@ -70,7 +70,7 @@ public class PurityReportChoiceActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), WaterReportActivity.class);
-                backIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
+                //backIntent.putExtra(PurityReportChoiceActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
