@@ -20,23 +20,21 @@ import java.util.Date;
 
 public class PurityReportActivity extends Activity {
 
-    //UserProfile _user;
     PurityReport _report = new PurityReport();
     WaterPurityCondition condition;
-
-    //public static final String ARG_USER = "user";
 
     private EditText dateInput;
     private EditText reporterInput;
     private EditText locationInput;
     private TextView reportNumberText;
     private EditText timeInput;
+    private EditText virusInput;
+    private EditText contInput;
 
 
 
     protected void onCreate(Bundle savedInstanceState) {
 
-        //_user = (UserProfile) getIntent().getSerializableExtra(SourceReportChoiceActivity.ARG_USER);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purity_report);
@@ -76,11 +74,11 @@ public class PurityReportActivity extends Activity {
         unsafePrompt.setTypeface(font);
         TextView virusPrompt = (TextView) findViewById(R.id.purityReport_virus_textView);
         virusPrompt.setTypeface(font);
-        EditText virusInput = (EditText) findViewById(R.id.purityReport_virus_input);
+        virusInput = (EditText) findViewById(R.id.purityReport_virus_input);
         virusInput.setTypeface(font1);
         TextView contPrompt = (TextView) findViewById(R.id.purityReport_cont_textView);
         contPrompt.setTypeface(font);
-        EditText contInput = (EditText) findViewById(R.id.purityReport_cont_input);
+        contInput = (EditText) findViewById(R.id.purityReport_cont_input);
         contInput.setTypeface(font1);
         TextView acceptButton = (TextView) findViewById(R.id.purityReport_acceptbutton_tetView);
         acceptButton.setTypeface(font);
@@ -91,7 +89,6 @@ public class PurityReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
-                //backIntent.putExtra(PurityReportActivity.ARG_USER, _user);
                 startActivity(backIntent);
             }
         });
@@ -134,9 +131,9 @@ public class PurityReportActivity extends Activity {
                 updateReport();
                 if (_report.getCondition() != null && _report.getTime().length() > 0
                         && _report.getDate().length() > 0 && _report.getLocation().length() > 0
-                        && _report.getLocation().contains("-")) {
-                    Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
-                    //backIntent.putExtra(SourceReportActivity.ARG_USER, _user);
+                        && _report.getVirus().length() > 0 && _report.getContaminant().length() > 0
+                        &&_report.getLocation().contains("-")) {
+                    Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
                     startActivity(backIntent);
                 } else if (!_report.getLocation().contains("-")) {
@@ -165,6 +162,8 @@ public class PurityReportActivity extends Activity {
         _report.setDate(dateInput.getText().toString());
         _report.setTime(timeInput.getText().toString());
         _report.setLocation(locationInput.getText().toString());
+        _report.setVirus(virusInput.getText().toString());
+        _report.setContaminant(contInput.getText().toString());
     }
 
     @Override
