@@ -6,7 +6,6 @@ NeedTODO:
     *Manager should be able to view list of quality reports
     *Only workers and managers can create purity reports
     *Write javadocs
-    **The ENUM for the purity report is not right needs to be changed to the proper waterPurityCondition ENUM
 
 
 OptionalTODO:
@@ -17,6 +16,7 @@ OptionalTODO:
 *Persistance of users
 
 M8 DoneDone:
+**DONE The ENUM for the purity report is not right needs to be changed to the proper waterPurityCondition ENUM
 *DONE Create xml for purity report activity
 *DONE Create xml for purity report choice activity
 *DONE Create xml for purity report list activity
