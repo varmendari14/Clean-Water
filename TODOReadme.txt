@@ -2,20 +2,20 @@ NeedTODO:
 *M7 stuff:
     *Source report image Link
 *M8 stuff:
-    *Change registration to instantiate user/worker/manager/admin class
     *Manager should be able to view list of quality reports
     *Only workers and managers can create purity reports
     *Write javadocs
 
 
 OptionalTODO:
-*GPS for google maps so users don't have to self insert lat and long EMMA
-*give option to click on map where you want to make report for EMMA
-*server EMMA
+*GPS for google maps so users don't have to self insert lat and long
+*give option to click on map where you want to make report for
+*server
 *Profile Pic Implementation
 *Persistance of users
 
 M8 DoneDone:
+*DONE Change registration to instantiate user/worker/manager/admin class EMMA
 **DONE The ENUM for the purity report is not right needs to be changed to the proper waterPurityCondition ENUM
 *DONE Create xml for purity report activity
 *DONE Create xml for purity report choice activity
