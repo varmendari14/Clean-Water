@@ -121,10 +121,29 @@ public class RegisterActivity extends Activity {
                 && nameInput.getText().toString().length() >= 1
                 && !OurHashMap.userMap.containsKey(usernameInput.getText().toString())) {
 
-            UserProfile newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
-                    nameInput.getText().toString(),
-                    usernameInput.getText().toString(),
-                    passwordInput.getText().toString());
+            ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
+            UserProfile newUser;
+            if (type.equals(ProfileType.MANAGER)) {
+                        newUser = new Manager((ProfileType) typeSpinner.getSelectedItem(),
+                        nameInput.getText().toString(),
+                        usernameInput.getText().toString(),
+                        passwordInput.getText().toString());
+            } else if (type.equals(ProfileType.ADMIN)) {
+                       newUser = new Admin((ProfileType) typeSpinner.getSelectedItem(),
+                        nameInput.getText().toString(),
+                        usernameInput.getText().toString(),
+                        passwordInput.getText().toString());
+            } else if (type.equals(ProfileType.WORKER)) {
+                        newUser = new Worker((ProfileType) typeSpinner.getSelectedItem(),
+                        nameInput.getText().toString(),
+                        usernameInput.getText().toString(),
+                        passwordInput.getText().toString());
+            } else {
+                        newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
+                        nameInput.getText().toString(),
+                        usernameInput.getText().toString(),
+                        passwordInput.getText().toString());
+            }
 
             CurrentUser.currentUser.add(newUser);
             OurHashMap.userMap.put(usernameInput.getText().toString(), newUser);
