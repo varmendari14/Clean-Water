@@ -35,7 +35,7 @@ public class UserProfile implements Serializable {
      * @param password      Password
      */
     public UserProfile(ProfileType profileType, String name, String username, String password) {
-        this.profileType = profileType;
+        this.profileType = ProfileType.USER;
         this.name = name;
         this.username = username;
         this.password = password;
