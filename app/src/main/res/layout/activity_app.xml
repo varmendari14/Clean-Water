@@ -109,7 +109,8 @@
                 android:alpha=".75"
                 android:layout_below="@+id/app_water_imageView"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -118,7 +119,8 @@
                 android:id="@+id/app_manage_imageView"
                 android:alpha=".75"
                 android:layout_below="@+id/app_historical_textView"
-                android:layout_toEndOf="@+id/app_profile_button" />
+                android:layout_toEndOf="@+id/app_profile_button"
+                android:visibility="invisible"/>
 
             <TextView
                 android:text="Historical Report"
@@ -132,7 +134,8 @@
                 android:alpha=".75"
                 android:layout_marginBottom="31dp"
                 android:layout_alignBottom="@+id/app_historical_imageView"
-                android:layout_alignStart="@+id/app_water_textView" />
+                android:layout_alignStart="@+id/app_water_textView"
+                android:visibility="invisible"/>
 
             <TextView
                 android:text="Manage Users"
@@ -146,7 +149,8 @@
                 android:alpha=".75"
                 android:layout_marginBottom="32dp"
                 android:layout_above="@+id/app_logout_textView"
-                android:layout_alignStart="@+id/app_historical_textView" />
+                android:layout_alignStart="@+id/app_historical_textView"
+                android:visibility="invisible"/>
 
             <TextView
                     android:text="Logout"

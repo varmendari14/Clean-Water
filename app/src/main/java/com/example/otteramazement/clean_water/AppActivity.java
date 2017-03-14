@@ -74,6 +74,27 @@ public class AppActivity extends Activity {
             }
         });
 
+        ImageView manageUserImage = (ImageView) findViewById(R.id.app_manage_imageView);
+
+        if (CurrentUser.currentUser.get(0) instanceof Admin) {
+            manageUserImage.setVisibility(View.VISIBLE);
+            manageButton.setVisibility(View.VISIBLE);
+        }
+
+        ImageView historicalUserImage = (ImageView) findViewById(R.id.app_historical_imageView);
+        historicalUserImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent reportIntent = new Intent(getBaseContext(), WaterReportActivity.class);
+                startActivity(reportIntent);
+            }
+        });
+
+        if (CurrentUser.currentUser.get(0) instanceof Manager) {
+            historicalUserImage.setVisibility(View.VISIBLE);
+            historicalButton.setVisibility(View.VISIBLE);
+        }
+
     }
 
 }
