@@ -1,10 +1,10 @@
 NeedTODO:
-*M7 stuff:
-    *Source report image Link
-*M8 stuff:
-    *Manager should be able to view list of quality reports
-    *Only workers and managers can create purity reports
-    *Write javadocs
+*M9 Stuff:
+    *Persistance
+    *Historical Report
+    *History Graph
+    *managers can request and see history graph
+    *managers can enter setup info for graph
 
 
 OptionalTODO:
@@ -13,6 +13,8 @@ OptionalTODO:
 *server
 *Profile Pic Implementation
 *Persistance of users
+*M7 stuff:
+    *Source report image Link
 
 M8 DoneDone:
 *DONE Change registration to instantiate user/worker/manager/admin class EMMA
@@ -24,6 +26,10 @@ M8 DoneDone:
 *DONE Cancel screen does not save data
 *DONE Save records report in the model
 *DONE PPM added to purity report
+*DONE M8 stuff:
+    *Manager should be able to view list of quality reports
+    *Only workers and managers can create purity reports
+    *Write javadocs
 
 M7 DoneDone:
 *DONE Make a blank image for clicking
