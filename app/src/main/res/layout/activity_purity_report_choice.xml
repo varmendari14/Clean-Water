@@ -56,7 +56,8 @@
         android:alpha=".75"
         android:layout_below="@+id/purityReportChoice_newReport_imageView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="47dp" />
+        android:layout_marginTop="47dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:text="New Purity Report"
@@ -82,6 +83,7 @@
         android:alpha=".75"
         android:layout_marginBottom="22dp"
         android:layout_alignBottom="@+id/purityReportChoice_listReports_imageView"
-        android:layout_alignEnd="@+id/purityReportChoice_backbutton_imageView" />
+        android:layout_alignEnd="@+id/purityReportChoice_backbutton_imageView"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

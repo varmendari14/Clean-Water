@@ -65,6 +65,11 @@ public class PurityReportChoiceActivity extends Activity {
             }
         });
 
+        if (CurrentUser.currentUser.get(0) instanceof Manager) {
+            listButtonImage.setVisibility(View.VISIBLE);
+            listButton.setVisibility(View.VISIBLE);
+        }
+
         ImageView backButton = (ImageView) findViewById(R.id.purityReportChoice_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

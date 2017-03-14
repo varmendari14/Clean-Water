@@ -67,6 +67,11 @@ public class WaterReportActivity extends Activity {
             }
         });
 
+        if (CurrentUser.currentUser.get(0) instanceof Worker || CurrentUser.currentUser.get(0) instanceof Manager) {
+            purityButtonImage.setVisibility(View.VISIBLE);
+            purityButton.setVisibility(View.VISIBLE);
+        }
+
         ImageView backButton = (ImageView) findViewById(R.id.waterReport_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
