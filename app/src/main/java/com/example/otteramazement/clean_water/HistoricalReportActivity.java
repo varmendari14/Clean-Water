@@ -19,6 +19,13 @@ import java.util.Date;
 
 public class HistoricalReportActivity extends Activity {
 
+    HistoricalReport _report = new HistoricalReport();
+
+    private EditText dateInput;
+    private EditText reporterInput;
+    private EditText locationInput;
+    private EditText contInput;
+
     protected void onCreate(Bundle savedInstanceState) {
 
 
@@ -34,19 +41,19 @@ public class HistoricalReportActivity extends Activity {
         title.setTypeface(font);
         TextView datePrompt = (TextView) findViewById(R.id.historicalReport_date_textView);
         datePrompt.setTypeface(font);
-        EditText dateInput = (EditText) findViewById(R.id.historicalReport_date_input);
+        dateInput = (EditText) findViewById(R.id.historicalReport_date_input);
         dateInput.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.historicalReport_reporter_textView);
         reporterPrompt.setTypeface(font);
-        EditText reporterInput = (EditText) findViewById(R.id.historicalReport_reporter_input);
+        reporterInput = (EditText) findViewById(R.id.historicalReport_reporter_input);
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.historicalReport_location_textView);
         locationPrompt.setTypeface(font);
-        EditText locationInput = (EditText) findViewById(R.id.historicalReport_location_input);
+        locationInput = (EditText) findViewById(R.id.historicalReport_location_input);
         locationInput.setTypeface(font1);
         TextView contPrompt = (TextView) findViewById(R.id.historicalReport_cont_textView);
         contPrompt.setTypeface(font);
-        EditText contInput = (EditText) findViewById(R.id.historicalReport_cont_input);
+        contInput = (EditText) findViewById(R.id.historicalReport_cont_input);
         contInput.setTypeface(font1);
         TextView acceptButton = (TextView) findViewById(R.id.historicalReport_acceptbutton_tetView);
         acceptButton.setTypeface(font);
@@ -61,7 +68,8 @@ public class HistoricalReportActivity extends Activity {
             }
         });
 
-        //reporterInput.setText(_report.getReporter());
+        _report.setReporter(CurrentUser.currentUser.get(0).getName());
+        reporterInput.setText(_report.getReporter());
         Date date = new Date();
         dateInput.setText(DateFormat.getDateInstance().format(date));
 
@@ -69,10 +77,35 @@ public class HistoricalReportActivity extends Activity {
         acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
-                startActivity(startIntent);
+                updateReport();
+                if (_report.getDate().length() > 0 && _report.getLocation().length() > 0
+                        && _report.getContaminant().length() > 0
+                        &&_report.getLocation().contains("-")) {
+                    Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
+                    WaterReportList.historicalReportList.add(_report);
+                    startActivity(startIntent);
+                } else if (!_report.getLocation().contains("-")) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
+                    alert.setTitle("Invalid Source Report");
+                    alert.setMessage("Please include a valid location like '25-30'");
+                    alert.show();
+                } else {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
+                    alert.setTitle("Invalid Source Report");
+                    alert.setMessage("Please fill out all required fields");
+                    alert.show();
+                }
             }
         });
+    }
+
+    /**
+     *  Updates the report class with the entered data.
+     */
+    protected void updateReport() {
+        _report.setDate(dateInput.getText().toString());
+        _report.setLocation(locationInput.getText().toString());
+        _report.setContaminant(contInput.getText().toString());
     }
 
     @Override

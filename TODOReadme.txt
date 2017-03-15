@@ -1,8 +1,7 @@
 NeedTODO:
 *M9 Stuff:
     *Persistance
-    *Historical Report
-    *History Graph
+    *History Graph Violet
     *Auto manager
 
 
@@ -17,6 +16,7 @@ OptionalTODO:
 
 
 M9 DoneDone:
+*DONE Historical Report
 *DONE only managers can request and see history graph
 *DONE only managers can enter setup info for graph
 *DONE All XML files are done

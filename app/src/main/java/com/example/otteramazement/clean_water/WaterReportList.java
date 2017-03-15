@@ -14,4 +14,5 @@ public class WaterReportList {
     static List waterAvailabilityList = new ArrayList();
     static List<WaterSourceReport> waterSourceList = new ArrayList();
     static List<PurityReport> waterPurityList = new ArrayList();
+    static List<HistoricalReport> historicalReportList = new ArrayList();
 }
