@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Author: Violet Armendariz-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.otteramazement.clean_water.HistoricalReportChoiceActivity">
+
+    <ImageView android:id="@+id/historicalchoicescreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@mipmap/profile_bkg"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/backbutton_phases"
+        android:id="@+id/historicalReportChoice_backbutton_imageView"
+        android:alpha=".75"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historical Reports"
+        android:id="@+id/historicalReportChoice_title"
+        android:fontFamily="sans-serif"
+        android:textSize="30sp"
+        android:textColor="#000000"
+        android:layout_marginTop="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/button_phases"
+        android:id="@+id/historicalReportChoice_newReport_imageView"
+        android:alpha=".75"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/historicalReportChoice_title"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:src="@drawable/button_phases"
+        android:id="@+id/historicalReportChoice_graphReports_imageView"
+        android:alpha=".75"
+        android:layout_below="@+id/historicalReportChoice_newReport_imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="47dp"/>
+
+    <TextView
+        android:text="New Historical Report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/historicalReportChoice_newReport"
+        android:layout_marginBottom="27dp"
+        android:textColor="@android:color/background_light"
+        android:alpha=".75"
+        android:textSize="14sp"
+        android:layout_above="@+id/historicalReportChoice_graphReports_imageView"
+        android:layout_alignStart="@+id/historicalReportChoice_reportGraph" />
+
+    <TextView
+        android:text="Historical Report Graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/historicalReportChoice_reportGraph"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:textColor="#ffffff"
+        android:alpha=".75"
+        android:layout_marginBottom="26dp"
+        android:layout_alignBottom="@+id/historicalReportChoice_graphReports_imageView"
+        android:layout_alignEnd="@+id/historicalReportChoice_backbutton_imageView"
+        android:layout_marginEnd="12dp" />
+
+</RelativeLayout>

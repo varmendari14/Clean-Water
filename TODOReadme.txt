@@ -3,8 +3,7 @@ NeedTODO:
     *Persistance
     *Historical Report
     *History Graph
-    *managers can request and see history graph
-    *managers can enter setup info for graph
+    *Auto manager
 
 
 OptionalTODO:
@@ -15,6 +14,13 @@ OptionalTODO:
 *Persistance of users
 *M7 stuff:
     *Source report image Link
+
+
+M9 DoneDone:
+*DONE only managers can request and see history graph
+*DONE only managers can enter setup info for graph
+*DONE All XML files are done
+*DONE buttons link to where they should
 
 M8 DoneDone:
 *DONE Change registration to instantiate user/worker/manager/admin class EMMA

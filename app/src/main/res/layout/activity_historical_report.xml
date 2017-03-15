@@ -8,9 +8,9 @@
     android:layout_height="fill_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.PurityReportActivity">
+    tools:context="com.example.otteramazement.clean_water.HistoricalReportActivity">
 
-    <ImageView android:id="@+id/purityreportscreen"
+    <ImageView android:id="@+id/historicalreportscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -32,8 +32,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Purity Report"
-                android:id="@+id/purityReport_title"
+                android:text="Historical Report"
+                android:id="@+id/historicalReport_title"
                 android:fontFamily="sans-serif"
                 android:textSize="30sp"
                 android:textColor="#000000"
@@ -48,7 +48,7 @@
                     android:text="Date:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_date_textView"
+                    android:id="@+id/historicalReport_date_textView"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="normal|bold"
@@ -60,64 +60,10 @@
                     android:layout_height="wrap_content"
                     android:inputType="date"
                     android:ems="10"
-                    android:id="@+id/purityReport_date_input"
+                    android:id="@+id/historicalReport_date_input"
                     android:textSize="18sp"
                     android:hint="Date"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <TextView
-                    android:text="Time:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_time_textView"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="time"
-                    android:ems="10"
-                    android:id="@+id/purityReport_time_input"
-                    android:textSize="18sp"
-                    android:hint="Time"
-                    android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:text="Report Number:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_reportNumber_textView"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
-
-                <TextView
-                    android:hint="Report Number"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_reportNumber_generation"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true" />
 
             </LinearLayout>
@@ -130,7 +76,7 @@
                     android:text="Reporter:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_reporter_textView"
+                    android:id="@+id/historicalReport_reporter_textView"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="normal|bold"
@@ -142,9 +88,9 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/purityReport_reporter_input"
+                    android:id="@+id/historicalReport_reporter_input"
                     android:textSize="18sp"
-                    android:hint="UserName"
+                    android:hint="Manager Name"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true" />
 
@@ -163,7 +109,7 @@
                         android:text="Location:"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/purityReport_location_textView"
+                        android:id="@+id/historicalReport_location_textView"
                         android:gravity="center"
                         android:textSize="18sp"
                         android:textStyle="normal|bold"
@@ -175,7 +121,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
                         android:ems="10"
-                        android:id="@+id/purityReport_location_input"
+                        android:id="@+id/historicalReport_location_input"
                         android:textSize="18sp"
                         android:hint="Lat-Long"
                         android:textAlignment="textStart"
@@ -187,92 +133,55 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="151dp"
                     android:src="@drawable/globe_icon_small"
-                    android:id="@+id/purityReport_mapholder_imageView"/>
+                    android:id="@+id/historicalReport_mapholder_imageView"/>
 
             </LinearLayout>
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:weightSum="1">
 
                 <TextView
-                    android:text="Unsafe"
+                    android:text="Virus/Contaminate:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_unsafe_textView"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
-                    android:layout_alignStart="@+id/purityReport_unsafe_imageView"
-                    android:layout_alignParentBottom="true"
-                    android:layout_below="@+id/purityReport_unsafe_imageView" />
-
-                <ImageView
-                    android:layout_width="61dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/treatable_clear_state"
-                    android:id="@+id/purityReport_treatable_imageView"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
-
-                <ImageView
-                    android:layout_width="61dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/waste_state"
-                    android:id="@+id/purityReport_unsafe_imageView"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="26dp" />
-
-                <ImageView
-                    android:layout_width="61dp"
-                    android:layout_height="75dp"
-                    android:src="@drawable/potable_state"
-                    android:id="@+id/purityReport_safe_imageView"
-                    android:layout_marginStart="36dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentStart="true" />
-
-                <TextView
-                    android:text="Treatable"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_treatable_textView"
+                    android:id="@+id/historicalReport_holder_textView"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="normal|bold"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true" />
+                    android:visibility="invisible"/>
 
-                <TextView
-                    android:text="Safe"
+                <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_safe_textView"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
-                    android:layout_alignEnd="@+id/purityReport_safe_imageView"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/historicalReport_holder_input"
+                    android:textSize="14sp"
+                    android:hint="Virus/Contaminate in PPM"
+                    android:textAlignment="textStart"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/purityReport_safe_imageView" />
+                    android:layout_weight="1.17"
+                    android:visibility="invisible"/>
 
-            </RelativeLayout>
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:weightSum="1">
 
                 <TextView
-                    android:text="Virus:"
+                    android:text="Virus/Contaminate:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_virus_textView"
+                    android:id="@+id/historicalReport_cont_textView"
                     android:gravity="center"
                     android:textSize="18sp"
                     android:textStyle="normal|bold"
@@ -284,41 +193,26 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/purityReport_virus_input"
-                    android:textSize="18sp"
-                    android:hint="Virus in PPM"
+                    android:id="@+id/historicalReport_cont_input"
+                    android:textSize="14sp"
+                    android:hint="Virus/Contaminate in PPM"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1.17" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:text="Contaminate:"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_cont_textView"
-                    android:gravity="center"
-                    android:textSize="18sp"
-                    android:textStyle="normal|bold"
-                    android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/purityReport_cont_input"
-                    android:textSize="18sp"
-                    android:hint="Contaminate in PPM"
-                    android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
-
-            </LinearLayout>
+            <TextView
+                android:text="Virus/Contaminate:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/historicalReport_holder2_textView"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"
+                android:textColor="#FF152A25"
+                android:layout_alignParentBottom="true"
+                android:visibility="invisible"/>
 
 
             <RelativeLayout
@@ -329,7 +223,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/button_phases"
-                    android:id="@+id/purityReport_acceptbutton_imageView"
+                    android:id="@+id/historicalReport_acceptbutton_imageView"
                     android:layout_marginEnd="167dp"
                     android:alpha=".75"
                     android:layout_alignParentBottom="true"
@@ -339,9 +233,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/backbutton_phases"
-                    android:id="@+id/purityReport_backbutton_imageView"
+                    android:id="@+id/historicalReport_backbutton_imageView"
                     android:layout_alignParentTop="true"
-                    android:layout_toEndOf="@+id/purityReport_acceptbutton_tetView"
+                    android:layout_toEndOf="@+id/historicalReport_acceptbutton_tetView"
                     android:alpha=".75"
                     android:layout_marginStart="34dp" />
 
@@ -349,7 +243,7 @@
                     android:text="Accept"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/purityReport_acceptbutton_tetView"
+                    android:id="@+id/historicalReport_acceptbutton_tetView"
                     android:textAppearance="@style/TextAppearance.AppCompat"
                     android:fontFamily="sans-serif"
                     android:textSize="30sp"
@@ -357,7 +251,7 @@
                     android:layout_marginEnd="24dp"
                     android:alpha=".75"
                     android:layout_centerVertical="true"
-                    android:layout_alignEnd="@+id/purityReport_acceptbutton_imageView" />
+                    android:layout_alignEnd="@+id/historicalReport_acceptbutton_imageView" />
 
             </RelativeLayout>
 

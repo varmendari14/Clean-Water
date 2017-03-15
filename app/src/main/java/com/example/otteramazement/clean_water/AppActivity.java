@@ -85,7 +85,7 @@ public class AppActivity extends Activity {
         historicalUserImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent reportIntent = new Intent(getBaseContext(), WaterReportActivity.class);
+                Intent reportIntent = new Intent(getBaseContext(), HistoricalReportChoiceActivity.class);
                 startActivity(reportIntent);
             }
         });
