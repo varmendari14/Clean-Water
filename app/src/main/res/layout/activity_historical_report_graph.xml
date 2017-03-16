@@ -46,7 +46,17 @@
         android:src="@drawable/globe_icon_large"
         android:id="@+id/historicalGraph_mapholder_imageView"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:alpha=".25"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/graph"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/historicalGraph_backbutton_imageView"
+        android:layout_below="@+id/historicalGraph_title" />
 
 
 </RelativeLayout>
