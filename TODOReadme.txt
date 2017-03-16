@@ -1,8 +1,8 @@
 NeedTODO:
 *M9 Stuff:
     *Persistance
-    *History Graph Violet
     *Auto manager
+    *linking data from historicalReports to History Graph
 
 
 OptionalTODO:
@@ -10,9 +10,9 @@ OptionalTODO:
 *give option to click on map where you want to make report for
 *server
 *Profile Pic Implementation
-*Persistance of users
-*M7 stuff:
-    *Source report image Link
+*Source report and purity report and history report image Link when click for location
+*make map marker a paw print
+*make graph points paw prints
 
 
 M9 DoneDone:
@@ -21,6 +21,7 @@ M9 DoneDone:
 *DONE only managers can enter setup info for graph
 *DONE All XML files are done
 *DONE buttons link to where they should
+*DONE History Graph setup Violet
 
 M8 DoneDone:
 *DONE Change registration to instantiate user/worker/manager/admin class EMMA

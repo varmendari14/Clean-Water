@@ -2,11 +2,18 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.GridLabelRenderer;
+import com.jjoe64.graphview.series.DataPoint;
+import com.jjoe64.graphview.series.LineGraphSeries;
+import com.jjoe64.graphview.series.PointsGraphSeries;
 
 /**
  * Created by Violet on 3/14/2017.
@@ -37,14 +44,34 @@ public class HistoricalReportGraphActivity extends Activity {
             }
         });
 
-//        ImageView mapButton = (ImageView) findViewById(R.id.historicalGraph_mapholder_imageView);
-//        mapButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent mapIntent = new Intent(getBaseContext(), MapsActivity.class);
-//                startActivity(mapIntent);
-//            }
-//        });
+
+
+        GraphView graph = (GraphView) findViewById(R.id.graph);
+        graph.getGridLabelRenderer().setHorizontalAxisTitle("Month");
+        graph.getGridLabelRenderer().setVerticalAxisTitle("Contaminate/Virus PPM");
+        graph.getViewport().setScrollable(true);
+        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.NONE);
+
+        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, -2),
+                new DataPoint(1, 5),
+                new DataPoint(2, 3),
+                new DataPoint(3, 2),
+                new DataPoint(4, 6)
+        });
+        series2.setColor(Color.GREEN);
+        graph.addSeries(series2);
+
+        PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(new DataPoint[] {
+                new DataPoint(0, -2),
+                new DataPoint(1, 5),
+                new DataPoint(2, 3),
+                new DataPoint(3, 2),
+                new DataPoint(4, 6)
+        });
+        graph.addSeries(series);
+        series.setShape(PointsGraphSeries.Shape.POINT);
+
 
     }
 
