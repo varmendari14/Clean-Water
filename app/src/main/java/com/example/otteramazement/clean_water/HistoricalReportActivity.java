@@ -131,8 +131,11 @@ public class HistoricalReportActivity extends Activity {
         });
     }
 
-    private void updateLabel() {
+    /**
+     * Updates the Date Input field with the correct format.
+     */
 
+    private void updateLabel() {
         String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         dateInput.setText(sdf.format(myCalendar.getTime()));

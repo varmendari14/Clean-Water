@@ -65,7 +65,7 @@ public class HistoricalReportGraphActivity extends Activity {
 //        graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(nf, nf));
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7"});
+        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
         DataPoint[] valuesp = new DataPoint[WaterReportList.historicalReportList.size()];
