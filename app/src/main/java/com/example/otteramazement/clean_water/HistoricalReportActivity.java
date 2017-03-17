@@ -2,16 +2,23 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
+import android.app.DialogFragment;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Violet on 3/14/2017.
@@ -25,6 +32,9 @@ public class HistoricalReportActivity extends Activity {
     private EditText reporterInput;
     private EditText locationInput;
     private EditText contInput;
+    private Calendar myCalendar = Calendar.getInstance();
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -70,16 +80,16 @@ public class HistoricalReportActivity extends Activity {
 
         _report.setReporter(CurrentUser.currentUser.get(0).getName());
         reporterInput.setText(_report.getReporter());
-        Date date = new Date();
-        dateInput.setText(DateFormat.getDateInstance().format(date));
+        //final Date date = new Date();
+        //dateInput.setText(DateFormat.getDateInstance().format(date));
 
         ImageView acceptButtonImageView = (ImageView) findViewById(R.id.historicalReport_acceptbutton_imageView);
         acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateReport();
-                if (_report.getDate().length() > 0 && _report.getLocation().length() > 0
-                        && _report.getContaminant().length() > 0
+                if (_report.getDate().length() > 3 && _report.getLocation().length() > 0
+                        && _report.getContaminant() >= 0
                         &&_report.getLocation().contains("-")) {
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
@@ -97,6 +107,35 @@ public class HistoricalReportActivity extends Activity {
                 }
             }
         });
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        dateInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(HistoricalReportActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+    }
+
+    private void updateLabel() {
+
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        dateInput.setText(sdf.format(myCalendar.getTime()));
     }
 
     /**
@@ -105,7 +144,7 @@ public class HistoricalReportActivity extends Activity {
     protected void updateReport() {
         _report.setDate(dateInput.getText().toString());
         _report.setLocation(locationInput.getText().toString());
-        _report.setContaminant(contInput.getText().toString());
+        _report.setContaminant(Integer.parseInt(contInput.getText().toString()));
     }
 
     @Override

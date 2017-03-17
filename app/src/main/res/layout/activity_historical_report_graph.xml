@@ -41,22 +41,22 @@
     <!--Possible place for map-->
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
         android:src="@drawable/globe_icon_large"
         android:id="@+id/historicalGraph_mapholder_imageView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:alpha=".25"/>
+        android:alpha=".25"
+        android:layout_below="@+id/historicalGraph_title"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/historicalGraph_backbutton_imageView" />
 
     <com.jjoe64.graphview.GraphView
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:id="@+id/graph"
-        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/historicalGraph_title"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/historicalGraph_backbutton_imageView"
-        android:layout_below="@+id/historicalGraph_title" />
+        android:layout_above="@+id/historicalGraph_backbutton_imageView" />
 
 
 </RelativeLayout>

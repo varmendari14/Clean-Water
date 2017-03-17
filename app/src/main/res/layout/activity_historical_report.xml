@@ -55,6 +55,14 @@
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true" />
 
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:text="pick_date"-->
+                    <!--android:src="@drawable/backbutton_phases"-->
+                    <!--android:alpha=".75"-->
+                    <!--android:onClick="showDatePickerDialog" />-->
+
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -191,7 +199,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:ems="10"
                     android:id="@+id/historicalReport_cont_input"
                     android:textSize="14sp"

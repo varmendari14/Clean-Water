@@ -13,6 +13,7 @@ OptionalTODO:
 *Source report and purity report and history report image Link when click for location
 *make map marker a paw print
 *make graph points paw prints
+*change previous reports: Historical, Purity, Source, to force users to enter a number in number spaces with number boxes VIOLET
 
 
 M9 DoneDone:

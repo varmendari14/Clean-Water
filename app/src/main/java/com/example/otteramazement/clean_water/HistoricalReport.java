@@ -10,7 +10,8 @@ public class HistoricalReport {
     private String date;
     private String reporter;
     private String location;
-    private String contaminant;
+    private int contaminant;
+    private int month;
 
     //No-arg constructor creates number for report
 
@@ -80,14 +81,63 @@ public class HistoricalReport {
      * set contaminant of water
      * @param aContaminant the contaminant ppm of the water
      */
-    public void setContaminant(String aContaminant) { contaminant = aContaminant; }
+    public void setContaminant(int aContaminant) { contaminant = aContaminant; }
 
     /**
      * get contaminant ppm
      * @return the contaminant ppm of the water
      */
-    public String getContaminant() {return contaminant; }
+    public int getContaminant() {return contaminant; }
+
+    /**
+     * set contaminant of water
+     * @param aMonth the month of the water
+     */
+    public void setMonth(int aMonth) { month = aMonth; }
+
+    /**
+     * get contaminant ppm
+     * @return the month of the water
+     */
+    public int getMonth() {return month; }
     // ***
+
+    /**
+     * month calc for Graphs
+     * @return the number of the month from the string
+     */
+
+    public int monthDate() {
+        String month = this.getDate().substring(0, 2).toUpperCase().trim();
+
+        if (month == "01") {
+            return 1;
+        } else if (month == "02") {
+            return 2;
+        } else if (month == "03") {
+            return 3;
+        } else if (month == "04") {
+            return 4;
+        } else if (month == "05") {
+            return 5;
+        } else if (month == "06") {
+            return 6;
+        } else if (month == "07") {
+            return 7;
+        } else if (month == "08") {
+            return 8;
+        } else if (month == "09") {
+            return 9;
+        } else if (month == "10") {
+            return 10;
+        } else if (month == "11") {
+            return 11;
+        } else if (month == "12") {
+            return 12;
+        }
+
+        return 0;
+    }
 
     /**
      * to string for purity report list
