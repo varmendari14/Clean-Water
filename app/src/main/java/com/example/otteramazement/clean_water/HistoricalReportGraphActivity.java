@@ -53,20 +53,26 @@ public class HistoricalReportGraphActivity extends Activity {
         GraphView graph = (GraphView) findViewById(R.id.graph);
         graph.getGridLabelRenderer().setHorizontalAxisTitle("Month");
         graph.getGridLabelRenderer().setVerticalAxisTitle("Contaminate/Virus PPM");
-        graph.getViewport().setScrollable(true);
-        graph.getViewport().setScrollableY(true);
-        graph.getViewport().setScalable(true);
-        graph.getViewport().setScalableY(true);
-        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.NONE);
+//        graph.getViewport().setScrollable(true);
+//        graph.getViewport().setScrollableY(true);
+//        graph.getViewport().setScalable(true);
+//        graph.getViewport().setScalableY(true);
+        graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.BOTH);
 
 //        NumberFormat nf = NumberFormat.getInstance();
 //        nf.setMaximumFractionDigits(0);
 //        nf.setMinimumIntegerDigits(1);
 //        graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(nf, nf));
 
-        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"});
-        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+//        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
+//        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"});
+//        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+
+        String[] horizantalAxisForm = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
+        StaticLabelsFormatter staticLabelsFormatter2 = new StaticLabelsFormatter(graph);
+        staticLabelsFormatter2.setHorizontalLabels(horizantalAxisForm);
+        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter2);
+        graph.getGridLabelRenderer().setNumHorizontalLabels(12);
 
         DataPoint[] valuesp = new DataPoint[WaterReportList.historicalReportList.size()];
         DataPoint[] valuesl = new DataPoint[WaterReportList.historicalReportList.size()];
