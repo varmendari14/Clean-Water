@@ -10,8 +10,8 @@ public class HistoricalReport {
     private String date;
     private String reporter;
     private String location;
-    private int contaminant;
-    private int month;
+    private double contaminant;
+    private double month;
 
     //No-arg constructor creates number for report
 
@@ -81,13 +81,13 @@ public class HistoricalReport {
      * set contaminant of water
      * @param aContaminant the contaminant ppm of the water
      */
-    public void setContaminant(int aContaminant) { contaminant = aContaminant; }
+    public void setContaminant(double aContaminant) { contaminant = aContaminant; }
 
     /**
      * get contaminant ppm
      * @return the contaminant ppm of the water
      */
-    public int getContaminant() {return contaminant; }
+    public double getContaminant() {return contaminant; }
 
     /**
      * set contaminant of water
@@ -99,7 +99,7 @@ public class HistoricalReport {
      * get contaminant ppm
      * @return the month of the water
      */
-    public int getMonth() {return month; }
+    public double getMonth() {return month; }
     // ***
 
     /**
@@ -108,7 +108,8 @@ public class HistoricalReport {
      */
 
     public int monthDate() {
-        String month = this.getDate().substring(0, 2).toUpperCase().trim();
+        String month = this.getDate().substring(0, 1).trim();
+        //String month = this.getDate().substring(0, 2).trim();
 
         if (month == "01") {
             return 0;

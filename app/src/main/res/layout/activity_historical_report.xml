@@ -70,7 +70,7 @@
                     android:ems="10"
                     android:id="@+id/historicalReport_date_input"
                     android:textSize="18sp"
-                    android:hint="Date"
+                    android:hint="Click Me"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true" />
 

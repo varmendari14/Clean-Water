@@ -59,15 +59,6 @@ public class HistoricalReportGraphActivity extends Activity {
 //        graph.getViewport().setScalableY(true);
         graph.getGridLabelRenderer().setGridStyle(GridLabelRenderer.GridStyle.BOTH);
 
-//        NumberFormat nf = NumberFormat.getInstance();
-//        nf.setMaximumFractionDigits(0);
-//        nf.setMinimumIntegerDigits(1);
-//        graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(nf, nf));
-
-//        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-//        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"});
-//        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
-
         String[] horizantalAxisForm = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"};
         StaticLabelsFormatter staticLabelsFormatter2 = new StaticLabelsFormatter(graph);
         staticLabelsFormatter2.setHorizontalLabels(horizantalAxisForm);
@@ -80,8 +71,8 @@ public class HistoricalReportGraphActivity extends Activity {
 
         for(HistoricalReport report: WaterReportList.historicalReportList){
 
-            int month = report.monthDate();
-            int cont = report.getContaminant();
+            double month = report.monthDate();
+            double cont = report.getContaminant();
             DataPoint dp = new DataPoint(month, cont);
             valuesp[index] = dp;
             valuesl[index] = dp;
@@ -92,24 +83,9 @@ public class HistoricalReportGraphActivity extends Activity {
         LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(valuesp);
         PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(valuesl);
 
-
-//        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(new DataPoint[] {
-//                new DataPoint(0, -2),
-//                new DataPoint(1, 5),
-//                new DataPoint(2, 3),
-//                new DataPoint(3, 2),
-//                new DataPoint(4, 6)
-//        });
         series2.setColor(Color.GREEN);
         graph.addSeries(series2);
 
-//        PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(new DataPoint[] {
-//                new DataPoint(0, -2),
-//                new DataPoint(1, 5),
-//                new DataPoint(2, 3),
-//                new DataPoint(3, 2),
-//                new DataPoint(4, 6)
-//        });
         graph.addSeries(series);
         series.setShape(PointsGraphSeries.Shape.POINT);
 
