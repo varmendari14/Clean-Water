@@ -13,6 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ImageView;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
 /**
  * Created by Violet on 2/11/2017.
  * Authors: Violet, Mary
@@ -22,6 +25,9 @@ import android.widget.ImageView;
  * controls activity that helps sign or register a user up/log them in
  */
 public class WelcomeActivity extends Activity{
+
+    UserFacade uf = UserFacade.getInstance();
+    File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +62,10 @@ public class WelcomeActivity extends Activity{
                 startActivity(new Intent(getBaseContext(), RegisterActivity.class));
             }
         });
+
+        //Load from json
+        file = new File(this.getFilesDir(), UserFacade.DEFAULT_JSON_FILE_NAME);
+        uf.loadJson(file);
     }
 
     @Override
