@@ -64,7 +64,16 @@ public class WelcomeActivity extends Activity{
         });
 
         //Load from json
-        file = new File(this.getFilesDir(), UserFacade.DEFAULT_JSON_FILE_NAME);
+        file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
+        uf.loadJson(file);
+
+        file = new File(this.getFilesDir(), UserFacade.SOURCE_JSON_FILE_NAME);
+        uf.loadJson(file);
+
+        file = new File(this.getFilesDir(), UserFacade.PURITY_JSON_FILE_NAME);
+        uf.loadJson(file);
+
+        file = new File(this.getFilesDir(), UserFacade.HISTORICAL_JSON_FILE_NAME);
         uf.loadJson(file);
     }
 
