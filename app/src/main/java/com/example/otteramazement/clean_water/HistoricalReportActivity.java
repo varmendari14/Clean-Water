@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -34,10 +35,11 @@ public class HistoricalReportActivity extends Activity {
     private EditText contInput;
     private Calendar myCalendar = Calendar.getInstance();
 
-
+    private static HistoricalReportActivity obj;
 
     protected void onCreate(Bundle savedInstanceState) {
 
+        obj = this;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_report);
@@ -93,6 +95,12 @@ public class HistoricalReportActivity extends Activity {
                         &&_report.getLocation().contains("-")) {
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
+
+                    //save to json
+                    UserFacade uf = UserFacade.getInstance();
+                    File file = new File(obj.getFilesDir(), UserFacade.HISTORICAL_JSON_FILE_NAME);
+                    uf.saveJson(file);
+
                     startActivity(startIntent);
                 } else if (!_report.getLocation().contains("-")) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
