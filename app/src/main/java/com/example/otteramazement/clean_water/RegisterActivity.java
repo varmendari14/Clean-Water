@@ -153,7 +153,7 @@ public class RegisterActivity extends Activity {
 
             //save to json
             UserFacade uf = UserFacade.getInstance();
-            File file = new File(this.getFilesDir(), UserFacade.DEFAULT_JSON_FILE_NAME);
+            File file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
             uf.saveJson(file);
 
             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
