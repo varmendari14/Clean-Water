@@ -144,7 +144,7 @@ public class HistoricalReportActivity extends Activity {
      */
 
     private void updateLabel() {
-        String myFormat = "mm/dd/yy";
+        String myFormat = "MM/dd/yy";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         dateInput.setText(sdf.format(myCalendar.getTime()));
     }
