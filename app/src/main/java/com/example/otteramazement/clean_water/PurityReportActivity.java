@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
 import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
@@ -31,10 +33,13 @@ public class PurityReportActivity extends Activity {
     private EditText virusInput;
     private EditText contInput;
 
+    private static PurityReportActivity obj;
+
 
 
     protected void onCreate(Bundle savedInstanceState) {
 
+        obj = this;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purity_report);
@@ -135,6 +140,12 @@ public class PurityReportActivity extends Activity {
                         &&_report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
+
+                    //save to json
+                    UserFacade uf = UserFacade.getInstance();
+                    File file = new File(obj.getFilesDir(), UserFacade.PURITY_JSON_FILE_NAME);
+                    uf.saveJson(file);
+
                     startActivity(backIntent);
                 } else if (!_report.getLocation().contains("-")) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(PurityReportActivity.this);
