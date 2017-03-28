@@ -13,6 +13,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by maryprouty on 3/27/17.
@@ -20,7 +21,10 @@ import java.util.HashMap;
 
 public class UserFacade {
 
-    public final static String DEFAULT_JSON_FILE_NAME = "data.json";
+    public final static String USER_JSON_FILE_NAME = "user.json";
+    public final static String SOURCE_JSON_FILE_NAME = "source.json";
+    public final static String PURITY_JSON_FILE_NAME = "purity.json";
+    public final static String HISTORICAL_JSON_FILE_NAME = "historical.json";
 
     /**
      * Singleton pattern
@@ -49,12 +53,25 @@ public class UserFacade {
             //Since we saved the json as a string, we just read in the string normally
             String inString = input.readLine();
             Log.d("DEBUG", "JSON: " + inString);
-            //Then we use the Gson library to recreate the object references and links automatically
             Gson gson = new Gson();
-
-            Type type = new TypeToken<HashMap<String, UserProfile>>(){}.getType();
-            OurHashMap.userMap = (HashMap<String, UserProfile>) gson.fromJson(inString, type);
-
+            //Then we use the Gson library to recreate the object references and links automatically
+            if (file.getName().equals("user.json")) {
+                Type hashType = new TypeToken<HashMap<String, UserProfile>>() {
+                }.getType();
+                OurHashMap.userMap = gson.fromJson(inString, hashType);
+            } else if (file.getName().equals("source.json")) {
+                Type listType = new TypeToken<List<WaterSourceReport>>() {
+                }.getType();
+                WaterReportList.waterSourceList = gson.fromJson(inString, listType);
+            } else if (file.getName().equals("purity.json")) {
+                Type listType = new TypeToken<List<PurityReport>>() {
+                }.getType();
+                WaterReportList.waterPurityList = gson.fromJson(inString, listType);
+            } else if (file.getName().equals("historical.json")) {
+                Type listType = new TypeToken<List<HistoricalReport>>() {
+                }.getType();
+                WaterReportList.historicalReportList = gson.fromJson(inString, listType);
+            }
             input.close();
         } catch (IOException e) {
             Log.e("UserFacade", "Failed to open/read the buffered reader for json");
@@ -81,8 +98,17 @@ public class UserFacade {
 
              */
             Gson gson = new Gson();
-            // convert our objects to a string for output
-            String outString = gson.toJson(OurHashMap.userMap);
+            String outString = "";
+            if (file.getName().equals("user.json")) {
+                // convert our objects to a string for output
+                outString = gson.toJson(OurHashMap.userMap);
+            } else if (file.getName().equals("source.json")) {
+                outString = gson.toJson(WaterReportList.waterSourceList);
+            } else if (file.getName().equals("purity.json")) {
+                outString = gson.toJson(WaterReportList.waterPurityList);
+            } else if (file.getName().equals("historical.json")) {
+                outString = gson.toJson(WaterReportList.historicalReportList);
+            }
             Log.d("DEBUG", "JSON Saved: " + outString);
             //then just write the string
             writer.println(outString);
