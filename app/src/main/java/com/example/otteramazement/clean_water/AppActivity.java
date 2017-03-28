@@ -76,7 +76,7 @@ public class AppActivity extends Activity {
 
         ImageView manageUserImage = (ImageView) findViewById(R.id.app_manage_imageView);
 
-        if (CurrentUser.currentUser.get(0) instanceof Admin) {
+        if (CurrentUser.currentUser.get(0).getProfileType().equals(ProfileType.ADMIN)) {
             manageUserImage.setVisibility(View.VISIBLE);
             manageButton.setVisibility(View.VISIBLE);
         }
@@ -90,7 +90,7 @@ public class AppActivity extends Activity {
             }
         });
 
-        if (CurrentUser.currentUser.get(0) instanceof Manager) {
+        if (CurrentUser.currentUser.get(0).getProfileType().equals(ProfileType.MANAGER)) {
             historicalUserImage.setVisibility(View.VISIBLE);
             historicalButton.setVisibility(View.VISIBLE);
         }

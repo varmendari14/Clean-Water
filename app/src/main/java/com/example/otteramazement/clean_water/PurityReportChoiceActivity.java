@@ -65,7 +65,7 @@ public class PurityReportChoiceActivity extends Activity {
             }
         });
 
-        if (CurrentUser.currentUser.get(0) instanceof Manager) {
+        if (CurrentUser.currentUser.get(0).getProfileType().equals(ProfileType.MANAGER)) {
             listButtonImage.setVisibility(View.VISIBLE);
             listButton.setVisibility(View.VISIBLE);
         }

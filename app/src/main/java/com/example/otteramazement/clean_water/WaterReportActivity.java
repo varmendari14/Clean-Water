@@ -67,7 +67,8 @@ public class WaterReportActivity extends Activity {
             }
         });
 
-        if (CurrentUser.currentUser.get(0) instanceof Worker || CurrentUser.currentUser.get(0) instanceof Manager) {
+        if (CurrentUser.currentUser.get(0).getProfileType().equals(ProfileType.WORKER) ||
+                CurrentUser.currentUser.get(0).getProfileType().equals(ProfileType.MANAGER)) {
             purityButtonImage.setVisibility(View.VISIBLE);
             purityButton.setVisibility(View.VISIBLE);
         }
