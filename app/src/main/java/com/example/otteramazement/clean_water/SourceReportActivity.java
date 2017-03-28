@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.io.File;
 import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
@@ -34,6 +36,8 @@ public class SourceReportActivity extends Activity {
     private TextView reportNumberText;
     private EditText timeInput;
 
+    private static SourceReportActivity obj;
+
 
     /**
      * sets up all needed fields of source report
@@ -41,6 +45,7 @@ public class SourceReportActivity extends Activity {
      */
     protected void onCreate(Bundle savedInstanceState) {
 
+        obj = this;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report);
@@ -201,7 +206,12 @@ public class SourceReportActivity extends Activity {
                         && _report.getDate().length() > 0 && _report.getLocation().length() > 0
                         && _report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+
                     WaterReportList.waterSourceList.add(_report);
+                    UserFacade uf = UserFacade.getInstance();
+                    File file = new File(obj.getFilesDir(), UserFacade.SOURCE_JSON_FILE_NAME);
+                    uf.saveJson(file);
+
                     startActivity(backIntent);
                 } else if (!_report.getLocation().contains("-")) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(SourceReportActivity.this);
