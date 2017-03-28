@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+
+import java.io.File;
 import java.util.HashMap;
 
 import java.util.Arrays;
@@ -32,6 +34,7 @@ public class RegisterActivity extends Activity {
     private EditText passwordInput;
     private EditText passwordRedo;
     private Spinner typeSpinner;
+
 
     //private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
@@ -147,8 +150,13 @@ public class RegisterActivity extends Activity {
 
             CurrentUser.currentUser.add(newUser);
             OurHashMap.userMap.put(usernameInput.getText().toString(), newUser);
+
+            //save to json
+            UserFacade uf = UserFacade.getInstance();
+            File file = new File(this.getFilesDir(), UserFacade.DEFAULT_JSON_FILE_NAME);
+            uf.saveJson(file);
+
             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
-            //intent.putExtra(RegisterActivity.ARG_USER, newUser);
             startActivity(intent);
 
         } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
