@@ -3,14 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.HistoricalGraphActivity">
-
     <ImageView android:id="@+id/historicalgraphscreen"
+        android:contentDescription="Historical Graph Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -18,6 +12,7 @@
         android:scaleType="centerCrop"/>
 
     <ImageView
+        android:contentDescription="Back Button"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:src="@drawable/backbutton_phases"
@@ -49,6 +44,7 @@
         android:layout_above="@+id/historicalGraph_backbutton_imageView" />
 
     <ImageView
+        android:contentDescription="Map Button"
         android:src="@drawable/globe_icon_large"
         android:id="@+id/historicalGraph_mapholder_imageView"
         android:alpha=".25"

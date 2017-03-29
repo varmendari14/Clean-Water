@@ -7,14 +7,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.ProfileActivity">
-
     <ImageView android:id="@+id/profilescreen"
+        android:contentDescription="Profile Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -52,6 +46,7 @@
                         android:layout_alignParentBottom="true" />
 
                     <ImageView
+                        android:contentDescription="Pic Button"
                         android:layout_width="220dp"
                         android:layout_height="205dp"
                         android:src="@mipmap/pic_bkg"
@@ -316,6 +311,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:contentDescription="Accept Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/button_phases"
@@ -326,6 +322,7 @@
                     android:layout_alignParentEnd="true" />
 
                 <ImageView
+                    android:contentDescription="Back Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/backbutton_phases"

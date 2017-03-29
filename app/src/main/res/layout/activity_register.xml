@@ -6,14 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.RegisterActivity">
-
     <ImageView android:id="@+id/registerscreen"
+        android:contentDescription="Registration Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -31,6 +25,7 @@
 
 
     <ImageView
+        android:contentDescription="Register Button"
         android:id="@+id/register_imageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
@@ -81,6 +76,7 @@
         android:layout_marginEnd="10dp" />
 
     <ImageView
+        android:contentDescription="Back Button"
         android:id="@+id/register_backbuttonimageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"

@@ -3,14 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.HistoricalReportActivity">
-
     <ImageView android:id="@+id/historicalreportscreen"
+        android:contentDescription="Historical Report Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -140,6 +134,7 @@
                 <!--Possible place for map-->
 
                 <ImageView
+                    android:contentDescription="Map Button"
                     android:layout_width="match_parent"
                     android:layout_height="151dp"
                     android:src="@drawable/globe_icon_small"
@@ -228,6 +223,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:contentDescription="Accept Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/button_phases"
@@ -238,6 +234,7 @@
                     android:layout_alignParentEnd="true" />
 
                 <ImageView
+                    android:contentDescription="Back Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/backbutton_phases"

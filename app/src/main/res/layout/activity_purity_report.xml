@@ -3,14 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.PurityReportActivity">
-
     <ImageView android:id="@+id/purityreportscreen"
+        android:contentDescription="Purity Report Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -186,6 +180,7 @@
                 <!--Possible place for map-->
 
                 <ImageView
+                    android:contentDescription="Map Button"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:src="@drawable/globe_icon_small"
@@ -211,6 +206,7 @@
                     android:layout_below="@+id/purityReport_unsafe_imageView" />
 
                 <ImageView
+                    android:contentDescription="Treatable Clear Button"
                     android:layout_width="61dp"
                     android:layout_height="75dp"
                     android:src="@drawable/treatable_clear_state"
@@ -219,6 +215,7 @@
                     android:layout_centerHorizontal="true" />
 
                 <ImageView
+                    android:contentDescription="Waste Button"
                     android:layout_width="61dp"
                     android:layout_height="75dp"
                     android:src="@drawable/waste_state"
@@ -228,6 +225,7 @@
                     android:layout_marginEnd="26dp" />
 
                 <ImageView
+                    android:contentDescription="Potable Button"
                     android:layout_width="61dp"
                     android:layout_height="75dp"
                     android:src="@drawable/potable_state"
@@ -326,6 +324,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:contentDescription="Accept Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/button_phases"
@@ -336,6 +335,7 @@
                     android:layout_alignParentEnd="true" />
 
                 <ImageView
+                    android:contentDescription="Back Button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:src="@drawable/backbutton_phases"

@@ -10,12 +10,14 @@
     tools:context="com.example.otteramazement.clean_water.LoginActivity">
 
     <ImageView android:id="@+id/welcomescreenbkg"
+        android:contentDescription="Welcome Screen"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/welcome_screen_bkg7"
         android:layout_gravity="center"
         android:scaleType="fitXY"/>
     <ImageView android:id="@+id/welcomescreenover"
+        android:contentDescription="Welcome Screen Text"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/welcome_screen_over"
@@ -30,6 +32,7 @@
         android:background="@drawable/button_phases"/>
 
     <ImageView
+        android:contentDescription="Login Button"
         android:id="@+id/login_imageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
@@ -79,6 +82,7 @@
     </LinearLayout>
 
     <ImageView
+        android:contentDescription="Register Button"
         android:id="@+id/register_imageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"

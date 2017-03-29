@@ -3,14 +3,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.SourceReportActivity">
-
     <ImageView android:id="@+id/waterreportscreen"
+        android:contentDescription="Water Report Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -186,6 +180,7 @@
                     <!--Possible place for map-->
 
                     <ImageView
+                        android:contentDescription="Map Button"
                         android:layout_width="match_parent"
                         android:layout_height="100dp"
                         android:src="@drawable/globe_icon_small"
@@ -211,6 +206,7 @@
                         android:layout_below="@+id/sourceReport_stream_imageView" />
 
                     <ImageView
+                        android:contentDescription="Well Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/well_state"
@@ -219,6 +215,7 @@
                         android:layout_centerHorizontal="true" />
 
                     <ImageView
+                        android:contentDescription="Stream Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/stream_state"
@@ -228,6 +225,7 @@
                         android:layout_marginEnd="26dp" />
 
                     <ImageView
+                        android:contentDescription="Bottle Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/bottle_state"
@@ -281,6 +279,7 @@
                         android:layout_below="@+id/sourceReport_spring_imageView" />
 
                     <ImageView
+                        android:contentDescription="Spring Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/spring_state"
@@ -302,6 +301,7 @@
                         android:layout_marginStart="43dp" />
 
                     <ImageView
+                        android:contentDescription="Lake Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/lake_state"
@@ -311,6 +311,7 @@
                         android:layout_marginStart="31dp" />
 
                     <ImageView
+                        android:contentDescription="Other Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/other_state"
@@ -364,6 +365,7 @@
                         android:layout_alignParentEnd="true" />
 
                     <ImageView
+                        android:contentDescription="Waste Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/waste_state"
@@ -373,6 +375,7 @@
                         android:layout_marginStart="89dp" />
 
                     <ImageView
+                        android:contentDescription="Treat Muddy Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/treatable_muddy_state"
@@ -401,6 +404,7 @@
 
 
                     <ImageView
+                        android:contentDescription="Treat Clear Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/treatable_clear_state"
@@ -409,6 +413,7 @@
                         android:layout_alignStart="@+id/sourceReport_treatable_clear_textView" />
 
                     <ImageView
+                        android:contentDescription="Potable Button"
                         android:layout_width="61dp"
                         android:layout_height="75dp"
                         android:src="@drawable/potable_state"
@@ -437,6 +442,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:contentDescription="Accept Button"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:src="@drawable/button_phases"
@@ -447,6 +453,7 @@
                         android:layout_alignParentEnd="true" />
 
                     <ImageView
+                        android:contentDescription="Back Button"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:src="@drawable/backbutton_phases"

@@ -19,6 +19,7 @@
         android:visibility="gone" />
 
     <ImageView android:id="@+id/loginscreen"
+        android:contentDescription="Login Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -117,6 +118,7 @@
     </LinearLayout>
 
     <ImageView
+        android:contentDescription="Login Button"
         android:id="@+id/email_sign_in_button_imageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
@@ -127,6 +129,7 @@
         android:layout_alignParentEnd="true" />
 
     <ImageView
+        android:contentDescription="Back Button"
         android:id="@+id/login_backbuttonimageView"
         android:layout_width="wrap_content"
         android:layout_height="80dp"

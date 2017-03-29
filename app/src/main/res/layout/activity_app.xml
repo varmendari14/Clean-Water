@@ -4,14 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    tools:context="com.example.otteramazement.clean_water.AppActivity">
-
     <ImageView android:id="@+id/appscreen"
+        android:contentDescription="Main App Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
@@ -33,6 +27,7 @@
                 android:background="@drawable/button_phases"/>
 
             <ImageView
+                android:contentDescription="Profile Button"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:src="@drawable/button_phases"
@@ -42,6 +37,7 @@
                 android:layout_toEndOf="@+id/app_profile_button" />
 
             <ImageView
+                android:contentDescription="Water Button"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:src="@drawable/button_phases"
@@ -93,6 +89,7 @@
                 </LinearLayout>
 
             <ImageView
+                android:contentDescription="Logout Button"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:src="@drawable/button_phases"
@@ -102,6 +99,7 @@
                 android:layout_alignParentEnd="true" />
 
             <ImageView
+                android:contentDescription="Historical Button"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:src="@drawable/button_phases"
@@ -113,6 +111,7 @@
                 android:visibility="invisible"/>
 
             <ImageView
+                android:contentDescription="Manage Button"
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
                 android:src="@drawable/button_phases"
