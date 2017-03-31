@@ -122,35 +122,42 @@ public class RegisterActivity extends Activity {
         String passRedo = passwordRedo.getText().toString();
         String username = usernameInput.getText().toString();
         String name = nameInput.getText().toString();
-        register(password, passRedo, username, name);
-
+        ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
+        register(password, passRedo, username, name, type);
     }
 
-    private void register(String password, String passRedo, String username, String name) {
+    /**
+     * makes this follow MVC
+     * @param password
+     * @param passRedo
+     * @param username
+     * @param name
+     * @param type
+     */
+    private void register(String password, String passRedo, String username,
+                          String name, ProfileType type) {
         if (password.equals(passRedo)
                 && username.length() >= 3
                 && name.length() >= 1
                 && !OurHashMap.userMap.containsKey(username)) {
-
-            ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
             UserProfile newUser;
             if (type.equals(ProfileType.MANAGER)) {
-                newUser = new Manager((ProfileType) typeSpinner.getSelectedItem(),
+                newUser = new Manager(type,
                         name,
                         username,
                         password);
             } else if (type.equals(ProfileType.ADMIN)) {
-                newUser = new Admin((ProfileType) typeSpinner.getSelectedItem(),
+                newUser = new Admin(type,
                         name,
                         username,
                         password);
             } else if (type.equals(ProfileType.WORKER)) {
-                newUser = new Worker((ProfileType) typeSpinner.getSelectedItem(),
+                newUser = new Worker(type,
                         name,
                         username,
                         password);
             } else {
-                newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
+                newUser = new UserProfile(type,
                         name,
                         username,
                         password);
