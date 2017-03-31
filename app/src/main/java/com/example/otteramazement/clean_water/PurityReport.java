@@ -13,8 +13,8 @@ class PurityReport {
     private String reporter;
     private String location;
     private WaterPurityCondition condition;
-    private String virus;
-    private String contaminant;
+    private double virus;
+    private double contaminant;
 
 
     //No-arg constructor creates number for report
@@ -113,25 +113,25 @@ class PurityReport {
      * set virus ppm of water
      * @param aVirus the virus ppm of the water
      */
-    public void setVirus(String aVirus) { virus = aVirus; }
+    public void setVirus(double aVirus) { virus = aVirus; }
 
     /**
      * get virus ppm
      * @return the virus ppm of the water
      */
-    public String getVirus() { return virus; }
+    public double getVirus() { return virus; }
 
     /**
      * set contaminant of water
      * @param aContaminant the contaminant ppm of the water
      */
-    public void setContaminant(String aContaminant) { contaminant = aContaminant; }
+    public void setContaminant(double aContaminant) { contaminant = aContaminant; }
 
     /**
      * get contaminant ppm
      * @return the contaminant ppm of the water
      */
-    public String getContaminant() {return contaminant; }
+    public double getContaminant() {return contaminant; }
     // ***
 
     /**

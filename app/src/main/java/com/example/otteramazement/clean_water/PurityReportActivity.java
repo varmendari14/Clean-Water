@@ -142,7 +142,7 @@ public class PurityReportActivity extends Activity {
                 updateReport();
                 if (_report.getCondition() != null && _report.getTime().length() > 0
                         && _report.getDate().length() > 0 && _report.getLocation().length() > 0
-                        && _report.getVirus().length() > 0 && _report.getContaminant().length() > 0
+                        && _report.getVirus() >= 0 && _report.getContaminant()>= 0
                         &&_report.getLocation().contains("-")) {
                     Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
@@ -211,8 +211,8 @@ public class PurityReportActivity extends Activity {
         _report.setDate(dateInput.getText().toString());
         _report.setTime(timeInput.getText().toString());
         _report.setLocation(locationInput.getText().toString());
-        _report.setVirus(virusInput.getText().toString());
-        _report.setContaminant(contInput.getText().toString());
+        _report.setVirus(Integer.parseInt(virusInput.getText().toString()));
+        _report.setContaminant(Integer.parseInt(contInput.getText().toString()));
     }
 
     @Override
