@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -30,7 +29,7 @@ import java.util.Locale;
  */
 public class SourceReportActivity extends Activity {
 
-    private WaterSourceReport _report = new WaterSourceReport();
+    private final WaterSourceReport _report = new WaterSourceReport();
     private WaterType type;
     private WaterCondition condition;
 
@@ -40,7 +39,7 @@ public class SourceReportActivity extends Activity {
     private EditText locationInput;
     private TextView reportNumberText;
     private EditText timeInput;
-    private Calendar myCalendar = Calendar.getInstance();
+    private final Calendar myCalendar = Calendar.getInstance();
 
     private static SourceReportActivity obj;
 

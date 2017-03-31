@@ -6,7 +6,7 @@ package com.example.otteramazement.clean_water;
 
 class PurityReport {
 
-    private int reportNum;
+    private final int reportNum;
 
     private String date;
     private String time;

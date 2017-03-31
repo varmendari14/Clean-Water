@@ -4,16 +4,14 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.DatePicker;
 
-import java.lang.reflect.Array;
 import java.util.Calendar;
 
 public class DatePickerFragment extends DialogFragment
                             implements DatePickerDialog.OnDateSetListener {
 
-    private int[] dateArray = new int[3];
+    private final int[] dateArray = new int[3];
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

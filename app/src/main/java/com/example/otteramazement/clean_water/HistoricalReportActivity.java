@@ -3,22 +3,18 @@ package com.example.otteramazement.clean_water;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import android.app.DialogFragment;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -27,13 +23,13 @@ import java.util.Locale;
 
 public class HistoricalReportActivity extends Activity {
 
-    private HistoricalReport _report = new HistoricalReport();
+    private final HistoricalReport _report = new HistoricalReport();
 
     private EditText dateInput;
     private EditText reporterInput;
     private EditText locationInput;
     private EditText contInput;
-    private Calendar myCalendar = Calendar.getInstance();
+    private final Calendar myCalendar = Calendar.getInstance();
 
     private static HistoricalReportActivity obj;
 

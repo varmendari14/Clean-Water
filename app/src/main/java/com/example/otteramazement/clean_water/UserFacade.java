@@ -29,7 +29,7 @@ public class UserFacade {
     /**
      * Singleton pattern
      */
-    private static UserFacade instance = new UserFacade();
+    private static final UserFacade instance = new UserFacade();
 
 
     /**

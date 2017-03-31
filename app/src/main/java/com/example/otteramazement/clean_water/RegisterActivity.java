@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import java.io.File;
@@ -39,7 +38,7 @@ public class RegisterActivity extends Activity {
     //private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
 
-    private static List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
+    private static final List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
             ProfileType.MANAGER, ProfileType.ADMIN);
 
 

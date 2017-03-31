@@ -1,7 +1,5 @@
 package com.example.otteramazement.clean_water;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
 import android.content.CursorLoader;
@@ -25,13 +22,10 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -59,7 +53,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * A HashMap of Credentials containing known user names and passwords.
      *
      */
-    private HashMap<String, UserProfile> credentials = RegisterActivity.getUserMap();
+    private final HashMap<String, UserProfile> credentials = RegisterActivity.getUserMap();
 
     /**
      * Keep track of the login task to ensure we can cancel it if requested.

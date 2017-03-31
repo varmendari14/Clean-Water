@@ -55,9 +55,9 @@ public class UserProfile implements Serializable {
      * @param phoneNumber   Phone Number
      * @param title         Title
      */
-    public UserProfile(ProfileType profileType, String name, String username, String password,
-                       String email, String address, String city, String state, String country,
-                       String phoneNumber, String title) {
+    UserProfile(ProfileType profileType, String name, String username, String password,
+                String email, String address, String city, String state, String country,
+                String phoneNumber, String title) {
         this(profileType, name, username, password);
         this.email = email;
         this.address = address;
@@ -292,6 +292,7 @@ public class UserProfile implements Serializable {
      *
      */
 
+    @SuppressWarnings("SameReturnValue")
     public int describeContents() {
         return 0;
     }

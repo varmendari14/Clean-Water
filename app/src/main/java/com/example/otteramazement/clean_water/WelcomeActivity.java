@@ -4,18 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.ImageView;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.HashMap;
 /**
  * Created by Violet on 2/11/2017.
  * Authors: Violet, Mary
@@ -26,8 +19,8 @@ import java.util.HashMap;
  */
 public class WelcomeActivity extends Activity{
 
-    UserFacade uf = UserFacade.getInstance();
-    File file;
+    private final UserFacade uf = UserFacade.getInstance();
+    private File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

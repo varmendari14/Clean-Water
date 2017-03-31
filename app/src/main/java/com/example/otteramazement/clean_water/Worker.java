@@ -6,7 +6,7 @@ package com.example.otteramazement.clean_water;
  * Authors: Emma
  */
 
-public class Worker extends UserProfile {
+class Worker extends UserProfile {
     public Worker(ProfileType profileType, String name, String username, String password) {
         super(profileType, name, username, password);
     }

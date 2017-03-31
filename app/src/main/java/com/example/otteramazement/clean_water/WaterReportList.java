@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * holds lists for all the water reports which hold every report
  */
-public class WaterReportList {
+class WaterReportList {
     static List waterAvailabilityList = new ArrayList();
     static List<WaterSourceReport> waterSourceList = new ArrayList();
     static List<PurityReport> waterPurityList = new ArrayList();

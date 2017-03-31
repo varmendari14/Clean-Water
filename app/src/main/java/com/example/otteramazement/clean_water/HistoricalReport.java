@@ -6,7 +6,7 @@ package com.example.otteramazement.clean_water;
 
 class HistoricalReport {
 
-    private int reportNum;
+    private final int reportNum;
     private String date;
     private String reporter;
     private String location;

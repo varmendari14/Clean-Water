@@ -15,7 +15,6 @@ import android.widget.TextView;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -27,7 +26,7 @@ import java.util.Locale;
 
 public class PurityReportActivity extends Activity {
 
-    private PurityReport _report = new PurityReport();
+    private final PurityReport _report = new PurityReport();
     private WaterPurityCondition condition;
 
     private EditText dateInput;
@@ -37,7 +36,7 @@ public class PurityReportActivity extends Activity {
     private EditText timeInput;
     private EditText virusInput;
     private EditText contInput;
-    private Calendar myCalendar = Calendar.getInstance();
+    private final Calendar myCalendar = Calendar.getInstance();
 
     private static PurityReportActivity obj;
 

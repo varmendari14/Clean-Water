@@ -7,5 +7,5 @@ import java.util.LinkedList;
  */
 
 class CurrentUser {
-    static LinkedList<UserProfile> currentUser = new LinkedList();
+    static final LinkedList<UserProfile> currentUser = new LinkedList();
 }

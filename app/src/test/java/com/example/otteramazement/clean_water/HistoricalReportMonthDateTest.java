@@ -14,11 +14,11 @@ import static org.junit.Assert.assertEquals;
 
 public class HistoricalReportMonthDateTest {
 
-    private HistoricalReport correctreports[] = {new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
+    private final HistoricalReport[] correctreports = {new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport()};
-    private HistoricalReport incorrectreports[] = {new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
+    private final HistoricalReport[] incorrectreports = {new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport(),
             new HistoricalReport(), new HistoricalReport(), new HistoricalReport()};

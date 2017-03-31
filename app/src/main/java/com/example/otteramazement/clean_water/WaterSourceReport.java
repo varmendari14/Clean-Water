@@ -9,9 +9,9 @@ package com.example.otteramazement.clean_water;
 /**
  * represents source reports
  */
-public class WaterSourceReport {
+class WaterSourceReport {
 
-    private int reportNum;
+    private final int reportNum;
 
     private String date;
     private String time;
