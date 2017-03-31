@@ -1,8 +1,7 @@
 NeedTODO:
-*M9 Stuff:
-    *Persistance
-    *Auto manager
-    *linking data from historicalReports to History Graph
+M10
+*maybe fix the whole selection buttons if time
+*Fix lat-long check on water reports and history report EMMA
 
 
 OptionalTODO:
@@ -17,6 +16,10 @@ OptionalTODO:
 
 
 M9 DoneDone:
+*DONE M9 Stuff:
+    *Persistance
+    *Auto manager
+    *linking data from historicalReports to History Graph
 *DONE Historical Report
 *DONE only managers can request and see history graph
 *DONE only managers can enter setup info for graph
