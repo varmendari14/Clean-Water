@@ -4,7 +4,7 @@ package com.example.otteramazement.clean_water;
  * Created by Violet on 3/15/2017.
  */
 
-public class HistoricalReport {
+class HistoricalReport {
 
     private int reportNum;
     private String date;

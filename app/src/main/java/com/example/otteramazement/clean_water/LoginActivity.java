@@ -249,7 +249,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     /**
      * Supplies back button functionality!
      */
-    void cancelLogin() {
+    private void cancelLogin() {
         Intent intent = new Intent(LoginActivity.this,WelcomeActivity.class);
         startActivity(intent);
     }

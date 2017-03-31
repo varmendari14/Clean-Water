@@ -21,7 +21,7 @@ import android.widget.TextView;
  */
 public class ProfileActivity extends Activity{
 
-    UserProfile _user = CurrentUser.currentUser.get(0);
+    private UserProfile _user = CurrentUser.currentUser.get(0);
             //OurHashMap.userMap.get(CurrentUser.currentUser.get(0).getUsername());
 
     private EditText nameInput;

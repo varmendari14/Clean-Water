@@ -13,7 +13,7 @@ import java.util.Calendar;
 public class DatePickerFragment extends DialogFragment
                             implements DatePickerDialog.OnDateSetListener {
 
-    public int[] dateArray = new int[3];
+    private int[] dateArray = new int[3];
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {

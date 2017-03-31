@@ -8,6 +8,6 @@ import java.util.HashMap;
 /**
  * hash map that holds all the users with username and password
  */
-public class OurHashMap {
+class OurHashMap {
     static HashMap<String, UserProfile> userMap = new HashMap<>();
 }

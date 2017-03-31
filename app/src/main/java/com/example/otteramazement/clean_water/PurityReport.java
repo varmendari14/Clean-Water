@@ -4,7 +4,7 @@ package com.example.otteramazement.clean_water;
  * Created by Violet on 3/7/2017.
  */
 
-public class PurityReport {
+class PurityReport {
 
     private int reportNum;
 

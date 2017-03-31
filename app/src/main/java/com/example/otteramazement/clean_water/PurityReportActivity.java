@@ -2,18 +2,23 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Violet on 3/7/2017.
@@ -22,8 +27,8 @@ import java.util.Date;
 
 public class PurityReportActivity extends Activity {
 
-    PurityReport _report = new PurityReport();
-    WaterPurityCondition condition;
+    private PurityReport _report = new PurityReport();
+    private WaterPurityCondition condition;
 
     private EditText dateInput;
     private EditText reporterInput;
@@ -32,6 +37,7 @@ public class PurityReportActivity extends Activity {
     private EditText timeInput;
     private EditText virusInput;
     private EditText contInput;
+    private Calendar myCalendar = Calendar.getInstance();
 
     private static PurityReportActivity obj;
 
@@ -124,9 +130,9 @@ public class PurityReportActivity extends Activity {
 
         _report.setReporter(CurrentUser.currentUser.get(0).getName());
         reporterInput.setText(_report.getReporter());
-        Date date = new Date();
-        dateInput.setText(DateFormat.getDateInstance().format(date));
-        timeInput.setText(DateFormat.getTimeInstance().format(date));
+        Date date1 = new Date();
+        //dateInput.setText(DateFormat.getDateInstance().format(date));
+        timeInput.setText(DateFormat.getTimeInstance().format(date1));
         reportNumberText.setText(_report.getReportNumber());
 
         ImageView acceptButtonImageView = (ImageView) findViewById(R.id.purityReport_acceptbutton_imageView);
@@ -161,6 +167,38 @@ public class PurityReportActivity extends Activity {
 
             }
         });
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        dateInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(PurityReportActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+    }
+
+    /**
+     * Updates the Date Input field with the correct format.
+     */
+
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        dateInput.setText(sdf.format(myCalendar.getTime()));
     }
 
     // ***
@@ -168,7 +206,7 @@ public class PurityReportActivity extends Activity {
     /**
      *  Updates the report class with the entered data.
      */
-    protected void updateReport() {
+    private void updateReport() {
         _report.setCondition(condition);
         _report.setDate(dateInput.getText().toString());
         _report.setTime(timeInput.getText().toString());

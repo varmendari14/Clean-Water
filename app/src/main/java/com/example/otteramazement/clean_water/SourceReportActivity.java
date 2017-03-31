@@ -2,18 +2,23 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedList;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by Violet on 2/24/2017.
@@ -25,9 +30,9 @@ import java.util.Date;
  */
 public class SourceReportActivity extends Activity {
 
-    WaterSourceReport _report = new WaterSourceReport();
-    WaterType type;
-    WaterCondition condition;
+    private WaterSourceReport _report = new WaterSourceReport();
+    private WaterType type;
+    private WaterCondition condition;
 
 
     private EditText dateInput;
@@ -35,6 +40,7 @@ public class SourceReportActivity extends Activity {
     private EditText locationInput;
     private TextView reportNumberText;
     private EditText timeInput;
+    private Calendar myCalendar = Calendar.getInstance();
 
     private static SourceReportActivity obj;
 
@@ -192,9 +198,9 @@ public class SourceReportActivity extends Activity {
 
         _report.setReporter(CurrentUser.currentUser.get(0).getName());
         reporterInput.setText(_report.getReporter());
-        Date date = new Date();
-        dateInput.setText(DateFormat.getDateInstance().format(date));
-        timeInput.setText(DateFormat.getTimeInstance().format(date));
+        Date date1 = new Date();
+        //dateInput.setText(DateFormat.getDateInstance().format(date));
+        timeInput.setText(DateFormat.getTimeInstance().format(date1));
         reportNumberText.setText(_report.getReportNumber());
 
         ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
@@ -227,6 +233,38 @@ public class SourceReportActivity extends Activity {
 
             }
         });
+
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
+
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+                updateLabel();
+            }
+
+        };
+
+        dateInput.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new DatePickerDialog(SourceReportActivity.this, date, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+    }
+
+    /**
+     * Updates the Date Input field with the correct format.
+     */
+
+    private void updateLabel() {
+        String myFormat = "MM/dd/yy";
+        SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+        dateInput.setText(sdf.format(myCalendar.getTime()));
     }
 
     // ***
@@ -234,7 +272,7 @@ public class SourceReportActivity extends Activity {
     /**
      *  Updates the report class with the entered data.
      */
-    protected void updateReport() {
+    private void updateReport() {
         _report.setCondition(condition);
         _report.setType(type);
         _report.setDate(dateInput.getText().toString());

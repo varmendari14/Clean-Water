@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public class HistoricalReportActivity extends Activity {
 
-    HistoricalReport _report = new HistoricalReport();
+    private HistoricalReport _report = new HistoricalReport();
 
     private EditText dateInput;
     private EditText reporterInput;
@@ -152,7 +152,7 @@ public class HistoricalReportActivity extends Activity {
     /**
      *  Updates the report class with the entered data.
      */
-    protected void updateReport() {
+    private void updateReport() {
         _report.setDate(dateInput.getText().toString());
         _report.setLocation(locationInput.getText().toString());
         _report.setContaminant(Integer.parseInt(contInput.getText().toString()));

@@ -9,7 +9,7 @@ package com.example.otteramazement.clean_water;
 /**
  * This class represents the manager which is a subclass of user
  */
-public class Manager extends UserProfile {
+class Manager extends UserProfile {
     public Manager(ProfileType profileType, String name, String username, String password) {
         super(profileType, name, username, password);
     }
