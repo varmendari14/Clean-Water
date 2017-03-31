@@ -127,6 +127,14 @@ public class RegisterActivity extends Activity {
         register(password, passRedo, username, name, type);
     }
 
+    /**
+     * makes this follow MVC
+     * @param password
+     * @param passRedo
+     * @param username
+     * @param name
+     * @param type
+     */
     private void register(String password, String passRedo, String username,
                           String name, ProfileType type) {
         if (password.equals(passRedo)
