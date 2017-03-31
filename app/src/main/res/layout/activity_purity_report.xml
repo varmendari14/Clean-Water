@@ -280,7 +280,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:ems="10"
                     android:id="@+id/purityReport_virus_input"
                     android:textSize="18sp"
@@ -308,7 +308,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:ems="10"
                     android:id="@+id/purityReport_cont_input"
                     android:textSize="18sp"
