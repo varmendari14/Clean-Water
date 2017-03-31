@@ -119,37 +119,46 @@ public class RegisterActivity extends Activity {
      */
 
     private void attemptRegistration() {
-        if (passwordInput.getText().toString().equals(passwordRedo.getText().toString())
-                && usernameInput.getText().toString().length() >= 3
-                && nameInput.getText().toString().length() >= 1
-                && !OurHashMap.userMap.containsKey(usernameInput.getText().toString())) {
+        String password = passwordInput.getText().toString();
+        String passRedo = passwordRedo.getText().toString();
+        String username = usernameInput.getText().toString();
+        String name = nameInput.getText().toString();
+        register(password, passRedo, username, name);
+
+    }
+
+    private void register(String password, String passRedo, String username, String name) {
+        if (password.equals(passRedo)
+                && username.length() >= 3
+                && name.length() >= 1
+                && !OurHashMap.userMap.containsKey(username)) {
 
             ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
             UserProfile newUser;
             if (type.equals(ProfileType.MANAGER)) {
-                        newUser = new Manager((ProfileType) typeSpinner.getSelectedItem(),
-                        nameInput.getText().toString(),
-                        usernameInput.getText().toString(),
-                        passwordInput.getText().toString());
+                newUser = new Manager((ProfileType) typeSpinner.getSelectedItem(),
+                        name,
+                        username,
+                        password);
             } else if (type.equals(ProfileType.ADMIN)) {
-                       newUser = new Admin((ProfileType) typeSpinner.getSelectedItem(),
-                        nameInput.getText().toString(),
-                        usernameInput.getText().toString(),
-                        passwordInput.getText().toString());
+                newUser = new Admin((ProfileType) typeSpinner.getSelectedItem(),
+                        name,
+                        username,
+                        password);
             } else if (type.equals(ProfileType.WORKER)) {
-                        newUser = new Worker((ProfileType) typeSpinner.getSelectedItem(),
-                        nameInput.getText().toString(),
-                        usernameInput.getText().toString(),
-                        passwordInput.getText().toString());
+                newUser = new Worker((ProfileType) typeSpinner.getSelectedItem(),
+                        name,
+                        username,
+                        password);
             } else {
-                        newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
-                        nameInput.getText().toString(),
-                        usernameInput.getText().toString(),
-                        passwordInput.getText().toString());
+                newUser = new UserProfile((ProfileType) typeSpinner.getSelectedItem(),
+                        name,
+                        username,
+                        password);
             }
 
             CurrentUser.currentUser.add(newUser);
-            OurHashMap.userMap.put(usernameInput.getText().toString(), newUser);
+            OurHashMap.userMap.put(username, newUser);
 
             //save to json
             UserFacade uf = UserFacade.getInstance();
@@ -159,21 +168,21 @@ public class RegisterActivity extends Activity {
             Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
             startActivity(intent);
 
-        } else if (! passwordInput.getText().toString().equals(passwordRedo.getText().toString())) {
+        } else if (! password.equals(passRedo)) {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
             alert.setTitle("Invalid Registration");
             alert.setMessage("Your passwords do not match");
             alert.show();
 
-        } else if (usernameInput.getText().toString().length() < 3 ||
-                nameInput.getText().toString().length() == 0) {
+        } else if (username.length() < 3 ||
+                name.length() == 0) {
 
             AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
             nameProblem.setTitle("Invalid Registration");
             nameProblem.setMessage("Your name or username isn't long enough");
             nameProblem.show();
-        } else if (OurHashMap.userMap.containsKey(usernameInput.getText().toString())) {
+        } else if (OurHashMap.userMap.containsKey(username)) {
             AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
             nameProblem.setTitle("Invalid Registration");
             nameProblem.setMessage("This username is already being used.");
