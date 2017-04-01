@@ -23,7 +23,7 @@ public class WaterAvailabilityActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_availability);
 
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        //Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
