@@ -3,6 +3,7 @@
 <!-- Author: Violet Armendariz -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -13,10 +14,12 @@
         android:layout_height="match_parent"
         android:src="@mipmap/splash_screen_bkg2"
         android:layout_gravity="center"
-        android:background="@mipmap/splash_screen_bkg2" />
+        android:background="@mipmap/splash_screen_bkg2"
+        tools:ignore="HardcodedText" />
 
     <TextView android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Clean Water, splash"/>
+        android:text="Clean Water, splash"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>

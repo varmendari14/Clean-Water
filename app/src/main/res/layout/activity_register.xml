@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:src="@mipmap/registration_bkg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        tools:ignore="HardcodedText" />
 
 
     <Button
@@ -33,7 +34,8 @@
         android:alpha=".75"
         android:layout_marginEnd="127dp"
         android:layout_alignTop="@+id/register_backbuttonimageView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/register_backbutton"
@@ -73,7 +75,8 @@
         android:alpha=".75"
         android:layout_alignTop="@+id/register_imageView"
         android:layout_toStartOf="@+id/register_backbutton_textView"
-        android:layout_marginEnd="10dp" />
+        android:layout_marginEnd="10dp"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:contentDescription="Back Button"
@@ -85,7 +88,8 @@
         android:layout_marginBottom="16dp"
         android:layout_marginStart="47dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/register_backbutton_textView" />
+        android:layout_toEndOf="@+id/register_backbutton_textView"
+        tools:ignore="HardcodedText" />
 
 
     <EditText
@@ -99,7 +103,8 @@
         android:layout_alignBaseline="@+id/register_name_textView"
         android:layout_alignBottom="@+id/register_name_textView"
         android:layout_alignStart="@+id/register_username_input"
-        android:textAlignment="textStart" />
+        android:textAlignment="textStart"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Password:"
@@ -111,7 +116,8 @@
         android:textStyle="normal|bold"
         android:layout_below="@+id/register_retype_textView"
         android:layout_alignParentStart="true"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Type:"
@@ -123,7 +129,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginBottom="65dp"
         android:textStyle="normal|bold"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Re-Type"
@@ -135,7 +142,8 @@
         android:textStyle="normal|bold"
         android:layout_alignTop="@+id/register_retypepassword_input"
         android:layout_alignParentStart="true"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -147,7 +155,8 @@
         android:textAlignment="textStart"
         android:textSize="24sp"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/register_password_input" />
+        android:layout_alignStart="@+id/register_password_input"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Password:"
@@ -160,7 +169,8 @@
         android:layout_alignBaseline="@+id/register_password_input"
         android:layout_alignBottom="@+id/register_password_input"
         android:layout_alignParentStart="true"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -173,7 +183,8 @@
         android:textSize="24sp"
         android:layout_marginBottom="35dp"
         android:layout_above="@+id/register_retypepassword_input"
-        android:layout_alignStart="@+id/register_username_input" />
+        android:layout_alignStart="@+id/register_username_input"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -185,7 +196,8 @@
         android:hint="Username"
         android:textAlignment="textStart"
         android:layout_below="@+id/register_backbutton_textView"
-        android:layout_toEndOf="@+id/register_username_textView" />
+        android:layout_toEndOf="@+id/register_username_textView"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Username:"
@@ -199,7 +211,8 @@
         android:layout_alignBottom="@+id/register_username_input"
         android:layout_alignParentStart="true"
         android:textColorHint="#FF152A25"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Name:"
@@ -213,7 +226,8 @@
         android:layout_alignBottom="@+id/register_registerbutton"
         android:layout_toEndOf="@+id/register_registerbutton"
         android:textColorLink="@android:color/holo_green_light"
-        android:textColor="#FF152A25" />
+        android:textColor="#FF152A25"
+        tools:ignore="HardcodedText" />
 
     <Spinner
         android:layout_width="match_parent"

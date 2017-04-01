@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,7 +11,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:src="@mipmap/app_activity_bkg3"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        tools:ignore="HardcodedText" />
 
 
         <RelativeLayout
@@ -34,7 +36,8 @@
                 android:id="@+id/app_profile_imageView"
                 android:alpha=".75"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/app_profile_button" />
+                android:layout_toEndOf="@+id/app_profile_button"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:contentDescription="Water Button"
@@ -44,7 +47,8 @@
                 android:id="@+id/app_water_imageView"
                 android:alpha=".75"
                 android:layout_below="@+id/app_profile_imageView"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
 
             <Button
@@ -96,7 +100,8 @@
                 android:id="@+id/app_logout_imageView"
                 android:alpha=".75"
                 android:layout_below="@+id/app_manage_textView"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignParentEnd="true"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:contentDescription="Historical Button"
@@ -108,7 +113,8 @@
                 android:layout_below="@+id/app_water_imageView"
                 android:layout_alignParentStart="true"
                 android:layout_marginTop="16dp"
-                android:visibility="invisible"/>
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
 
             <ImageView
                 android:contentDescription="Manage Button"
@@ -119,7 +125,8 @@
                 android:alpha=".75"
                 android:layout_below="@+id/app_historical_textView"
                 android:layout_toEndOf="@+id/app_profile_button"
-                android:visibility="invisible"/>
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:text="Historical Report"
@@ -134,7 +141,8 @@
                 android:layout_marginBottom="31dp"
                 android:layout_alignBottom="@+id/app_historical_imageView"
                 android:layout_alignStart="@+id/app_water_textView"
-                android:visibility="invisible"/>
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:text="Manage Users"
@@ -149,7 +157,8 @@
                 android:layout_marginBottom="32dp"
                 android:layout_above="@+id/app_logout_textView"
                 android:layout_alignStart="@+id/app_historical_textView"
-                android:visibility="invisible"/>
+                android:visibility="invisible"
+                tools:ignore="HardcodedText" />
 
             <TextView
                     android:text="Logout"
@@ -163,7 +172,8 @@
                     android:alpha=".75"
                 android:layout_marginTop="31dp"
                 android:layout_below="@+id/app_manage_imageView"
-                android:layout_alignStart="@+id/app_manage_textView" />
+                android:layout_alignStart="@+id/app_manage_textView"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:text="Edit Profile"
@@ -177,7 +187,8 @@
                 android:alpha=".75"
                 android:layout_marginBottom="12dp"
                 android:layout_alignBottom="@+id/app_profile_button"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:text="Water Report"
@@ -191,7 +202,8 @@
                 android:alpha=".75"
                 android:layout_marginBottom="28dp"
                 android:layout_above="@+id/app_historical_imageView"
-                android:layout_alignStart="@+id/app_profile_textView" />
+                android:layout_alignStart="@+id/app_profile_textView"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 

@@ -24,7 +24,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:src="@mipmap/login_screen_bkg2"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         android:id="@+id/login_form"
@@ -47,7 +48,8 @@
                     android:layout_height="wrap_content"
                     android:hint="User"
                     android:inputType="textEmailAddress"
-                    android:maxLines="1"/>
+                    android:maxLines="1"
+                    tools:ignore="HardcodedText" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -64,7 +66,8 @@
                     android:imeActionLabel="@string/action_sign_in_short"
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
-                    android:maxLines="1"/>
+                    android:maxLines="1"
+                    tools:ignore="HardcodedText" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -124,7 +127,8 @@
         android:alpha=".75"
         android:layout_marginEnd="126dp"
         android:layout_alignTop="@+id/login_backbuttonimageView"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:contentDescription="Back Button"
@@ -136,7 +140,8 @@
         android:layout_marginBottom="73dp"
         android:layout_alignParentBottom="true"
         android:layout_toEndOf="@+id/login_loginbutton_textView"
-        android:layout_marginStart="11dp" />
+        android:layout_marginStart="11dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/login_loginbutton_textView"
@@ -149,6 +154,7 @@
         android:alpha=".75"
         android:layout_marginEnd="30dp"
         android:layout_alignTop="@+id/email_sign_in_button_imageView"
-        android:layout_toStartOf="@+id/login_backbutton_textView" />
+        android:layout_toStartOf="@+id/login_backbutton_textView"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
