@@ -211,7 +211,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         if (cancel) {
             focusView.requestFocus();
         } else {
-            mAuthTask = new UserLoginTask(email, password);
+            mAuthTask = new UserLoginTask();
             mAuthTask.execute((Void) null);
             CurrentUser.currentUser.add(credentials.get(email));
             Intent logIntent = new Intent(getBaseContext(), AppActivity.class);
@@ -335,7 +335,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         //private final String mEmail;
         //private final String mPassword;
 
-        UserLoginTask(String email, String password) {
+        UserLoginTask() {
             //mEmail = email;
             //mPassword = password;
         }

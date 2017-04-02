@@ -9,7 +9,7 @@
     android:layout_height="fill_parent"
     tools:context="com.example.otteramazement.clean_water.LoginActivity">
 
-    <ImageView android:id="@+id/welcomescreenbkg"
+    <ImageView
         android:contentDescription="Welcome Screen"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:layout_gravity="center"
         android:scaleType="fitXY"
         tools:ignore="HardcodedText" />
-    <ImageView android:id="@+id/welcomescreenover"
+    <ImageView
         android:contentDescription="Welcome Screen Text"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
@@ -31,7 +31,8 @@
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
-        android:background="@drawable/button_phases"/>
+        android:background="@drawable/button_phases"
+        tools:ignore="RtlHardcoded" />
 
     <ImageView
         android:contentDescription="Login Button"
@@ -70,12 +71,12 @@
         <!--android:layout_marginTop="34dp" />-->
 
     <Button
-        android:id="@+id/welcome_registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
-        android:background="@drawable/button_phases"/>
+        android:background="@drawable/button_phases"
+        tools:ignore="RtlHardcoded" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"

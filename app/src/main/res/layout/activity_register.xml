@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <ImageView android:id="@+id/registerscreen"
+    <ImageView
         android:contentDescription="Registration Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +22,8 @@
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
-        android:background="@drawable/button_phases"/>
+        android:background="@drawable/button_phases"
+        tools:ignore="RtlHardcoded" />
 
 
     <ImageView
@@ -38,13 +39,13 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/register_backbutton"
         android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_alignLeft="@+id/buttonLayout"
         android:layout_alignRight="@+id/buttonLayout"
         android:background="@drawable/back_button"
-        android:src="@drawable/backbutton_phases"/>
+        android:src="@drawable/backbutton_phases"
+        tools:ignore="RtlHardcoded" />
 
     <LinearLayout
         android:id="@+id/buttonLayout"
@@ -240,7 +241,8 @@
         android:gravity="center"
         android:paddingLeft="10dp"
         android:layout_alignBottom="@+id/register_type_textView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        tools:ignore="RtlHardcoded,RtlSymmetry" />
 
 
 </RelativeLayout>

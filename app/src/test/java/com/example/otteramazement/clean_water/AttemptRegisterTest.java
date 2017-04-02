@@ -1,9 +1,6 @@
 package com.example.otteramazement.clean_water;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -14,7 +11,7 @@ import org.junit.Test;
 
 public class AttemptRegisterTest {
 
-    RegisterActivity r = new RegisterActivity();
+    private final RegisterActivity r = new RegisterActivity();
 
     @Test
     public void passMatch() {

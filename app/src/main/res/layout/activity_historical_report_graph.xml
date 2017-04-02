@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <ImageView android:id="@+id/historicalgraphscreen"
+    <ImageView
         android:contentDescription="Historical Graph Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,7 +50,6 @@
     <ImageView
         android:contentDescription="Map Button"
         android:src="@drawable/globe_icon_large"
-        android:id="@+id/historicalGraph_mapholder_imageView"
         android:alpha=".25"
         android:layout_width="325dp"
         android:layout_height="400dp"

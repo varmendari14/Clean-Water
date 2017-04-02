@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <ImageView android:id="@+id/appscreen"
+    <ImageView
         android:contentDescription="Main App Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +26,8 @@
                 android:layout_height="80dp"
                 android:layout_alignLeft="@+id/buttonLayout"
                 android:layout_alignRight="@+id/buttonLayout"
-                android:background="@drawable/button_phases"/>
+                android:background="@drawable/button_phases"
+                tools:ignore="RtlHardcoded" />
 
             <ImageView
                 android:contentDescription="Profile Button"
@@ -52,37 +53,37 @@
 
 
             <Button
-                    android:id="@+id/app_water_button"
-                    android:layout_width="wrap_content"
+                android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_alignLeft="@+id/buttonLayout"
                     android:layout_alignRight="@+id/buttonLayout"
-                    android:background="@drawable/button_phases"/>
+                    android:background="@drawable/button_phases"
+                tools:ignore="RtlHardcoded" />
 
 
                     <Button
-                        android:id="@+id/app_manage_button"
                         android:layout_width="wrap_content"
                         android:layout_height="80dp"
                         android:layout_alignLeft="@+id/buttonLayout"
                         android:layout_alignRight="@+id/buttonLayout"
-                        android:background="@drawable/button_phases"/>
+                        android:background="@drawable/button_phases"
+                        tools:ignore="RtlHardcoded" />
 
             <Button
-                android:id="@+id/app_historical_button"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_alignLeft="@+id/buttonLayout"
                 android:layout_alignRight="@+id/buttonLayout"
-                android:background="@drawable/button_phases"/>
+                android:background="@drawable/button_phases"
+                tools:ignore="RtlHardcoded" />
 
                 <Button
-                    android:id="@+id/app_logout_button"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_alignLeft="@+id/buttonLayout"
                     android:layout_alignRight="@+id/buttonLayout"
-                    android:background="@drawable/button_phases"/>
+                    android:background="@drawable/button_phases"
+                    tools:ignore="RtlHardcoded" />
 
                 <LinearLayout
                     android:id="@+id/buttonLayout"

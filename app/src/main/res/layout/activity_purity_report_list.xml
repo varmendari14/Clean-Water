@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <ImageView android:id="@+id/purityreportscreen"
+    <ImageView
         android:contentDescription="Purity Report Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -7,7 +7,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView android:id="@+id/profilescreen"
+    <ImageView
         android:contentDescription="Profile Screen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -44,7 +44,6 @@
                         android:textStyle="normal|bold"
                         android:textColorLink="@android:color/holo_green_light"
                         android:textColor="#FF152A25"
-                        android:layout_alignParentBottom="true"
                         tools:ignore="HardcodedText" />
 
                     <ImageView
@@ -52,7 +51,6 @@
                         android:layout_width="220dp"
                         android:layout_height="205dp"
                         android:src="@mipmap/pic_bkg"
-                        android:id="@+id/profile_profilePic"
                         android:adjustViewBounds="true"
                         android:scaleType="fitXY"
                         tools:ignore="HardcodedText" />
@@ -74,7 +72,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -86,7 +83,6 @@
                     android:textSize="18sp"
                     android:hint="Name"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -105,7 +101,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -117,7 +112,6 @@
                     android:textSize="18sp"
                     android:hint="Title"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -137,7 +131,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -148,7 +141,6 @@
                     android:id="@+id/profile_email_input"
                     android:layout_weight="0.56"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
                     android:hint="Email Address"
                     tools:ignore="HardcodedText" />
 
@@ -168,8 +160,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView"
                     tools:ignore="HardcodedText" />
 
                 <!--<EditText-->
@@ -210,8 +200,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -223,8 +211,6 @@
                     android:textSize="18sp"
                     android:hint="City"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_city_textView"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -243,8 +229,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -256,8 +240,6 @@
                     android:textSize="18sp"
                     android:hint="State"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_state_textView"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -276,8 +258,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView"
                     tools:ignore="HardcodedText" />
 
                 <EditText
@@ -289,8 +269,6 @@
                     android:textSize="18sp"
                     android:hint="Country"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_country_textView"
                     tools:ignore="HardcodedText" />
 
             </LinearLayout>
@@ -309,8 +287,6 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView"
                     tools:ignore="HardcodedText" />
 
                 <EditText
