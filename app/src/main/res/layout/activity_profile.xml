@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Author: Violet Armendariz -->
+<!-- Author: Violet -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -141,7 +141,7 @@
                     tools:ignore="HardcodedText" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:ems="10"
@@ -185,7 +185,7 @@
                     <!--android:layout_toEndOf="@+id/profile_staddress_textView" />-->
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="textPostalAddress"
                     android:ems="10"
@@ -314,7 +314,7 @@
                     tools:ignore="HardcodedText" />
 
                 <EditText
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:hint="Phone Number (9999999999)"
