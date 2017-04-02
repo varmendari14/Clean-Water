@@ -134,7 +134,7 @@ public class RegisterActivity extends Activity {
      * @param name user's name
      * @param type type of user
      */
-    private void register(String password, String passRedo, String username,
+    void register(String password, String passRedo, String username,
                           String name, ProfileType type) {
         if (password.equals(passRedo)
                 && username.length() >= 3
