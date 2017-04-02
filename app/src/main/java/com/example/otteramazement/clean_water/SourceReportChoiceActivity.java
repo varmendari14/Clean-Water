@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 2/26/2017.
+ * Created by Violet
+ * Activity for choosing to create or view source reports
  */
 
 /**
@@ -35,7 +36,7 @@ public class SourceReportChoiceActivity extends Activity {
         title.setTypeface(font);
 
 
-        //button functionalities
+        //button functionality
         ImageView sourceButtonImage = (ImageView) findViewById(R.id.sourceReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,7 +1,8 @@
 package com.example.otteramazement.clean_water;
 
-/**
- * Created by Violet on 3/15/2017.
+/*
+ * Created by Violet
+ * A Historical Report that can be made by Workers and Managers
  */
 
 class HistoricalReport {
@@ -11,7 +12,7 @@ class HistoricalReport {
     private String reporter;
     private String location;
     private double contaminant;
-    private double month;
+    //private double month;
 
     //No-arg constructor creates number for report
 
@@ -69,13 +70,15 @@ class HistoricalReport {
         return location;
     }
 
-    /**
-     * get report number
-     * @return numerically ordered report number
-     */
-    public String getReportNumber() {
-        return Integer.toString(reportNum);
-    }
+// --Commented out by Inspection START (4/1/17, 8:32 PM):
+//    /**
+//     * get report number
+//     * @return numerically ordered report number
+//     */
+//    public String getReportNumber() {
+//        return Integer.toString(reportNum);
+//    }
+// --Commented out by Inspection STOP (4/1/17, 8:32 PM)
 
     /**
      * set contaminant of water
@@ -89,17 +92,21 @@ class HistoricalReport {
      */
     public double getContaminant() {return contaminant; }
 
-    /**
-     * set contaminant of water
-     * @param aMonth the month of the water
-     */
-    public void setMonth(int aMonth) { month = aMonth; }
+// --Commented out by Inspection START (4/1/17, 8:33 PM):
+//    /**
+//     * set contaminant of water
+//     * @param aMonth the month of the water
+//     */
+//    public void setMonth(int aMonth) { month = aMonth; }
+// --Commented out by Inspection STOP (4/1/17, 8:33 PM)
 
-    /**
-     * get contaminant ppm
-     * @return the month of the water
-     */
-    public double getMonth() {return month; }
+// --Commented out by Inspection START (4/1/17, 8:33 PM):
+//    /**
+//     * get contaminant ppm
+//     * @return the month of the water
+//     */
+//    public double getMonth() {return month; }
+// --Commented out by Inspection STOP (4/1/17, 8:33 PM)
     // ***
 
     /**

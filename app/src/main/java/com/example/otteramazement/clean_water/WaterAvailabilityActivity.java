@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 3/3/2017.
+ * Created by Violet
+ * Activity preemptive to google maps activity
  */
 
 /**
@@ -23,7 +24,6 @@ public class WaterAvailabilityActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_availability);
 
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts

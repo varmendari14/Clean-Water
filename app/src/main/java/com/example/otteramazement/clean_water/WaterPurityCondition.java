@@ -1,7 +1,8 @@
 package com.example.otteramazement.clean_water;
 
 /**
- * Created by Emma on 3/7/2017.
+ * Created by Emma
+ * Enum for types of water purity conditions
  */
 
 public enum WaterPurityCondition {
@@ -12,7 +13,7 @@ public enum WaterPurityCondition {
      * @param type  String name of condition
      * @return      Corresponding condition
      */
-    public static String waterPurityContiditionToString(WaterPurityCondition type) {
+    public static String waterPurityConditionToString(WaterPurityCondition type) {
         switch(type) {
             default:
             case SAFE:

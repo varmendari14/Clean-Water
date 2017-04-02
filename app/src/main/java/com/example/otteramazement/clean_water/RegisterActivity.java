@@ -105,7 +105,7 @@ public class RegisterActivity extends Activity {
         //Spinner
 
         typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
-        ArrayAdapter<String> typeAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, ProfileAdapter);
+        ArrayAdapter<ProfileType> typeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, ProfileAdapter);
         typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         typeSpinner.setAdapter(typeAdapter);
 
@@ -128,11 +128,11 @@ public class RegisterActivity extends Activity {
 
     /**
      * makes this follow MVC
-     * @param password
-     * @param passRedo
-     * @param username
-     * @param name
-     * @param type
+     * @param password user's password
+     * @param passRedo user's password typed again
+     * @param username user's username
+     * @param name user's name
+     * @param type type of user
      */
     private void register(String password, String passRedo, String username,
                           String name, ProfileType type) {
@@ -197,7 +197,7 @@ public class RegisterActivity extends Activity {
     }
 
     /**
-     * This is a getter for the hashmap that holds all of the users info
+     * This is a getter for the hash map that holds all of the users info
      * @return hash map of users and passwords
      */
     public static HashMap<String,UserProfile> getUserMap() {

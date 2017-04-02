@@ -1,7 +1,8 @@
 package com.example.otteramazement.clean_water;
 
 /**
- * Created by Violet on 3/7/2017.
+ * Created by Violet on 3/7/17
+ * A purity/quality report that can be created by Workers and Managers
  */
 
 class PurityReport {
@@ -142,21 +143,12 @@ class PurityReport {
         return reportNum + ": " +
                 date +
                 "\n" + time +
-                "\nCondition: " + WaterPurityCondition.waterPurityContiditionToString(condition)
+                "\nCondition: " + WaterPurityCondition.waterPurityConditionToString(condition)
                 + "\nVirus ppm: " + virus
                 + "\nContaminant ppm: " + contaminant
                 + "\n@Location: " + location +
                 "\nVia: " + reporter;
     }
 
-    /**
-     * to string for google maps
-     * @return string for google maps
-     */
-    public String mapMarkerToString() {
-        return reportNum + ": " +
-                "\nCondition: " + WaterPurityCondition.waterPurityContiditionToString(condition) +
-                "\nVia: " + reporter;
-    }
 
 }

@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by maryprouty on 2/12/17.
+ * Created by Mary on 2/12/17.
  * Authors: Mary, Violet
  */
 
@@ -31,8 +31,8 @@ public class AppActivity extends Activity {
 
         TextView logoutButton = (TextView) findViewById(R.id.app_logout_textView);
         logoutButton.setTypeface(font);
-        TextView editprofileButton = (TextView) findViewById(R.id.app_profile_textView);
-        editprofileButton.setTypeface(font);
+        TextView editProfileButton = (TextView) findViewById(R.id.app_profile_textView);
+        editProfileButton.setTypeface(font);
         TextView waterButton = (TextView) findViewById(R.id.app_water_textView);
         waterButton.setTypeface(font);
         TextView historicalButton = (TextView) findViewById(R.id.app_historical_textView);

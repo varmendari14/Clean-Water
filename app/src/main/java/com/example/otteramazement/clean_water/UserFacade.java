@@ -16,7 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by maryprouty on 3/27/17.
+ * Created by Mary
+ * Used to load and save Json for persistence
  */
 
 public class UserFacade {
@@ -47,14 +48,14 @@ public class UserFacade {
      */
     public static UserFacade getInstance() { return instance; }
 
-    public boolean loadJson(File file) {
+    public void loadJson(File file) {
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
             //Since we saved the json as a string, we just read in the string normally
             String inString = input.readLine();
             Log.d("DEBUG", "JSON: " + inString);
             Gson gson = new Gson();
-            //Then we use the Gson library to recreate the object references and links automatically
+            //Then we use the G son library to recreate the object references and links automatically
             if (file.getName().equals("user.json")) {
                 Type hashType = new TypeToken<HashMap<String, UserProfile>>() {
                 }.getType();
@@ -75,26 +76,20 @@ public class UserFacade {
             input.close();
         } catch (IOException e) {
             Log.e("UserFacade", "Failed to open/read the buffered reader for json");
-            return false;
         }
 
-        return true;
 
     }
 
-    public boolean saveJson(File file ) {
+    public void saveJson(File file ) {
 
         try {
             PrintWriter writer = new PrintWriter(file);
             /*
-                We are using the Google Gson library to make things easy.  You will need to add the
-                following line to your gradle file so the proper dependencies are set up:
-                compile 'com.google.code.gson:gson:2.3'
 
-                Gson, like object serialization will take a single object and save all the objects
+                G son, like object serialization will take a single object and save all the objects
                 it refers to.  You can save everything by one reference, as long as it is the
                 top-level reference.
-
 
              */
             Gson gson = new Gson();
@@ -115,13 +110,7 @@ public class UserFacade {
             writer.close();
         } catch (FileNotFoundException e) {
             Log.e("UserManagementFacade", "Failed to open json file for output");
-            return false;
         }
 
-        return true;
-    }
-
-    public static HashMap<String, UserProfile> getMap() {
-        return OurHashMap.userMap;
     }
 }

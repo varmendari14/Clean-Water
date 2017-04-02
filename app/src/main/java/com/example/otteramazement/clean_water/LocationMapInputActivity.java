@@ -7,7 +7,7 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.GoogleMap;
 
 /**
- * Created by Violet on 3/6/2017.
+ * Created by Violet
  */
 
 /**

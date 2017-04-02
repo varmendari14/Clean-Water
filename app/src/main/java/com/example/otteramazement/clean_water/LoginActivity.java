@@ -63,12 +63,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     // UI references.
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
-    private View mProgressView;
-    private View mLoginFormView;
-    private ImageView mCancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        ImageView mCancelButton;
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
@@ -104,8 +104,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_progress);
         mCancelButton = (ImageView) findViewById(R.id.login_backbuttonimageView);
 
         mCancelButton.setOnClickListener(new OnClickListener() {
@@ -224,20 +222,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isEmailValid(String email) {
-        if (credentials.containsKey(email)) {
-            return true;
-        } else {
-            return false;
-        }
+        return credentials.containsKey(email);
     }
 
     private boolean isPasswordValid(String password, String email) {
-        if (credentials.containsKey(email)
-                && credentials.get(email).getPassword().equals(password)) {
-            return true;
-        } else {
-            return false;
-        }
+        return (credentials.get(email).getPassword().equals(password));
     }
 
     /**
@@ -334,7 +323,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         };
 
         int ADDRESS = 0;
-        int IS_PRIMARY = 1;
+        //int IS_PRIMARY = 1;
     }
 
     /**
@@ -343,12 +332,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        private final String mEmail;
-        private final String mPassword;
+        //private final String mEmail;
+        //private final String mPassword;
 
         UserLoginTask(String email, String password) {
-            mEmail = email;
-            mPassword = password;
+            //mEmail = email;
+            //mPassword = password;
         }
 
         @Override

@@ -1,5 +1,6 @@
 package com.example.otteramazement.clean_water;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -30,14 +31,13 @@ public class PurityReportActivity extends Activity {
     private WaterPurityCondition condition;
 
     private EditText dateInput;
-    private EditText reporterInput;
     private EditText locationInput;
-    private TextView reportNumberText;
     private EditText timeInput;
     private EditText virusInput;
     private EditText contInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
+    @SuppressLint("StaticFieldLeak")
     private static PurityReportActivity obj;
 
 
@@ -66,11 +66,11 @@ public class PurityReportActivity extends Activity {
         timeInput.setTypeface(font1);
         TextView reportNumberPrompt = (TextView) findViewById(R.id.purityReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
-        reportNumberText = (TextView) findViewById(R.id.purityReport_reportNumber_generation);
+        TextView reportNumberText = (TextView) findViewById(R.id.purityReport_reportNumber_generation);
         reportNumberText.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.purityReport_reporter_textView);
         reporterPrompt.setTypeface(font);
-        reporterInput = (EditText) findViewById(R.id.purityReport_reporter_input);
+        EditText reporterInput = (EditText) findViewById(R.id.purityReport_reporter_input);
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.purityReport_location_textView);
         locationPrompt.setTypeface(font);

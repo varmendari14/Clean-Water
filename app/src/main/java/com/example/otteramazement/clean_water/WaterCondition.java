@@ -13,7 +13,7 @@ public enum WaterCondition {
      * @param type  String name of condition
      * @return      Corresponding condition
      */
-    public static String waterContiditionToString(WaterCondition type) {
+    public static String waterConditionToString(WaterCondition type) {
         switch(type) {
             default:
             case WASTE:

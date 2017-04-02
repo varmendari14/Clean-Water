@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 2/25/2017.
+ * Created by Violet
  */
 
 public class PapyrusTextView extends TextView {

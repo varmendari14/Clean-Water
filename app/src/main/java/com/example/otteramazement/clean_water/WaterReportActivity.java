@@ -39,7 +39,7 @@ public class WaterReportActivity extends Activity {
         title.setTypeface(font);
 
 
-        //button functionalities
+        //button functionality
         ImageView sourceButtonImage = (ImageView) findViewById(R.id.waterReport_sourceReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override

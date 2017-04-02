@@ -9,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 3/7/2017.
+ * Created by Violet
+ * Activity for choosing to create or view list of purity reports
  */
 
 public class PurityReportChoiceActivity extends Activity {
@@ -44,7 +45,7 @@ public class PurityReportChoiceActivity extends Activity {
         title.setTypeface(font);
 
 
-        //button functionalities
+        //button functionality
         ImageView sourceButtonImage = (ImageView) findViewById(R.id.purityReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override

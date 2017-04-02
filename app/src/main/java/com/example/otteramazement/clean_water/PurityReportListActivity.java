@@ -2,7 +2,6 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,7 +9,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 /**
- * Created by Violet on 3/7/2017.
+ * Created by Violet
+ * Activity for viewing list of Purity Reports
  */
 
 public class PurityReportListActivity extends Activity {
@@ -21,13 +21,10 @@ public class PurityReportListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_purity_report_list);
 
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
-        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
-
         //setting fonts
 
 
-        //button functionalities
+        //button functionality
 
         ImageView backButton = (ImageView) findViewById(R.id.purityReportList_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,6 @@
 package com.example.otteramazement.clean_water;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -17,8 +18,9 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-/**
- * Created by Violet on 3/14/2017.
+/*
+ * Created by Violet
+ * Activity for creating Historical Reports
  */
 
 public class HistoricalReportActivity extends Activity {
@@ -26,11 +28,11 @@ public class HistoricalReportActivity extends Activity {
     private final HistoricalReport _report = new HistoricalReport();
 
     private EditText dateInput;
-    private EditText reporterInput;
     private EditText locationInput;
     private EditText contInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
+    @SuppressLint("StaticFieldLeak")
     private static HistoricalReportActivity obj;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class HistoricalReportActivity extends Activity {
         dateInput.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.historicalReport_reporter_textView);
         reporterPrompt.setTypeface(font);
-        reporterInput = (EditText) findViewById(R.id.historicalReport_reporter_input);
+        EditText reporterInput = (EditText) findViewById(R.id.historicalReport_reporter_input);
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.historicalReport_location_textView);
         locationPrompt.setTypeface(font);

@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 /**
- * Created by Violet on 2/11/2017.
+ * Created by Violet
  */
 
 /**

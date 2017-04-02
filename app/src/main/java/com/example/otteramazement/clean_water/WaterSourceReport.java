@@ -2,7 +2,7 @@ package com.example.otteramazement.clean_water;
 
 
 /**
- * Created by Mary Prouty on 2/26/17.
+ * Created by Mary on 2/26/17.
  * Authors: Mary, Cat
  */
 
@@ -36,7 +36,7 @@ class WaterSourceReport {
 
     /**
      * getter for type of water
-     * @return watertype
+     * @return water type
      */
     public WaterType getType() {return type;}
 
@@ -135,7 +135,7 @@ class WaterSourceReport {
                 date +
                 "\n" + time +
                 "\nType: " + WaterType.waterTypeToString(type) +
-                "\nCondition: " + WaterCondition.waterContiditionToString(condition)
+                "\nCondition: " + WaterCondition.waterConditionToString(condition)
                 + "\n@Location: " + location +
                 "\nVia: " + reporter;
     }
@@ -146,6 +146,6 @@ class WaterSourceReport {
      */
     public String mapMarkerToString() {
         return "Type: " + WaterType.waterTypeToString(type) +
-                "Condition: " + WaterCondition.waterContiditionToString(condition);
+                "Condition: " + WaterCondition.waterConditionToString(condition);
     }
 }

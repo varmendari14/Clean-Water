@@ -20,7 +20,6 @@ import java.io.File;
 public class WelcomeActivity extends Activity{
 
     private final UserFacade uf = UserFacade.getInstance();
-    private File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +56,8 @@ public class WelcomeActivity extends Activity{
         });
 
         //Load from json
+        File file;
+
         file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
         uf.loadJson(file);
 

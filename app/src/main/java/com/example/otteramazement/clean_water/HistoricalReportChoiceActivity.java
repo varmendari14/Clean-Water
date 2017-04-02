@@ -8,8 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/**
- * Created by Violet on 3/14/2017.
+/*
+ * Created by Violet
+ * Activity lets you choose to create H reports or view graph
  */
 
 public class HistoricalReportChoiceActivity extends Activity {
@@ -32,7 +33,7 @@ public class HistoricalReportChoiceActivity extends Activity {
         title.setTypeface(font);
 
 
-        //button functionalities
+        //button functionality
         ImageView sourceButtonImage = (ImageView) findViewById(R.id.historicalReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,6 @@
 package com.example.otteramazement.clean_water;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -35,12 +36,11 @@ public class SourceReportActivity extends Activity {
 
 
     private EditText dateInput;
-    private EditText reporterInput;
     private EditText locationInput;
-    private TextView reportNumberText;
     private EditText timeInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
+    @SuppressLint("StaticFieldLeak")
     private static SourceReportActivity obj;
 
 
@@ -72,11 +72,11 @@ public class SourceReportActivity extends Activity {
         timeInput.setTypeface(font1);
         TextView reportNumberPrompt = (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
-        reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
+        TextView reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
         reportNumberText.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.sourceReport_reporter_textView);
         reporterPrompt.setTypeface(font);
-        reporterInput = (EditText) findViewById(R.id.sourceReport_reporter_input);
+        EditText reporterInput = (EditText) findViewById(R.id.sourceReport_reporter_input);
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.sourceReport_location_textView);
         locationPrompt.setTypeface(font);
@@ -171,16 +171,16 @@ public class SourceReportActivity extends Activity {
             }
         });
 
-        ImageView treatmuddImage = (ImageView) findViewById(R.id.sourceReport_treatable_muddy_imageView);
-        treatmuddImage.setOnClickListener(new View.OnClickListener() {
+        ImageView treatMudImage = (ImageView) findViewById(R.id.sourceReport_treatable_muddy_imageView);
+        treatMudImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 condition = WaterCondition.TREATABLE_MUDDY;
             }
         });
 
-        ImageView treatclearImage = (ImageView) findViewById(R.id.sourceReport_treatable_clear_imageView);
-        treatclearImage.setOnClickListener(new View.OnClickListener() {
+        ImageView treatClearImage = (ImageView) findViewById(R.id.sourceReport_treatable_clear_imageView);
+        treatClearImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 condition = WaterCondition.TREATABLE_CLEAR;
