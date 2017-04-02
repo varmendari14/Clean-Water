@@ -2,7 +2,7 @@ package com.example.otteramazement.clean_water;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
+//import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -24,8 +24,8 @@ public class SourceReportListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_source_report_list);
 
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
-        Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
+        //Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        //Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
 
