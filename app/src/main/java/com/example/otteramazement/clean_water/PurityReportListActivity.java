@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 /**
- * Created by Violet on 3/7/2017.
+ * Created by Violet
  */
 
 public class PurityReportListActivity extends Activity {
