@@ -114,36 +114,83 @@ class HistoricalReport {
      * @return the number of the month from the string
      */
 
+
     public int monthDate() {
         String month = this.getDate().substring(0, 2).trim();
 
-        if (month.equals("01")) {
-            return 1;
-        } else if (month.equals("02")) {
-            return 2;
-        } else if (month.equals("03")) {
-            return 3;
-        } else if (month.equals("04")) {
-            return 4;
-        } else if (month.equals("05")) {
-            return 5;
-        } else if (month.equals("06")) {
-            return 6;
-        } else if (month.equals("07")) {
-            return 7;
-        } else if (month.equals("08")) {
-            return 8;
-        } else if (month.equals("09")) {
-            return 9;
-        } else if (month.equals("10")) {
-            return 10;
-        } else if (month.equals("11")) {
-            return 11;
-        } else if (month.equals("12")) {
-            return 12;
+        //if (month.equals("01")) {
+          //  return 1;
+        //} else if (month.equals("02")) {
+          //  return 2;
+        //} else if (month.equals("03")) {
+          //  return 3;
+        //} else if (month.equals("04")) {
+          //  return 4;
+        //} else if (month.equals("05")) {
+          //  return 5;
+        //} else if (month.equals("06")) {
+          //  return 6;
+        //} else if (month.equals("07")) {
+          //  return 7;
+        //} else if (month.equals("08")) {
+          //  return 8;
+        //} else if (month.equals("09")) {
+          //  return 9;
+        //} else if (month.equals("10")) {
+          //  return 10;
+        //} else if (month.equals("11")) {
+          //  return 11;
+        //} else if (month.equals("12")) {
+          //  return 12;
+        //}
+       // return 0;
+
+
+        switch(month) {
+            case "01":
+                return 1;
+
+            case "02":
+                return 2;
+
+            case "03":
+                return 3;
+
+            case "04":
+                return 4;
+
+            case "05":
+                return 5;
+
+            case "06":
+                return 6;
+
+            case "07":
+                return 7;
+
+            case "08":
+                return 8;
+
+            case "09":
+                return 9;
+
+            case "10":
+                return 10;
+
+            case "11":
+                return 11;
+
+            case "12":
+                return 12;
+
+            default:
+                return 0;
         }
 
-        return 0;
+
+
+
+
     }
 
     /**
