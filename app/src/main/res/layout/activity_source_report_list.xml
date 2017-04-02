@@ -2,6 +2,7 @@
 <!--Author: Violet Armendariz-->
 <!--***-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView android:id="@+id/waterreportscreen"
@@ -10,7 +11,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:src="@mipmap/profile_bkg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        tools:ignore="HardcodedText" />
 
     <ImageView
         android:contentDescription="Back Button"
@@ -20,7 +22,8 @@
         android:id="@+id/sourceReportList_backbutton_imageView"
         android:alpha=".75"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
     <ListView
         android:layout_width="match_parent"

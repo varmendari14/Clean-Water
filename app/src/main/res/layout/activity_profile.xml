@@ -3,7 +3,7 @@
 <!-- Author: Violet Armendariz -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -13,7 +13,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:src="@mipmap/profile_bkg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        tools:ignore="HardcodedText" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -43,7 +44,8 @@
                         android:textStyle="normal|bold"
                         android:textColorLink="@android:color/holo_green_light"
                         android:textColor="#FF152A25"
-                        android:layout_alignParentBottom="true" />
+                        android:layout_alignParentBottom="true"
+                        tools:ignore="HardcodedText" />
 
                     <ImageView
                         android:contentDescription="Pic Button"
@@ -52,7 +54,8 @@
                         android:src="@mipmap/pic_bkg"
                         android:id="@+id/profile_profilePic"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitXY" />
+                        android:scaleType="fitXY"
+                        tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -71,7 +74,8 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -82,7 +86,8 @@
                     android:textSize="18sp"
                     android:hint="Name"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -100,7 +105,8 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -111,7 +117,8 @@
                     android:textSize="18sp"
                     android:hint="Title"
                     android:textAlignment="textStart"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -130,7 +137,8 @@
                     android:textStyle="normal|bold"
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
-                    android:layout_alignParentBottom="true" />
+                    android:layout_alignParentBottom="true"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -141,7 +149,8 @@
                     android:layout_weight="0.56"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true"
-                    android:hint="Email Address" />
+                    android:hint="Email Address"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -160,7 +169,8 @@
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView" />
+                    android:layout_alignStart="@+id/profile_name_textView"
+                    tools:ignore="HardcodedText" />
 
                 <!--<EditText-->
                     <!--android:layout_width="wrap_content"-->
@@ -181,7 +191,8 @@
                     android:ems="10"
                     android:id="@+id/profile_staddress_input"
                     android:layout_weight="1"
-                    android:hint="Street Address" />
+                    android:hint="Street Address"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -200,7 +211,8 @@
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView" />
+                    android:layout_alignStart="@+id/profile_name_textView"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -212,7 +224,8 @@
                     android:hint="City"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_city_textView" />
+                    android:layout_toEndOf="@+id/profile_city_textView"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -231,7 +244,8 @@
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView" />
+                    android:layout_alignStart="@+id/profile_name_textView"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -243,7 +257,8 @@
                     android:hint="State"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_state_textView" />
+                    android:layout_toEndOf="@+id/profile_state_textView"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -262,7 +277,8 @@
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView" />
+                    android:layout_alignStart="@+id/profile_name_textView"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -274,7 +290,8 @@
                     android:hint="Country"
                     android:textAlignment="textStart"
                     android:layout_alignParentBottom="true"
-                    android:layout_toEndOf="@+id/profile_country_textView" />
+                    android:layout_toEndOf="@+id/profile_country_textView"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -293,7 +310,8 @@
                     android:textColorLink="@android:color/holo_green_light"
                     android:textColor="#FF152A25"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignStart="@+id/profile_name_textView" />
+                    android:layout_alignStart="@+id/profile_name_textView"
+                    tools:ignore="HardcodedText" />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -302,7 +320,8 @@
                     android:hint="Phone Number (9999999999)"
                     android:ems="10"
                     android:id="@+id/profile_phone_editText"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -319,7 +338,8 @@
                     android:layout_marginEnd="167dp"
                     android:alpha=".75"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentEnd="true"
+                    tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:contentDescription="Back Button"
@@ -330,7 +350,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_toEndOf="@+id/profile_acceptbutton_tetView"
                     android:alpha=".75"
-                    android:layout_marginStart="34dp" />
+                    android:layout_marginStart="34dp"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:text="Accept"
@@ -344,7 +365,8 @@
                     android:layout_marginEnd="41dp"
                     android:alpha=".75"
                     android:layout_centerVertical="true"
-                    android:layout_alignEnd="@+id/profile_acceptbutton_imageView" />
+                    android:layout_alignEnd="@+id/profile_acceptbutton_imageView"
+                    tools:ignore="HardcodedText" />
 
 
             </RelativeLayout>

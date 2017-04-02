@@ -2,14 +2,14 @@ package com.example.otteramazement.clean_water;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-//import android.location.Location;
+import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-//import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -26,17 +26,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
-    //private GoogleApiClient mGoogleApiClient;
-    //private Location mCurrentLocation;
+    private GoogleApiClient mGoogleApiClient;
+    private Location mCurrentLocation;
 
-// --Commented out by Inspection START (4/1/17, 8:37 PM):
-//    private final int[] MAP_TYPES = { GoogleMap.MAP_TYPE_SATELLITE,
-//            GoogleMap.MAP_TYPE_NORMAL,
-//            GoogleMap.MAP_TYPE_HYBRID,
-//            GoogleMap.MAP_TYPE_TERRAIN,
-//            GoogleMap.MAP_TYPE_NONE };
-// --Commented out by Inspection STOP (4/1/17, 8:37 PM)
-    //private int curMapTypeIndex = 0;
+    private final int[] MAP_TYPES = { GoogleMap.MAP_TYPE_SATELLITE,
+            GoogleMap.MAP_TYPE_NORMAL,
+            GoogleMap.MAP_TYPE_HYBRID,
+            GoogleMap.MAP_TYPE_TERRAIN,
+            GoogleMap.MAP_TYPE_NONE };
+    private int curMapTypeIndex = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +47,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
 
+        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
@@ -57,7 +56,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        //button functionality
+        //button functionalities
 
         ImageView backButton = (ImageView) findViewById(R.id.map_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -94,8 +93,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker for each water source report
         List<WaterSourceReport> reportList = WaterReportList.waterSourceList;
         for (int i = 0; i < reportList.size(); i++) {
-            String latLon = reportList.get(i).getLocation();
-            String[] fields = latLon.split("-");
+            String latlon = reportList.get(i).getLocation();
+            String[] fields = latlon.split("-");
             int lat = Integer.parseInt(fields[0]);
             int lon = Integer.parseInt(fields[1]);
             LatLng reportLocation = new LatLng(lat, lon);

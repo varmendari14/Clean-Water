@@ -16,8 +16,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.PointsGraphSeries;
 
 /**
- * Created by Violet
- * Displays Historical Reports in graph form
+ * Created by Violet on 3/14/2017.
  */
 
 public class HistoricalReportGraphActivity extends Activity {
@@ -27,6 +26,7 @@ public class HistoricalReportGraphActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_report_graph);
 
+        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
@@ -57,8 +57,8 @@ public class HistoricalReportGraphActivity extends Activity {
 
         graph.getViewport().setScrollable(true);
 
-        DataPoint[] valuesP = new DataPoint[WaterReportList.historicalReportList.size()];
-        DataPoint[] valuesL = new DataPoint[WaterReportList.historicalReportList.size()];
+        DataPoint[] valuesp = new DataPoint[WaterReportList.historicalReportList.size()];
+        DataPoint[] valuesl = new DataPoint[WaterReportList.historicalReportList.size()];
         int index = 0;
 
         for(HistoricalReport report: WaterReportList.historicalReportList){
@@ -66,14 +66,14 @@ public class HistoricalReportGraphActivity extends Activity {
             int monthPoint = report.monthDate();
             double cont = report.getContaminant();
             DataPoint dp = new DataPoint(monthPoint, cont);
-            valuesP[index] = dp;
-            valuesL[index] = dp;
+            valuesp[index] = dp;
+            valuesl[index] = dp;
             index++;
 
         }
 
-        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(valuesP);
-        PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(valuesL);
+        LineGraphSeries<DataPoint> series2 = new LineGraphSeries<>(valuesp);
+        PointsGraphSeries<DataPoint> series = new PointsGraphSeries<>(valuesl);
 
         series2.setColor(Color.GREEN);
         graph.addSeries(series2);

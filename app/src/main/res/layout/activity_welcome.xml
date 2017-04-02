@@ -15,13 +15,15 @@
         android:layout_height="match_parent"
         android:src="@mipmap/welcome_screen_bkg7"
         android:layout_gravity="center"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        tools:ignore="HardcodedText" />
     <ImageView android:id="@+id/welcomescreenover"
         android:contentDescription="Welcome Screen Text"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/welcome_screen_over"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/welcome_loginbutton"
@@ -39,7 +41,8 @@
         android:src="@drawable/button_phases"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:alpha=".75"/>
+        android:alpha=".75"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/welcome_loginbutton_textView"
@@ -51,7 +54,8 @@
         android:textColor="#ffffff"
         android:layout_alignTop="@+id/login_imageView"
         android:layout_centerHorizontal="true"
-        android:alpha=".75"/>
+        android:alpha=".75"
+        tools:ignore="HardcodedText" />
 
     <!--<Button-->
         <!--android:text="Register"-->
@@ -90,7 +94,8 @@
         android:alpha=".75"
         android:layout_below="@+id/login_imageView"
         android:layout_toEndOf="@+id/welcome_loginbutton"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:id="@+id/welcome_registerbutton_textView"
@@ -102,6 +107,7 @@
         android:textColor="#ffffff"
         android:alpha=".75"
         android:layout_alignTop="@+id/register_imageView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
 
 </RelativeLayout>
