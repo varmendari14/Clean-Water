@@ -186,11 +186,6 @@ class HistoricalReport {
             default:
                 return 0;
         }
-
-
-
-
-
     }
 
     /**
