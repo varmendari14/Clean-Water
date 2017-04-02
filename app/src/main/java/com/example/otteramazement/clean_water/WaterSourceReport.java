@@ -148,4 +148,25 @@ class WaterSourceReport {
         return "Type: " + WaterType.waterTypeToString(type) +
                 "Condition: " + WaterCondition.waterConditionToString(condition);
     }
+
+    /**
+     *
+     * @param cDate date to be checked
+     * @param cTime time to be checked
+     * @param cLocation location to be checked
+     * @param cType water type to be checked
+     * @param cCondition water condition to be checked
+     * @return 0 if good to go, 1 or 2 to display alert dialogue in view
+     */
+    static int reportCheck(String cDate, String cTime, String cLocation, WaterType cType,
+                           WaterCondition cCondition) {
+        if (cCondition != null && cType != null && cTime.length() > 0 && cDate.length() > 0
+                && cLocation.length() > 0 && cLocation.contains("-")) {
+            return 0;
+        } else if (!cLocation.contains("-")) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
 }
