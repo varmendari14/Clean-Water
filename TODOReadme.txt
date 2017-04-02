@@ -1,7 +1,7 @@
 NeedTODO:
 M10
 *maybe fix the whole selection buttons if time
-*Fix lat-long check on water reports and history report EMMA
+
 
 
 OptionalTODO:
@@ -14,9 +14,11 @@ OptionalTODO:
 *make graph points paw prints
 
 
+M10 DoneDone:
+*DONE Fix lat-long check on water reports and history report EMMA
 
 M9 DoneDone:
-*DONR change previous reports: Historical, Purity, Source, to force users to enter a number in number spaces with number boxes VIOLET
+*DONE change previous reports: Historical, Purity, Source, to force users to enter a number in number spaces with number boxes VIOLET
 *DONE M9 Stuff:
     *Persistance
     *Auto manager
