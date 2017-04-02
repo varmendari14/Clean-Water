@@ -88,9 +88,28 @@ public class HistoricalReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 updateReport();
+                String lat = "";
+                int aLong;
+                int aLat;
+                String num = "";
+                for (int i = 0; i < _report.getLocation().length(); i++) {
+                    num = num + _report.getLocation().charAt(i);
+                    if (_report.getLocation().charAt(i) == '-') {
+                        lat = num.substring(0, _report.getLocation().length() - 1);
+                        num = "";
+                    }
+                }
+                try {
+                    aLat = Integer.parseInt(lat);
+                    aLong = Integer.parseInt(num);
+                } catch (NumberFormatException ex) {
+                    aLat = -91;
+                    aLong = -181;
+                }
                 if (_report.getDate().length() > 3 && _report.getLocation().length() > 0
                         && _report.getContaminant() >= 0
-                        &&_report.getLocation().contains("-")) {
+                        && _report.getLocation().contains("-")
+                        && aLat >= -90 && aLat <= 90 && aLong >= -180 && aLong <= 180) {
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
 
@@ -104,6 +123,11 @@ public class HistoricalReportActivity extends Activity {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
+                    alert.show();
+                } else if (aLat >= -90 && aLat <= 90 && aLong >= -180 && aLong <= 180) {
+                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
+                    alert.setTitle("Invalid Source Report");
+                    alert.setMessage("Please enter a valid location in the format latitude-longitude");
                     alert.show();
                 } else {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
