@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Violet on 3/3/2017.
+ * Created by Violet
  */
 
 /**
