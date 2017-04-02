@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- Authors: Violet Armendariz, Mary Prouty-->
+<!-- Authors: Violet, Mary-->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.otteramazement.clean_water">
@@ -214,7 +214,7 @@
 -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyCeZqvE1Kk-INOZAatIBQtOEfaPaR-UfAE" />
 
         <activity
             android:name=".MapsActivity"
