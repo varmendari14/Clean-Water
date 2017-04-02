@@ -26,7 +26,7 @@ public class HistoricalReportGraphActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_historical_report_graph);
 
-        Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
+        //Typeface font1 = Typeface.createFromAsset(getAssets(), "fonts/PAPYRUS.TTF");
         Typeface font = Typeface.createFromAsset(getAssets(), "fonts/Papyrus-LET-Bold.ttf");
 
         //setting fonts
