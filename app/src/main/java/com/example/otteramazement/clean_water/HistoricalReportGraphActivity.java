@@ -16,7 +16,7 @@ import com.jjoe64.graphview.series.LineGraphSeries;
 import com.jjoe64.graphview.series.PointsGraphSeries;
 
 /**
- * Created by Violet on 3/14/2017.
+ * Created by Violet
  */
 
 public class HistoricalReportGraphActivity extends Activity {
