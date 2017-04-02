@@ -194,16 +194,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".LocationMapInputActivity"
-            android:label="Clean-Water">
-            android:theme="@android:style/Full_Background"
-            <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.LOCATIONMAPINPUTACTIVITY" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <!--
      The API key for Google Maps-based APIs is defined as a string resource.
      (See the file "res/values/google_maps_api.xml").
