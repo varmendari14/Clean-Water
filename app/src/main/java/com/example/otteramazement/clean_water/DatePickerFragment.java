@@ -8,6 +8,7 @@ import android.widget.DatePicker;
 
 import java.util.Calendar;
 
+@SuppressWarnings("unused")
 public class DatePickerFragment extends DialogFragment
                             implements DatePickerDialog.OnDateSetListener {
 

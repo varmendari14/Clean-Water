@@ -18,13 +18,14 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
 
+    <!--suppress CheckTagEmptyBody -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:ignore="AllowBackup">
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning">
 
         <activity
             android:name=".SplashScreen"
@@ -210,7 +211,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
 
     </application>
 

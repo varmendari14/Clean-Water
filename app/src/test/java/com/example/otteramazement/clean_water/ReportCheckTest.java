@@ -11,9 +11,9 @@ import static org.junit.Assert.assertEquals;
 
 public class ReportCheckTest {
 
-    private WaterSourceReport validReport = new WaterSourceReport();
-    private WaterSourceReport locReport = new WaterSourceReport();
-    private WaterSourceReport invalidReport = new WaterSourceReport();
+    private final WaterSourceReport validReport = new WaterSourceReport();
+    private final WaterSourceReport locReport = new WaterSourceReport();
+    private final WaterSourceReport invalidReport = new WaterSourceReport();
 
     /*
      * Initialize values for each report before testing
