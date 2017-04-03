@@ -123,7 +123,7 @@ public class RegisterActivity extends Activity {
         String username = usernameInput.getText().toString();
         String name = nameInput.getText().toString();
         ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
-        register(password, passRedo, username, name, type);
+        register(password, passRedo, username, name, type, true);
     }
 
     /**
@@ -135,10 +135,10 @@ public class RegisterActivity extends Activity {
      * @param type type of user
      */
     void register(String password, String passRedo, String username,
-                          String name, ProfileType type) {
+                          String name, ProfileType type, boolean bool) {
         if (password.equals(passRedo)
                 && username.length() >= 3
-                && name.length() >= 1
+                && name.length() > 1
                 && !OurHashMap.userMap.containsKey(username)) {
             UserProfile newUser;
             if (type.equals(ProfileType.MANAGER)) {
@@ -165,34 +165,38 @@ public class RegisterActivity extends Activity {
 
             CurrentUser.currentUser.add(newUser);
             OurHashMap.userMap.put(username, newUser);
+            if (bool) {
+                //save to json
+                UserFacade uf = UserFacade.getInstance();
+                File file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
+                uf.saveJson(file);
 
-            //save to json
-            UserFacade uf = UserFacade.getInstance();
-            File file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
-            uf.saveJson(file);
+                Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
+                startActivity(intent);
+            }
 
-            Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
-            startActivity(intent);
+        } if (bool) {
 
-        } else if (! password.equals(passRedo)) {
+            if (!password.equals(passRedo)) {
 
-            AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
-            alert.setTitle("Invalid Registration");
-            alert.setMessage("Your passwords do not match");
-            alert.show();
+                AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
+                alert.setTitle("Invalid Registration");
+                alert.setMessage("Your passwords do not match");
+                alert.show();
 
-        } else if (username.length() < 3 ||
-                name.length() == 0) {
+            } else if (username.length() < 3 ||
+                    name.length() == 0) {
 
-            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
-            nameProblem.setTitle("Invalid Registration");
-            nameProblem.setMessage("Your name or username isn't long enough");
-            nameProblem.show();
-        } else if (OurHashMap.userMap.containsKey(username)) {
-            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
-            nameProblem.setTitle("Invalid Registration");
-            nameProblem.setMessage("This username is already being used.");
-            nameProblem.show();
+                AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                nameProblem.setTitle("Invalid Registration");
+                nameProblem.setMessage("Your name or username isn't long enough");
+                nameProblem.show();
+            } else if (OurHashMap.userMap.containsKey(username)) {
+                AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                nameProblem.setTitle("Invalid Registration");
+                nameProblem.setMessage("This username is already being used.");
+                nameProblem.show();
+            }
         }
     }
 
