@@ -30,6 +30,8 @@ public class WaterAvailabilityActivity extends Activity {
 
         TextView title = (TextView) findViewById(R.id.water_availability_title);
         title.setTypeface(font);
+        TextView click = (TextView) findViewById(R.id.clickMe);
+        click.setTypeface(font);
 
 
         ImageView backButton = (ImageView) findViewById(R.id.water_availability_backbutton_imageView);
