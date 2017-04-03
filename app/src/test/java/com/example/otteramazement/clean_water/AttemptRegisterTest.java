@@ -6,7 +6,7 @@ import org.junit.Test;
 
 /**
  * Created by Emma on 4/2/2017.
- *
+ * Tests registering logic in the register method
  */
 
 
