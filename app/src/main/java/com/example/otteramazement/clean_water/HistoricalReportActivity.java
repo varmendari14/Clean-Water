@@ -28,7 +28,8 @@ public class HistoricalReportActivity extends Activity {
     private final HistoricalReport _report = new HistoricalReport();
 
     private EditText dateInput;
-    private EditText locationInput;
+    private EditText latInput;
+    private EditText lonInput;
     private EditText contInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
@@ -59,8 +60,10 @@ public class HistoricalReportActivity extends Activity {
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.historicalReport_location_textView);
         locationPrompt.setTypeface(font);
-        locationInput = (EditText) findViewById(R.id.historicalReport_location_input);
-        locationInput.setTypeface(font1);
+        latInput = (EditText) findViewById(R.id.historicalReport_lat_input);
+        latInput.setTypeface(font1);
+        lonInput = (EditText) findViewById(R.id.historicalReport_long);
+        lonInput.setTypeface(font1);
         TextView contPrompt = (TextView) findViewById(R.id.historicalReport_cont_textView);
         contPrompt.setTypeface(font);
         contInput = (EditText) findViewById(R.id.historicalReport_cont_input);
@@ -88,28 +91,13 @@ public class HistoricalReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 updateReport();
-                /*String lat = "";
-                int aLong;
-                int aLat;
-                String num = "";
-                for (int i = 0; i < _report.getLocation().length(); i++) {
-                    num = num + _report.getLocation().charAt(i);
-                    if (_report.getLocation().charAt(i) == '-') {
-                        lat = num.substring(0, _report.getLocation().length() - 1);
-                        num = "";
-                    }
-                }
-                try {
-                    aLat = Integer.parseInt(lat);
-                    aLong = Integer.parseInt(num);
-                } catch (NumberFormatException ex) {
-                    aLat = -91;
-                    aLong = -181;
-                }*/
-                if (_report.getDate().length() > 3 && _report.getLocation().length() > 0
+
+                if (_report.getDate().length() > 3 && _report.getLat() >= -90
                         && _report.getContaminant() >= 0
-                        && _report.getLocation().contains("-")) {
-                        //&& aLat >= -90 && aLat <= 90 && aLong >= -180 && aLong <= 180) {
+                        && _report.getLat() <= 90
+                        && _report.getLon() <= 180
+                        && _report.getLon() >= -180) {
+
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
 
@@ -119,16 +107,14 @@ public class HistoricalReportActivity extends Activity {
                     uf.saveJson(file);
 
                     startActivity(startIntent);
-                } else if (!_report.getLocation().contains("-")) {
+                } else if (!(_report.getLat() >= -90)
+                        && !(_report.getLat() <= 90)
+                        && !(_report.getLon() <= 180)
+                        && !(_report.getLon() >= 180)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
                     alert.show();
-                /*} else if (aLat >= -90 && aLat <= 90 && aLong >= -180 && aLong <= 180) {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
-                    alert.setTitle("Invalid Source Report");
-                    alert.setMessage("Please enter a valid location in the format latitude-longitude");
-                    alert.show();*/
                 } else {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
@@ -176,7 +162,8 @@ public class HistoricalReportActivity extends Activity {
      */
     private void updateReport() {
         _report.setDate(dateInput.getText().toString());
-        _report.setLocation(locationInput.getText().toString());
+        _report.setLat(Integer.parseInt(latInput.getText().toString()));
+        _report.setLon(Integer.parseInt(lonInput.getText().toString()));
         _report.setContaminant(Integer.parseInt(contInput.getText().toString()));
     }
 
