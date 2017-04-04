@@ -123,7 +123,7 @@ public class RegisterActivity extends Activity {
         String username = usernameInput.getText().toString();
         String name = nameInput.getText().toString();
         ProfileType type = (ProfileType) typeSpinner.getSelectedItem();
-        register(password, passRedo, username, name, type);
+        register(password, passRedo, username, name, type, true);
     }
 
     /**
@@ -135,7 +135,7 @@ public class RegisterActivity extends Activity {
      * @param type type of user
      */
     void register(String password, String passRedo, String username,
-                          String name, ProfileType type) {
+                          String name, ProfileType type, boolean bool) {
         if (password.equals(passRedo)
                 && username.length() >= 3
                 && name.length() >= 1
@@ -165,43 +165,37 @@ public class RegisterActivity extends Activity {
 
             CurrentUser.currentUser.add(newUser);
             OurHashMap.userMap.put(username, newUser);
+            if (bool) {
+                //save to json
+                UserFacade uf = UserFacade.getInstance();
+                File file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
+                uf.saveJson(file);
 
-            //save to json
-            UserFacade uf = UserFacade.getInstance();
-            File file = new File(this.getFilesDir(), UserFacade.USER_JSON_FILE_NAME);
-            uf.saveJson(file);
+                Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
+                startActivity(intent);
+            } else if (bool) {
+                if (!password.equals(passRedo)) {
 
-            Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
-            startActivity(intent);
+                    AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
+                    alert.setTitle("Invalid Registration");
+                    alert.setMessage("Your passwords do not match");
+                    alert.show();
 
-        } else if (! password.equals(passRedo)) {
+                } else if (username.length() < 3 ||
+                        name.length() == 0) {
 
-            AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
-            alert.setTitle("Invalid Registration");
-            alert.setMessage("Your passwords do not match");
-            alert.show();
-
-        } else if (username.length() < 3 ||
-                name.length() == 0) {
-
-            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
-            nameProblem.setTitle("Invalid Registration");
-            nameProblem.setMessage("Your name or username isn't long enough");
-            nameProblem.show();
-        } else if (OurHashMap.userMap.containsKey(username)) {
-            AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
-            nameProblem.setTitle("Invalid Registration");
-            nameProblem.setMessage("This username is already being used.");
-            nameProblem.show();
+                    AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                    nameProblem.setTitle("Invalid Registration");
+                    nameProblem.setMessage("Your name or username isn't long enough");
+                    nameProblem.show();
+                } else if (OurHashMap.userMap.containsKey(username)) {
+                    AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                    nameProblem.setTitle("Invalid Registration");
+                    nameProblem.setMessage("This username is already being used.");
+                    nameProblem.show();
+                }
+            }
         }
-    }
-
-    /**
-     * This is a getter for the hash map that holds all of the users info
-     * @return hash map of users and passwords
-     */
-    public static HashMap<String,UserProfile> getUserMap() {
-        return OurHashMap.userMap;
     }
 
     @Override
