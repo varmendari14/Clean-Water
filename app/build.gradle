@@ -35,4 +35,5 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/GraphView-4.2.1.jar')
+    compile 'junit:junit:4.12'
 }
