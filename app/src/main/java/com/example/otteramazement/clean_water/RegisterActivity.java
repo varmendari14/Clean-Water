@@ -138,7 +138,7 @@ public class RegisterActivity extends Activity {
                           String name, ProfileType type, boolean bool) {
         if (password.equals(passRedo)
                 && username.length() >= 3
-                && name.length() >= 1
+                && name.length() > 1
                 && !OurHashMap.userMap.containsKey(username)) {
             UserProfile newUser;
             if (type.equals(ProfileType.MANAGER)) {
