@@ -82,7 +82,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-        RegisterActivity.getUserMap().put("Ollie", new UserProfile(ProfileType.USER, "Ollie", "Ollie", "I<3water"));
+        OurHashMap.userMap.put("Ollie", new UserProfile(ProfileType.USER, "Ollie", "Ollie", "I<3water"));
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
