@@ -110,7 +110,7 @@ public class HistoricalReportActivity extends Activity {
                 } else if (!(_report.getLat() >= -90)
                         && !(_report.getLat() <= 90)
                         && !(_report.getLon() <= 180)
-                        && !(_report.getLon() >= 180)) {
+                        && !(_report.getLon() >= -180)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
