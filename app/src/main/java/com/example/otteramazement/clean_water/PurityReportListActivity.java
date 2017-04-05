@@ -15,6 +15,7 @@ import android.widget.ListView;
 
 public class PurityReportListActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 

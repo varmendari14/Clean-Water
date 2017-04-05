@@ -11,12 +11,10 @@ import android.widget.ImageView;
 import java.io.File;
 /**
  * Created by Violet on 2/11/2017.
+ * controls activity that helps sign or register a user up/log them in
  * Authors: Violet, Mary
  */
 
-/**
- * controls activity that helps sign or register a user up/log them in
- */
 public class WelcomeActivity extends Activity{
 
     private final UserFacade uf = UserFacade.getInstance();

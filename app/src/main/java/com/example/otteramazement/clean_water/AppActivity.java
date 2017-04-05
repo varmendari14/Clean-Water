@@ -12,12 +12,10 @@ import android.widget.TextView;
 
 /**
  * Created by Mary on 2/12/17.
+ * This activity controls the app
  * Authors: Mary, Violet
  */
 
-/**
- * This activity controls the app
- */
 public class AppActivity extends Activity {
 
     @Override
@@ -80,7 +78,8 @@ public class AppActivity extends Activity {
         historicalUserImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent reportIntent = new Intent(getBaseContext(), HistoricalReportChoiceActivity.class);
+                Intent reportIntent = new Intent(getBaseContext(),
+                                    HistoricalReportChoiceActivity.class);
                 startActivity(reportIntent);
             }
         });

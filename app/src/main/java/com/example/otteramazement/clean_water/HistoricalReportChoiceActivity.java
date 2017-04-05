@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/*
+/**
  * Created by Violet
  * Activity lets you choose to create H reports or view graph
  */
 
 public class HistoricalReportChoiceActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

@@ -11,13 +11,12 @@ import android.widget.TextView;
 /**
  * Created by Violet
  * Activity for choosing to create or view source reports
- */
-
-/**
  * a way to view the list for source report versus make a new one
  */
+
 public class SourceReportChoiceActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

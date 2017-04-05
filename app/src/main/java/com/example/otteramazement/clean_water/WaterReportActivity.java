@@ -10,15 +10,14 @@ import android.widget.TextView;
 
 /**
  * Created by Violet on 2/24/2017.
+ * controls creation of water reports
  * Authors: Violet, Mary
  */
 
-/**
- * controls creation of water reports
- */
 public class WaterReportActivity extends Activity {
 
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

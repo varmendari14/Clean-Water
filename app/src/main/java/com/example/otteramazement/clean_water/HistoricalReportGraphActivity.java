@@ -21,6 +21,7 @@ import com.jjoe64.graphview.series.PointsGraphSeries;
 
 public class HistoricalReportGraphActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

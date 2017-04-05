@@ -5,12 +5,10 @@ import java.io.Serializable;
 /**
  * Represents a User's profile.
  * Created by Cat on 2/19/2017.
+ * represents user
  * Authors: Cat, Mary, Violet, Emma
  */
 
-/**
- * represents user
- */
 class UserProfile implements Serializable {
     private final ProfileType profileType;
     private String name;

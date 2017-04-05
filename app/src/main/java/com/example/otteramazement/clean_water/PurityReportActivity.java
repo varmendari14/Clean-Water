@@ -39,10 +39,11 @@ public class PurityReportActivity extends Activity {
     private final Calendar myCalendar = Calendar.getInstance();
 
     @SuppressLint("StaticFieldLeak")
-    private static PurityReportActivity obj;
+    private PurityReportActivity obj;
 
 
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         obj = this;

@@ -10,13 +10,12 @@ import android.widget.TextView;
 
 /**
  * Created by Violet
- */
-
-/**
  * controls creation of water availability report
  */
+
 public class WaterAvailabilityActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
 

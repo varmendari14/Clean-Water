@@ -11,14 +11,13 @@ import android.widget.ListView;
 
 /**
  * Created by Violet on 2/26/2017.
+ * This class controls the list to view the previously made source reports
  * Authors: Violet, Cat
  */
 
-/**
- * This class controls the list to view the previously made source reports
- */
 public class SourceReportListActivity extends Activity {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);

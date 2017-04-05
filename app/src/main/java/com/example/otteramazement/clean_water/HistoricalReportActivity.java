@@ -18,7 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-/*
+/**
  * Created by Violet
  * Activity for creating Historical Reports
  */
@@ -34,8 +34,9 @@ public class HistoricalReportActivity extends Activity {
     private final Calendar myCalendar = Calendar.getInstance();
 
     @SuppressLint("StaticFieldLeak")
-    private static HistoricalReportActivity obj;
+    private HistoricalReportActivity obj;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         obj = this;
@@ -76,7 +77,8 @@ public class HistoricalReportActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(getBaseContext(), HistoricalReportChoiceActivity.class);
+                Intent backIntent = new Intent(getBaseContext(),
+                        HistoricalReportChoiceActivity.class);
                 startActivity(backIntent);
             }
         });

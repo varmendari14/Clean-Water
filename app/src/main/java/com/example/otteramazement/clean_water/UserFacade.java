@@ -48,6 +48,11 @@ public class UserFacade {
      */
     public static UserFacade getInstance() { return instance; }
 
+    /**
+     * load the JSON
+     * @param file the file to save
+     */
+
     public void loadJson(File file) {
         try {
             BufferedReader input = new BufferedReader(new FileReader(file));
@@ -80,6 +85,11 @@ public class UserFacade {
 
 
     }
+
+    /**
+     * save the JSON
+     * @param file the file to save
+     */
 
     public void saveJson(File file ) {
 

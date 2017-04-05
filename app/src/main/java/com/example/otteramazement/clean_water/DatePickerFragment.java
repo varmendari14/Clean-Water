@@ -8,6 +8,10 @@ import android.widget.DatePicker;
 
 import java.util.Calendar;
 
+/**
+ * A class to help with date picking
+ */
+
 @SuppressWarnings("unused")
 public class DatePickerFragment extends DialogFragment
                             implements DatePickerDialog.OnDateSetListener {
@@ -26,12 +30,17 @@ public class DatePickerFragment extends DialogFragment
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
 
+    @Override
     public void onDateSet(DatePicker view, int year, int month, int day) {
         dateArray[0] = year;
         dateArray[1] = month;
         dateArray[2] = day;
     }
 
+    /**
+     * gets the date from this class
+     * @return dateArray the int date array
+     */
     public int[] getDateArray() {
         return dateArray;
     }

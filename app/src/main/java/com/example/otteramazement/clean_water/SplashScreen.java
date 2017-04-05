@@ -5,11 +5,9 @@ import android.os.Bundle;
 
 /**
  * Created by Violet
- */
-
-/**
  * splash screen that occurs when you launch the app
  */
+
 public class SplashScreen extends Activity{
 
     /** Duration of wait **/
@@ -22,6 +20,7 @@ public class SplashScreen extends Activity{
         setContentView(R.layout.splash_screen);
 
         Thread timerThread = new Thread(){
+            @Override
             public void run(){
                 try{
                     sleep(SPLASH_DISPLAY_LENGTH);

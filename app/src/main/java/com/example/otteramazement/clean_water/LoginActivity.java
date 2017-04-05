@@ -1,11 +1,13 @@
 package com.example.otteramazement.clean_water;
 
+        import android.annotation.SuppressLint;
         import android.annotation.TargetApi;
         import android.app.Activity;
         import android.content.Intent;
         import android.content.pm.PackageManager;
         import android.graphics.Typeface;
         import android.support.annotation.NonNull;
+        import android.support.annotation.Nullable;
         import android.support.design.widget.Snackbar;
         import android.app.LoaderManager.LoaderCallbacks;
 
@@ -58,6 +60,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
+    @Nullable
     private UserLoginTask mAuthTask = null;
 
     // UI references.
@@ -129,6 +132,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         getLoaderManager().initLoader(0, null, this);
     }
 
+    @SuppressLint("ObsoleteSdkInt")
     private boolean mayRequestContacts() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
@@ -311,8 +315,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
-
             try {
                 // Simulate network access.
                 Thread.sleep(2000);
@@ -320,7 +322,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 return false;
             }
 
-            // TODO: register the new account here.
             return true;
         }
 

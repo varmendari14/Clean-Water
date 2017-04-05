@@ -1,3 +1,4 @@
+//noinspection GradleCompatible
 apply plugin: 'com.android.application'
 
 //noinspection GroovyMissingReturnStatement
@@ -30,7 +31,7 @@ dependencies {
     //noinspection GradleDependency
     compile 'com.android.support:design:25.1.0'
     //older version of play services
-    //noinspection GradleDependency
+    //noinspection UseOfBundledGooglePlayServices,GradleDependency
     compile 'com.google.android.gms:play-services:9.8.0'
     compile 'com.google.code.gson:gson:2.8.0'
     testCompile 'junit:junit:4.12'

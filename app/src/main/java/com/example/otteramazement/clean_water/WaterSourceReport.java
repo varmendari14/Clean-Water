@@ -3,12 +3,10 @@ package com.example.otteramazement.clean_water;
 
 /**
  * Created by Mary on 2/26/17.
+ * represents source reports
  * Authors: Mary, Cat
  */
 
-/**
- * represents source reports
- */
 class WaterSourceReport {
 
     private final int reportNum;

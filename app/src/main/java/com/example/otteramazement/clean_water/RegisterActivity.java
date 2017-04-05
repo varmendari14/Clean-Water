@@ -19,12 +19,10 @@ import java.util.List;
 
 /**
  * Created by Violet on 2/16/2017.
+ * This class controls the registration of new users
  * Authors: Violet, Avery, Mary, Cat, Emma
  */
 
-/**
- * This class controls the registration of new users
- */
 public class RegisterActivity extends Activity {
 
     private EditText nameInput;

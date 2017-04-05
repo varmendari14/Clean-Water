@@ -19,6 +19,7 @@ public class PurityReportChoiceActivity extends Activity {
 
     //public static final String ARG_USER = "user";
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         //_user = (UserProfile) getIntent().getSerializableExtra(WaterReportActivity.ARG_USER);

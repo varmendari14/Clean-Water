@@ -3,13 +3,17 @@ package com.example.otteramazement.clean_water;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 /**
  * Created by Violet
  */
 
-public class PapyrusTextView extends TextView {
+public class PapyrusTextView extends android.support.v7.widget.AppCompatTextView {
+
+    /**
+     * constructor
+     * @param context the pakage name
+     */
 
         public PapyrusTextView(Context context) {
 
@@ -17,11 +21,23 @@ public class PapyrusTextView extends TextView {
 
         }
 
+    /**
+     * constructor
+     * @param context the pakage name
+     * @param attrs the attributes
+     */
         public PapyrusTextView(Context context, AttributeSet attrs) {
 
             super(context, attrs);
 
         }
+
+    /**
+     * constructor
+     * @param context the pakage name
+     * @param attrs the attributes
+     * @param defStyle the default style
+     */
 
         public PapyrusTextView(Context context, AttributeSet attrs, int defStyle) {
 
@@ -29,7 +45,13 @@ public class PapyrusTextView extends TextView {
 
         }
 
-        @Override
+    /**
+     * constructor
+     * @param tf the typeface
+     * @param style the style
+     */
+
+    @Override
 
         public void setTypeface(Typeface tf, int style) {
 

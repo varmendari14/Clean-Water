@@ -1,6 +1,5 @@
 package com.example.otteramazement.clean_water;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
@@ -22,12 +21,10 @@ import java.util.Locale;
 
 /**
  * Created by Violet on 2/24/2017.
+ * THis class controls the creation of source reports
  * Authors: Violet, Mary
  */
 
-/**
- * THis class controls the creation of source reports
- */
 public class SourceReportActivity extends Activity {
 
     private final WaterSourceReport _report = new WaterSourceReport();
@@ -41,14 +38,15 @@ public class SourceReportActivity extends Activity {
     private EditText timeInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
-    @SuppressLint("StaticFieldLeak")
-    private static SourceReportActivity obj;
+
+    private SourceReportActivity obj;
 
 
     /**
      * sets up all needed fields of source report
      * @param savedInstanceState instance state at start of creation
      */
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         obj = this;

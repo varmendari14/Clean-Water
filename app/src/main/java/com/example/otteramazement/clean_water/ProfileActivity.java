@@ -11,12 +11,10 @@ import android.widget.TextView;
 
 /**
  * Created by Violet on 2/18/2017.
+ * This class controls the profile creating and editing
  * Authors: Violet, Mary
  */
 
-/**
- * This class controls the profile creating and editing
- */
 public class ProfileActivity extends Activity{
 
     private final UserProfile _user = CurrentUser.currentUser.get(0);
