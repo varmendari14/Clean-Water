@@ -31,7 +31,8 @@ public class PurityReportActivity extends Activity {
     private WaterPurityCondition condition;
 
     private EditText dateInput;
-    private EditText locationInput;
+    private EditText latInput;
+    private EditText lonInput;
     private EditText timeInput;
     private EditText virusInput;
     private EditText contInput;
@@ -74,8 +75,10 @@ public class PurityReportActivity extends Activity {
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.purityReport_location_textView);
         locationPrompt.setTypeface(font);
-        locationInput = (EditText) findViewById(R.id.purityReport_location_input);
-        locationInput.setTypeface(font1);
+        latInput = (EditText) findViewById(R.id.lat_input);
+        latInput.setTypeface(font1);
+        lonInput = (EditText) findViewById(R.id.long_input);
+        lonInput.setTypeface(font1);
         TextView safePrompt = (TextView) findViewById(R.id.purityReport_safe_textView);
         safePrompt.setTypeface(font);
         TextView treatablePrompt = (TextView) findViewById(R.id.purityReport_treatable_textView);
@@ -140,9 +143,12 @@ public class PurityReportActivity extends Activity {
             public void onClick(View v) {
                 updateReport();
                 if (_report.getCondition() != null && _report.getTime().length() > 0
-                        && _report.getDate().length() > 0 && _report.getLocation().length() > 0
+                        && _report.getDate().length() > 0
                         && _report.getVirus() >= 0 && _report.getContaminant()>= 0
-                        &&_report.getLocation().contains("-")) {
+                        && _report.getLat() >= -90
+                        && _report.getLat() <= 90
+                        && _report.getLon() <= 180
+                        && _report.getLon() >= -180) {
                     Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
 
@@ -152,7 +158,10 @@ public class PurityReportActivity extends Activity {
                     uf.saveJson(file);
 
                     startActivity(backIntent);
-                } else if (!_report.getLocation().contains("-")) {
+                } else if (!(_report.getLat() >= -90)
+                        || !(_report.getLat() <= 90)
+                        || !(_report.getLon() <= 180)
+                        || !(_report.getLon() >= -180)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(PurityReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
@@ -209,7 +218,8 @@ public class PurityReportActivity extends Activity {
         _report.setCondition(condition);
         _report.setDate(dateInput.getText().toString());
         _report.setTime(timeInput.getText().toString());
-        _report.setLocation(locationInput.getText().toString());
+        _report.setLat(Integer.parseInt(latInput.getText().toString()));
+        _report.setLon(Integer.parseInt(lonInput.getText().toString()));
         _report.setVirus(Integer.parseInt(virusInput.getText().toString()));
         _report.setContaminant(Integer.parseInt(contInput.getText().toString()));
     }

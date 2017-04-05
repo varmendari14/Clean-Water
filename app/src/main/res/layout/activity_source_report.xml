@@ -166,15 +166,30 @@
                             tools:ignore="HardcodedText" />
 
                         <EditText
-                            android:layout_width="wrap_content"
+                            android:layout_width="72dp"
                             android:layout_height="wrap_content"
-                            android:inputType="textPersonName"
+                            android:inputType="number"
                             android:ems="10"
-                            android:id="@+id/sourceReport_location_input"
+                            android:id="@+id/lat_input"
                             android:textSize="18sp"
-                            android:hint="Lat-Long"
+                            android:hint="Lat"
                             android:textAlignment="textStart"
                             tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:text="-"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/dash"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:layout_width="195dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/long_input"
+                            android:hint="        Long" />
 
                     </LinearLayout>
 

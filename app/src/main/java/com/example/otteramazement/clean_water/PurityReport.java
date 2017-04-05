@@ -12,7 +12,8 @@ class PurityReport {
     private String date;
     private String time;
     private String reporter;
-    private String location;
+    private double lat;
+    private double lon;
     private WaterPurityCondition condition;
     private double virus;
     private double contaminant;
@@ -90,16 +91,33 @@ class PurityReport {
      * set location of report
      * @param loc location of report
      */
-    public void setLocation(String loc) {
-        location = loc;
+    public void setLat(double loc) {
+        lat = loc;
     }
 
     /**
      * get location report is for
      * @return location of report
      */
-    public String getLocation() {
-        return location;
+    public double getLat() {
+        return lat;
+    }
+
+
+    /**
+     * set location of report
+     * @param loc2 location of report
+     */
+    public void setLon(double loc2) {
+        lon = loc2;
+    }
+
+    /**
+     * get location report is for
+     * @return location of report
+     */
+    public double getLon() {
+        return lon;
     }
 
     /**
@@ -146,7 +164,7 @@ class PurityReport {
                 "\nCondition: " + WaterPurityCondition.waterPurityConditionToString(condition)
                 + "\nVirus ppm: " + virus
                 + "\nContaminant ppm: " + contaminant
-                + "\n@Location: " + location +
+                + "\n@Location: " + lat + "-" + lon +
                 "\nVia: " + reporter;
     }
 

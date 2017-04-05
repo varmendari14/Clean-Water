@@ -85,10 +85,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker for each water source report
         List<WaterSourceReport> reportList = WaterReportList.waterSourceList;
         for (int i = 0; i < reportList.size(); i++) {
-            String latlon = reportList.get(i).getLocation();
-            String[] fields = latlon.split("-");
-            int lat = Integer.parseInt(fields[0]);
-            int lon = Integer.parseInt(fields[1]);
+            //String latlon = reportList.get(i).getLocation();
+            //String[] fields = latlon.split("-");
+            //int lat = Integer.parseInt(fields[0]);
+            //int lon = Integer.parseInt(fields[1]);
+            int lat = (int) reportList.get(i).getLat();
+            int lon = (int) reportList.get(i).getLon();
             LatLng reportLocation = new LatLng(lat, lon);
 
             MarkerOptions myMarker = new MarkerOptions();

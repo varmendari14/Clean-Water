@@ -36,7 +36,8 @@ public class SourceReportActivity extends Activity {
 
 
     private EditText dateInput;
-    private EditText locationInput;
+    private EditText latInput;
+    private EditText lonInput;
     private EditText timeInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
@@ -80,8 +81,10 @@ public class SourceReportActivity extends Activity {
         reporterInput.setTypeface(font1);
         TextView locationPrompt = (TextView) findViewById(R.id.sourceReport_location_textView);
         locationPrompt.setTypeface(font);
-        locationInput = (EditText) findViewById(R.id.sourceReport_location_input);
-        locationInput.setTypeface(font1);
+        latInput = (EditText) findViewById(R.id.lat_input);
+        latInput.setTypeface(font1);
+        lonInput = (EditText) findViewById(R.id.long_input);
+        lonInput.setTypeface(font1);
         TextView bottlePrompt = (TextView) findViewById(R.id.sourceReport_bottled_textView);
         bottlePrompt.setTypeface(font);
         TextView wellPrompt = (TextView) findViewById(R.id.sourceReport_well_textView);
@@ -208,7 +211,7 @@ public class SourceReportActivity extends Activity {
             public void onClick(View v) {
                 updateReport();
                 int x = WaterSourceReport.reportCheck(_report.getDate(), _report.getTime(),
-                        _report.getLocation(), _report.getType(), _report.getCondition());
+                        _report.getLat(), _report.getLon(), _report.getType(), _report.getCondition());
                 if (x == 0) {
                     Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
 
@@ -276,7 +279,8 @@ public class SourceReportActivity extends Activity {
         _report.setType(type);
         _report.setDate(dateInput.getText().toString());
         _report.setTime(timeInput.getText().toString());
-        _report.setLocation(locationInput.getText().toString());
+        _report.setLat(Integer.parseInt(latInput.getText().toString()));
+        _report.setLon(Integer.parseInt(lonInput.getText().toString()));
     }
 
     @Override

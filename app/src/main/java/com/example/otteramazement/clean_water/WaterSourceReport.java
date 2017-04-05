@@ -16,7 +16,8 @@ class WaterSourceReport {
     private String date;
     private String time;
     private String reporter;
-    private String location;
+    private double lat;
+    private double lon;
     private WaterType type;
     private WaterCondition condition;
 
@@ -101,19 +102,36 @@ class WaterSourceReport {
     }
 
     /**
-     * sets location of report
-     * @param loc location person making report is at
+     * set location of report
+     * @param loc location of report
      */
-    public void setLocation(String loc) {
-        location = loc;
+    public void setLat(double loc) {
+        lat = loc;
     }
 
     /**
-     * getter for location of report
-     * @return location report made at
+     * get location report is for
+     * @return location of report
      */
-    public String getLocation() {
-        return location;
+    public double getLat() {
+        return lat;
+    }
+
+
+    /**
+     * set location of report
+     * @param loc2 location of report
+     */
+    public void setLon(double loc2) {
+        lon = loc2;
+    }
+
+    /**
+     * get location report is for
+     * @return location of report
+     */
+    public double getLon() {
+        return lon;
     }
 
     /**
@@ -136,7 +154,7 @@ class WaterSourceReport {
                 "\n" + time +
                 "\nType: " + WaterType.waterTypeToString(type) +
                 "\nCondition: " + WaterCondition.waterConditionToString(condition)
-                + "\n@Location: " + location +
+                + "\n@Location: " + lat + "-" + lon +
                 "\nVia: " + reporter;
     }
 
@@ -153,17 +171,24 @@ class WaterSourceReport {
      *
      * @param cDate date to be checked
      * @param cTime time to be checked
-     * @param cLocation location to be checked
+     * @param cLat lat to be checked
+     * @param cLon long to be checked
      * @param cType water type to be checked
      * @param cCondition water condition to be checked
      * @return 0 if good to go, 1 or 2 to display alert dialogue in view
      */
-    static int reportCheck(String cDate, String cTime, String cLocation, WaterType cType,
+    static int reportCheck(String cDate, String cTime, double cLat, double cLon, WaterType cType,
                            WaterCondition cCondition) {
         if (cCondition != null && cType != null && cTime.length() > 0 && cDate.length() > 0
-                && cLocation.length() > 0 && cLocation.contains("-")) {
+                && cLat >= -90
+                && cLat <= 90
+                && cLon <= 180
+                && cLon >= -180) {
             return 0;
-        } else if (!cLocation.contains("-")) {
+        } else if (!(cLat >= -90)
+                || !(cLat <= 90)
+                || !(cLon <= 180)
+                || !(cLon >= -180)) {
             return 1;
         } else {
             return 2;
