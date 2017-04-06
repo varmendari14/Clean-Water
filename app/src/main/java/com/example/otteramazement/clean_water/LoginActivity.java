@@ -317,6 +317,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         protected Boolean doInBackground(Void... params) {
             try {
                 // Simulate network access.
+                //noinspection MagicNumber
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 return false;
