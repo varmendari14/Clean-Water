@@ -54,6 +54,7 @@ public class HistoricalReportGraphActivity extends Activity {
 
         graph.getViewport().setXAxisBoundsManual(true);
         graph.getViewport().setMinX(1);
+        //noinspection MagicNumber
         graph.getViewport().setMaxX(13);
 
         graph.getViewport().setScrollable(true);
