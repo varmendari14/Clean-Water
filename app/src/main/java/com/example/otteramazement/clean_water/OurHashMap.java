@@ -1,4 +1,5 @@
 package com.example.otteramazement.clean_water;
+import java.util.Map;
 import java.util.HashMap;
 
 /**
@@ -8,5 +9,5 @@ import java.util.HashMap;
  */
 
 class OurHashMap {
-    static HashMap<String, UserProfile> userMap = new HashMap<>();
+    static Map<String, UserProfile> userMap = new HashMap<>();
 }
