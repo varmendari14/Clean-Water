@@ -196,9 +196,11 @@ class HistoricalReport {
                 return 10;
 
             case "11":
+                //noinspection MagicNumber
                 return 11;
 
             case "12":
+                //noinspection MagicNumber
                 return 12;
 
             default:
