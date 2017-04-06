@@ -148,8 +148,8 @@ public class PurityReportActivity extends Activity {
             @Override
             public void onClick(View v) {
                 updateReport();
-                if (_report.getCondition() != null && _report.getTime().length() > 0
-                        && _report.getDate().length() > 0
+                if (_report.getCondition() != null && !_report.getTime().isEmpty()
+                        && !_report.getDate().isEmpty()
                         && _report.getVirus() >= 0 && _report.getContaminant()>= 0
                         && _report.getLat() >= LAT_MIN
                         && _report.getLat() <= LAT_MAX
