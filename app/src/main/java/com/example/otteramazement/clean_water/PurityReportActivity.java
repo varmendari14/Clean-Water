@@ -38,6 +38,11 @@ public class PurityReportActivity extends Activity {
     private EditText contInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
+    final int LAT_MIN = -90;
+    final int LAT_MAX = 90;
+    final int LONG_MIN = -180;
+    final int LONG_MAX = 180;
+
     @SuppressLint("StaticFieldLeak")
     private PurityReportActivity obj;
 
@@ -146,10 +151,10 @@ public class PurityReportActivity extends Activity {
                 if (_report.getCondition() != null && _report.getTime().length() > 0
                         && _report.getDate().length() > 0
                         && _report.getVirus() >= 0 && _report.getContaminant()>= 0
-                        && _report.getLat() >= -90
-                        && _report.getLat() <= 90
-                        && _report.getLon() <= 180
-                        && _report.getLon() >= -180) {
+                        && _report.getLat() >= LAT_MIN
+                        && _report.getLat() <= LAT_MAX
+                        && _report.getLon() <= LONG_MAX
+                        && _report.getLon() >= LONG_MIN) {
                     Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
 
@@ -159,10 +164,10 @@ public class PurityReportActivity extends Activity {
                     uf.saveJson(file);
 
                     startActivity(backIntent);
-                } else if (!(_report.getLat() >= -90)
-                        || !(_report.getLat() <= 90)
-                        || !(_report.getLon() <= 180)
-                        || !(_report.getLon() >= -180)) {
+                } else if (!(_report.getLat() >= LAT_MIN)
+                        || !(_report.getLat() <= LAT_MAX)
+                        || !(_report.getLon() <= LONG_MAX)
+                        || !(_report.getLon() >= LONG_MIN)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(PurityReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
