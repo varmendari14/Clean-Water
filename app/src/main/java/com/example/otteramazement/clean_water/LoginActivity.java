@@ -31,7 +31,7 @@ package com.example.otteramazement.clean_water;
         import android.widget.TextView;
 
         import java.util.ArrayList;
-        import java.util.HashMap;
+        import java.util.Map;
         import java.util.List;
 
         import static android.Manifest.permission.READ_CONTACTS;
@@ -55,7 +55,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      * A HashMap of Credentials containing known user names and passwords.
      *
      */
-    private final HashMap<String, UserProfile> credentials = OurHashMap.userMap;
+    private final Map<String, UserProfile> credentials = OurHashMap.userMap;
 
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
