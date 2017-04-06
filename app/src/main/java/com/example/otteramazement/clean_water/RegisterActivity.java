@@ -180,7 +180,7 @@ public class RegisterActivity extends Activity {
                     alert.show();
 
                 } else if (username.length() < 3 ||
-                        name.length() == 0) {
+                        name.isEmpty()) {
 
                     AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
                     nameProblem.setTitle("Invalid Registration");
