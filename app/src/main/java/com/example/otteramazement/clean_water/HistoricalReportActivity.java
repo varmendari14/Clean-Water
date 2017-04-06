@@ -25,6 +25,11 @@ import java.util.Locale;
 
 public class HistoricalReportActivity extends Activity {
 
+    private final int LATMIN = -90;
+    private final int LATMAX = 90;
+    private final int LONGMIN = -180;
+    private final int LONGMAX = 180;
+
     private final HistoricalReport _report = new HistoricalReport();
 
     private EditText dateInput;
@@ -94,11 +99,11 @@ public class HistoricalReportActivity extends Activity {
             public void onClick(View v) {
                 updateReport();
 
-                if (_report.getDate().length() > 3 && _report.getLat() >= -90
+                if (_report.getDate().length() > 3 && _report.getLat() >= LATMIN
                         && _report.getContaminant() >= 0
-                        && _report.getLat() <= 90
-                        && _report.getLon() <= 180
-                        && _report.getLon() >= -180) {
+                        && _report.getLat() <= LATMAX
+                        && _report.getLon() <= LONGMAX
+                        && _report.getLon() >= LONGMIN) {
 
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
@@ -109,10 +114,10 @@ public class HistoricalReportActivity extends Activity {
                     uf.saveJson(file);
 
                     startActivity(startIntent);
-                } else if (!(_report.getLat() >= -90)
-                        || !(_report.getLat() <= 90)
-                        || !(_report.getLon() <= 180)
-                        || !(_report.getLon() >= -180)) {
+                } else if (!(_report.getLat() >= LATMIN)
+                        || !(_report.getLat() <= LATMAX)
+                        || !(_report.getLon() <= LONGMAX)
+                        || !(_report.getLon() >= LONGMIN)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
