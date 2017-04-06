@@ -20,7 +20,7 @@ import java.util.List;
  * Used to load and save Json for persistence
  */
 
-public class UserFacade {
+public final class UserFacade {
 
     public final static String USER_JSON_FILE_NAME = "user.json";
     public final static String SOURCE_JSON_FILE_NAME = "source.json";
