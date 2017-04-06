@@ -170,7 +170,8 @@ public class RegisterActivity extends Activity {
 
                 Intent intent = new Intent(getBaseContext(), ProfileActivity.class);
                 startActivity(intent);
-            } else if (bool) {
+            } else //noinspection ConstantConditions
+                if (bool) { //used for testing purposes
                 if (!password.equals(passRedo)) {
 
                     AlertDialog.Builder alert = new AlertDialog.Builder(RegisterActivity.this);
