@@ -230,10 +230,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isPasswordValid(String password, String email) {
-        if (credentials.containsKey(email)) {
-            return (credentials.get(email).getPassword().equals(password));
-        }
-        return false;
+        return credentials.containsKey(email) && (credentials.get(email).getPassword().equals(password));
     }
 
     /**
