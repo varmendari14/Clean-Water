@@ -19,6 +19,7 @@ class WaterSourceReport {
     private WaterType type;
     private WaterCondition condition;
 
+
     //No-arg constructor creates number for report
 
     public WaterSourceReport() {
@@ -177,16 +178,20 @@ class WaterSourceReport {
      */
     static int reportCheck(String cDate, String cTime, double cLat, double cLon, WaterType cType,
                            WaterCondition cCondition) {
+        final int LAT_MIN = -90;
+        final int LAT_MAX = 90;
+        final int LONG_MIN = -180;
+        final int LONG_MAX = 180;
         if (cCondition != null && cType != null && cTime.length() > 0 && cDate.length() > 0
-                && cLat >= -90
-                && cLat <= 90
-                && cLon <= 180
-                && cLon >= -180) {
+                && cLat >= LAT_MIN
+                && cLat <= LAT_MAX
+                && cLon <= LONG_MAX
+                && cLon >= LONG_MIN) {
             return 0;
-        } else if (!(cLat >= -90)
-                || !(cLat <= 90)
-                || !(cLon <= 180)
-                || !(cLon >= -180)) {
+        } else if (!(cLat >= LAT_MIN)
+                || !(cLat <= LAT_MAX)
+                || !(cLon <= LONG_MAX)
+                || !(cLon >= LONG_MIN)) {
             return 1;
         } else {
             return 2;
