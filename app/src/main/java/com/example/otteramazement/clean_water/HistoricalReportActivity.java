@@ -25,10 +25,10 @@ import java.util.Locale;
 
 public class HistoricalReportActivity extends Activity {
 
-    private final int LATMIN = -90;
-    private final int LATMAX = 90;
-    private final int LONGMIN = -180;
-    private final int LONGMAX = 180;
+    private final int LAT_MIN = -90;
+    private final int LAT_MAX = 90;
+    private final int LONG_MIN = -180;
+    private final int LONG_MAX = 180;
 
     private final HistoricalReport _report = new HistoricalReport();
 
@@ -99,11 +99,11 @@ public class HistoricalReportActivity extends Activity {
             public void onClick(View v) {
                 updateReport();
 
-                if (_report.getDate().length() > 3 && _report.getLat() >= LATMIN
+                if (_report.getDate().length() > 3 && _report.getLat() >= LAT_MIN
                         && _report.getContaminant() >= 0
-                        && _report.getLat() <= LATMAX
-                        && _report.getLon() <= LONGMAX
-                        && _report.getLon() >= LONGMIN) {
+                        && _report.getLat() <= LAT_MAX
+                        && _report.getLon() <= LONG_MAX
+                        && _report.getLon() >= LONG_MIN) {
 
                     Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
@@ -114,10 +114,10 @@ public class HistoricalReportActivity extends Activity {
                     uf.saveJson(file);
 
                     startActivity(startIntent);
-                } else if (!(_report.getLat() >= LATMIN)
-                        || !(_report.getLat() <= LATMAX)
-                        || !(_report.getLon() <= LONGMAX)
-                        || !(_report.getLon() >= LONGMIN)) {
+                } else if (!(_report.getLat() >= LAT_MIN)
+                        || !(_report.getLat() <= LAT_MAX)
+                        || !(_report.getLon() <= LONG_MAX)
+                        || !(_report.getLon() >= LONG_MIN)) {
                     AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
