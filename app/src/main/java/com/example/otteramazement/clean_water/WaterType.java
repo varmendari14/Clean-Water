@@ -5,6 +5,7 @@ package com.example.otteramazement.clean_water;
  * Authors: Emma, Violet
  */
 
+@SuppressWarnings("DefaultNotLastCaseInSwitch")
 public enum WaterType {
     BOTTLED, WELL, STREAM, LAKE, SPRING, OTHER;
 

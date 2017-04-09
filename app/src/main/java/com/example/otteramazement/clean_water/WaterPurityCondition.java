@@ -5,6 +5,7 @@ package com.example.otteramazement.clean_water;
  * Enum for types of water purity conditions
  */
 
+@SuppressWarnings("DefaultNotLastCaseInSwitch")
 public enum WaterPurityCondition {
     SAFE, TREATABLE, UNSAFE;
 

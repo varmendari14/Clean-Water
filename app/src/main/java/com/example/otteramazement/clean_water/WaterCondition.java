@@ -5,6 +5,7 @@ package com.example.otteramazement.clean_water;
  * Authors: Emma, Violet
  */
 
+@SuppressWarnings("DefaultNotLastCaseInSwitch")
 public enum WaterCondition {
     WASTE, TREATABLE_MUDDY, TREATABLE_CLEAR, POTABLE;
 
