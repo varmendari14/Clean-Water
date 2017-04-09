@@ -15,6 +15,7 @@ import android.widget.TextView;
  * Authors: Violet, Mary
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class ProfileActivity extends Activity{
 
     private final UserProfile _user = CurrentUser.currentUser.get(0);

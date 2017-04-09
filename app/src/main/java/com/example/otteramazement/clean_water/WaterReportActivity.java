@@ -14,6 +14,7 @@ import android.widget.TextView;
  * Authors: Violet, Mary
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class WaterReportActivity extends Activity {
 
 
@@ -30,7 +31,8 @@ public class WaterReportActivity extends Activity {
 
         TextView sourceButton = (TextView) findViewById(R.id.waterReport_sourceReport_textView);
         sourceButton.setTypeface(font1);
-        TextView availabilityButton = (TextView) findViewById(R.id.waterReport_avalabilityReport_textView);
+        TextView availabilityButton =
+                (TextView) findViewById(R.id.waterReport_avalabilityReport_textView);
         availabilityButton.setTypeface(font1);
         TextView purityButton = (TextView) findViewById(R.id.waterReport_purityReport_textView);
         purityButton.setTypeface(font1);
@@ -39,16 +41,19 @@ public class WaterReportActivity extends Activity {
 
 
         //button functionality
-        ImageView sourceButtonImage = (ImageView) findViewById(R.id.waterReport_sourceReport_imageView);
+        ImageView sourceButtonImage =
+                (ImageView) findViewById(R.id.waterReport_sourceReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                Intent sourceIntent =
+                        new Intent(getBaseContext(), SourceReportChoiceActivity.class);
                 startActivity(sourceIntent);
             }
         });
 
-        ImageView availabilityButtonImage = (ImageView) findViewById(R.id.waterReport_avalabilityReport_imageView);
+        ImageView availabilityButtonImage =
+                (ImageView) findViewById(R.id.waterReport_avalabilityReport_imageView);
         availabilityButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,11 +62,13 @@ public class WaterReportActivity extends Activity {
             }
         });
 
-        ImageView purityButtonImage = (ImageView) findViewById(R.id.waterReport_purityReport_imageView);
+        ImageView purityButtonImage =
+                (ImageView) findViewById(R.id.waterReport_purityReport_imageView);
         purityButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sourceIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
+                Intent sourceIntent =
+                        new Intent(getBaseContext(), PurityReportChoiceActivity.class);
                 startActivity(sourceIntent);
             }
         });

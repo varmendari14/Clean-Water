@@ -13,6 +13,7 @@ import android.widget.TextView;
  * Activity for choosing to create or view list of purity reports
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class PurityReportChoiceActivity extends Activity {
 
     //UserProfile _user;
@@ -27,7 +28,8 @@ public class PurityReportChoiceActivity extends Activity {
         //    _user = (UserProfile) getIntent().getSerializableExtra(SourceReportActivity.ARG_USER);
         //}
         //if (_user == null) {
-        //    _user = (UserProfile) getIntent().getSerializableExtra(SourceReportListActivity.ARG_USER);
+        //    _user = (UserProfile)
+        // getIntent().getSerializableExtra(SourceReportListActivity.ARG_USER);
         //}
 
         super.onCreate(savedInstanceState);
@@ -47,7 +49,8 @@ public class PurityReportChoiceActivity extends Activity {
 
 
         //button functionality
-        ImageView sourceButtonImage = (ImageView) findViewById(R.id.purityReportChoice_newReport_imageView);
+        ImageView sourceButtonImage =
+                (ImageView) findViewById(R.id.purityReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,7 +60,8 @@ public class PurityReportChoiceActivity extends Activity {
             }
         });
 
-        ImageView listButtonImage = (ImageView) findViewById(R.id.purityReportChoice_listReports_imageView);
+        ImageView listButtonImage =
+                (ImageView) findViewById(R.id.purityReportChoice_listReports_imageView);
         listButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +76,8 @@ public class PurityReportChoiceActivity extends Activity {
             listButton.setVisibility(View.VISIBLE);
         }
 
-        ImageView backButton = (ImageView) findViewById(R.id.purityReportChoice_backbutton_imageView);
+        ImageView backButton =
+                (ImageView) findViewById(R.id.purityReportChoice_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

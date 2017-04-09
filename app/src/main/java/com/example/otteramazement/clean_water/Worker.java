@@ -29,7 +29,8 @@ class Worker extends UserProfile {
 //    public Worker(ProfileType profileType, String name, String username, String password,
 //                 String email, String address, String city, String state, String country,
 //                 String phoneNumber, String title) {
-//        super(profileType, name, username, password, email, address, city, state, country, phoneNumber, title);
+//        super(profileType, name, username, password,
+// email, address, city, state, country, phoneNumber, title);
 //    }
 // --Commented out by Inspection STOP (4/1/17, 8:35 PM)
 }

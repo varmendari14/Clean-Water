@@ -5,9 +5,14 @@
     <item
         android:state_selected="true"
         android:drawable="@drawable/well_select_icon" />
-    <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/well_select_icon" />
-    <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/well_select_icon" />
-    <item android:state_pressed="true" android:drawable="@drawable/well_select_icon" />
+    <item android:state_focused="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/well_select_icon" />
+    <item android:state_focused="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/well_select_icon" />
+    <item android:state_pressed="true"
+        android:drawable="@drawable/well_select_icon" />
     <item
         android:drawable="@drawable/well_icon" />
 

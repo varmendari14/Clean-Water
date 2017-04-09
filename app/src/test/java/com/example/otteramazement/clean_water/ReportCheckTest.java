@@ -15,7 +15,7 @@ public class ReportCheckTest {
     private final WaterSourceReport locReport = new WaterSourceReport();
     private final WaterSourceReport invalidReport = new WaterSourceReport();
 
-    /*
+    /**
      * Initialize values for each report before testing
      */
     @Before
@@ -43,14 +43,15 @@ public class ReportCheckTest {
         invalidReport.setType(WaterType.WELL);
     }
 
-    /*
+    /**
      * Tests a valid water source report
      */
     @Test
     public void reportIsValid() {
 
         assertEquals(WaterSourceReport.reportCheck(validReport.getDate(), validReport.getTime(),
-                validReport.getLat(), validReport.getLon(), validReport.getType(), validReport.getCondition()), 0);
+                validReport.getLat(), validReport.getLon(), validReport.getType(),
+                validReport.getCondition()), 0);
 
     }
 
@@ -62,7 +63,8 @@ public class ReportCheckTest {
     public void hasInvalidLocation() {
 
         assertEquals(WaterSourceReport.reportCheck(locReport.getDate(), locReport.getTime(),
-                locReport.getLat(), locReport.getLon(), locReport.getType(), locReport.getCondition()), 1);
+                locReport.getLat(), locReport.getLon(), locReport.getType(),
+                locReport.getCondition()), 1);
     }
 
     /**
@@ -73,7 +75,8 @@ public class ReportCheckTest {
     public void reportIsInvalid() {
 
         assertEquals(WaterSourceReport.reportCheck(invalidReport.getDate(), invalidReport.getTime(),
-                invalidReport.getLat(), invalidReport.getLon(), invalidReport.getType(), invalidReport.getCondition()), 2);
+                invalidReport.getLat(), invalidReport.getLon(), invalidReport.getType(),
+                invalidReport.getCondition()), 2);
     }
 
 }

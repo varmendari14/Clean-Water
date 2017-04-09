@@ -23,6 +23,7 @@ import java.util.Locale;
  * Activity for creating Historical Reports
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class HistoricalReportActivity extends Activity {
 
     private final int LAT_MIN = -90;
@@ -93,19 +94,21 @@ public class HistoricalReportActivity extends Activity {
         //final Date date = new Date();
         //dateInput.setText(DateFormat.getDateInstance().format(date));
 
-        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.historicalReport_acceptbutton_imageView);
+        ImageView acceptButtonImageView =
+                (ImageView) findViewById(R.id.historicalReport_acceptbutton_imageView);
         acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateReport();
 
-                if (_report.getDate().length() > 3 && _report.getLat() >= LAT_MIN
-                        && _report.getContaminant() >= 0
-                        && _report.getLat() <= LAT_MAX
-                        && _report.getLon() <= LONG_MAX
-                        && _report.getLon() >= LONG_MIN) {
+                if ((_report.getDate().length() > 3) && (_report.getLat() >= LAT_MIN)
+                        && (_report.getContaminant() >= 0)
+                        && (_report.getLat() <= LAT_MAX)
+                        && (_report.getLon() <= LONG_MAX)
+                        && (_report.getLon() >= LONG_MIN)) {
 
-                    Intent startIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
+                    Intent startIntent =
+                            new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                     WaterReportList.historicalReportList.add(_report);
 
                     //save to json
@@ -118,12 +121,14 @@ public class HistoricalReportActivity extends Activity {
                         || !(_report.getLat() <= LAT_MAX)
                         || !(_report.getLon() <= LONG_MAX)
                         || !(_report.getLon() >= LONG_MIN)) {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
+                    AlertDialog.Builder alert =
+                            new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please include a valid location like '25-30'");
                     alert.show();
                 } else {
-                    AlertDialog.Builder alert = new AlertDialog.Builder(HistoricalReportActivity.this);
+                    AlertDialog.Builder alert =
+                            new AlertDialog.Builder(HistoricalReportActivity.this);
                     alert.setTitle("Invalid Source Report");
                     alert.setMessage("Please fill out all required fields");
                     alert.show();

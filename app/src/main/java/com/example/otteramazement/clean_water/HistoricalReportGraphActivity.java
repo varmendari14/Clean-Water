@@ -19,6 +19,7 @@ import com.jjoe64.graphview.series.PointsGraphSeries;
  * Created by Violet
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class HistoricalReportGraphActivity extends Activity {
 
     @Override
@@ -40,7 +41,8 @@ public class HistoricalReportGraphActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backIntent = new Intent(getBaseContext(), HistoricalReportChoiceActivity.class);
+                Intent backIntent =
+                        new Intent(getBaseContext(), HistoricalReportChoiceActivity.class);
                 startActivity(backIntent);
             }
         });

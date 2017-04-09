@@ -20,12 +20,13 @@ import java.util.List;
  * Used to load and save Json for persistence
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public final class UserFacade {
 
-    public final static String USER_JSON_FILE_NAME = "user.json";
-    public final static String SOURCE_JSON_FILE_NAME = "source.json";
-    public final static String PURITY_JSON_FILE_NAME = "purity.json";
-    public final static String HISTORICAL_JSON_FILE_NAME = "historical.json";
+    public static final String USER_JSON_FILE_NAME = "user.json";
+    public static final String SOURCE_JSON_FILE_NAME = "source.json";
+    public static final String PURITY_JSON_FILE_NAME = "purity.json";
+    public static final String HISTORICAL_JSON_FILE_NAME = "historical.json";
 
     /**
      * Singleton pattern
@@ -60,7 +61,8 @@ public final class UserFacade {
             String inString = input.readLine();
             Log.d("DEBUG", "JSON: " + inString);
             Gson gson = new Gson();
-            //Then we use the G son library to recreate the object references and links automatically
+            //Then we use the G son library to recreate
+            //the object references and links automatically
             if (file.getName().equals("user.json")) {
                 Type hashType = new TypeToken<HashMap<String, UserProfile>>() {
                 }.getType();

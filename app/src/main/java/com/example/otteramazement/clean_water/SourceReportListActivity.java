@@ -47,7 +47,8 @@ public class SourceReportListActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.report_list);
         assert listView != null;
         ArrayAdapter reportAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, WaterReportList.waterSourceList);
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                        WaterReportList.waterSourceList);
         listView.setAdapter(reportAdapter);
     }
 

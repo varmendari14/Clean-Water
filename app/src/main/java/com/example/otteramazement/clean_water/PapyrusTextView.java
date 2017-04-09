@@ -8,6 +8,7 @@ import android.util.AttributeSet;
  * Created by Violet
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class PapyrusTextView extends android.support.v7.widget.AppCompatTextView {
 
     /**
@@ -55,7 +56,8 @@ public class PapyrusTextView extends android.support.v7.widget.AppCompatTextView
 
         public void setTypeface(Typeface tf, int style) {
 
-            super.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "fonts/PAPYRUS.TTF"));
+            super.setTypeface(Typeface.createFromAsset(getContext().getAssets(),
+                    "fonts/PAPYRUS.TTF"));
 
         }
 

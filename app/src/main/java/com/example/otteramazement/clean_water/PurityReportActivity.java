@@ -25,6 +25,7 @@ import java.util.Locale;
  * Authors: Violet
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class PurityReportActivity extends Activity {
 
     private final PurityReport _report = new PurityReport();
@@ -38,10 +39,10 @@ public class PurityReportActivity extends Activity {
     private EditText contInput;
     private final Calendar myCalendar = Calendar.getInstance();
 
-    final int LAT_MIN = -90;
-    final int LAT_MAX = 90;
-    final int LONG_MIN = -180;
-    final int LONG_MAX = 180;
+    private final int LAT_MIN = -90;
+    private final int LAT_MAX = 90;
+    private final int LONG_MIN = -180;
+    private final int LONG_MAX = 180;
 
     @SuppressLint("StaticFieldLeak")
     private PurityReportActivity obj;
@@ -71,11 +72,14 @@ public class PurityReportActivity extends Activity {
         timePrompt.setTypeface(font);
         timeInput = (EditText) findViewById(R.id.purityReport_time_input);
         timeInput.setTypeface(font1);
-        TextView reportNumberPrompt = (TextView) findViewById(R.id.purityReport_reportNumber_textView);
+        TextView reportNumberPrompt =
+                (TextView) findViewById(R.id.purityReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
-        TextView reportNumberText = (TextView) findViewById(R.id.purityReport_reportNumber_generation);
+        TextView reportNumberText =
+                (TextView) findViewById(R.id.purityReport_reportNumber_generation);
         reportNumberText.setTypeface(font1);
-        TextView reporterPrompt = (TextView) findViewById(R.id.purityReport_reporter_textView);
+        TextView reporterPrompt =
+                (TextView) findViewById(R.id.purityReport_reporter_textView);
         reporterPrompt.setTypeface(font);
         EditText reporterInput = (EditText) findViewById(R.id.purityReport_reporter_input);
         reporterInput.setTypeface(font1);
@@ -143,19 +147,21 @@ public class PurityReportActivity extends Activity {
         timeInput.setText(DateFormat.getTimeInstance().format(date1));
         reportNumberText.setText(_report.getReportNumber());
 
-        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.purityReport_acceptbutton_imageView);
+        ImageView acceptButtonImageView =
+                (ImageView) findViewById(R.id.purityReport_acceptbutton_imageView);
         acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateReport();
-                if (_report.getCondition() != null && !_report.getTime().isEmpty()
+                if ((_report.getCondition() != null) && !_report.getTime().isEmpty()
                         && !_report.getDate().isEmpty()
-                        && _report.getVirus() >= 0 && _report.getContaminant()>= 0
-                        && _report.getLat() >= LAT_MIN
-                        && _report.getLat() <= LAT_MAX
-                        && _report.getLon() <= LONG_MAX
-                        && _report.getLon() >= LONG_MIN) {
-                    Intent backIntent = new Intent(getBaseContext(), PurityReportChoiceActivity.class);
+                        && (_report.getVirus() >= 0) && (_report.getContaminant() >= 0)
+                        && (_report.getLat() >= LAT_MIN)
+                        && (_report.getLat() <= LAT_MAX)
+                        && (_report.getLon() <= LONG_MAX)
+                        && (_report.getLon() >= LONG_MIN)) {
+                    Intent backIntent = new Intent(getBaseContext(),
+                            PurityReportChoiceActivity.class);
                     WaterReportList.waterPurityList.add(_report);
 
                     //save to json

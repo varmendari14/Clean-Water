@@ -25,6 +25,7 @@ import java.util.Locale;
  * Authors: Violet, Mary
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class SourceReportActivity extends Activity {
 
     private final WaterSourceReport _report = new WaterSourceReport();
@@ -69,9 +70,11 @@ public class SourceReportActivity extends Activity {
         timePrompt.setTypeface(font);
         timeInput = (EditText) findViewById(R.id.sourceReport_time_input);
         timeInput.setTypeface(font1);
-        TextView reportNumberPrompt = (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
+        TextView reportNumberPrompt =
+                (TextView) findViewById(R.id.sourceReport_reportNumber_textView);
         reportNumberPrompt.setTypeface(font);
-        TextView reportNumberText = (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
+        TextView reportNumberText =
+                (TextView) findViewById(R.id.sourceReport_reportNumber_generation);
         reportNumberText.setTypeface(font1);
         TextView reporterPrompt = (TextView) findViewById(R.id.sourceReport_reporter_textView);
         reporterPrompt.setTypeface(font);
@@ -172,7 +175,8 @@ public class SourceReportActivity extends Activity {
             }
         });
 
-        ImageView treatMudImage = (ImageView) findViewById(R.id.sourceReport_treatable_muddy_imageView);
+        ImageView treatMudImage =
+                (ImageView) findViewById(R.id.sourceReport_treatable_muddy_imageView);
         treatMudImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -180,7 +184,8 @@ public class SourceReportActivity extends Activity {
             }
         });
 
-        ImageView treatClearImage = (ImageView) findViewById(R.id.sourceReport_treatable_clear_imageView);
+        ImageView treatClearImage =
+                (ImageView) findViewById(R.id.sourceReport_treatable_clear_imageView);
         treatClearImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -203,15 +208,18 @@ public class SourceReportActivity extends Activity {
         timeInput.setText(DateFormat.getTimeInstance().format(date1));
         reportNumberText.setText(_report.getReportNumber());
 
-        ImageView acceptButtonImageView = (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
+        ImageView acceptButtonImageView =
+                (ImageView) findViewById(R.id.sourceReport_acceptbutton_imageView);
         acceptButtonImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 updateReport();
                 int x = WaterSourceReport.reportCheck(_report.getDate(), _report.getTime(),
-                        _report.getLat(), _report.getLon(), _report.getType(), _report.getCondition());
+                        _report.getLat(), _report.getLon(), _report.getType(),
+                        _report.getCondition());
                 if (x == 0) {
-                    Intent backIntent = new Intent(getBaseContext(), SourceReportChoiceActivity.class);
+                    Intent backIntent = new Intent(getBaseContext(),
+                            SourceReportChoiceActivity.class);
 
                     WaterReportList.waterSourceList.add(_report);
                     UserFacade uf = UserFacade.getInstance();

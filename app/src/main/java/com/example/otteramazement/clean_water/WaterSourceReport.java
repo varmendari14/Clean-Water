@@ -182,11 +182,11 @@ class WaterSourceReport {
         final int LAT_MAX = 90;
         final int LONG_MIN = -180;
         final int LONG_MAX = 180;
-        if (cCondition != null && cType != null && !cTime.isEmpty() && !cDate.isEmpty()
-                && cLat >= LAT_MIN
-                && cLat <= LAT_MAX
-                && cLon <= LONG_MAX
-                && cLon >= LONG_MIN) {
+        if ((cCondition != null) && (cType != null) && !cTime.isEmpty() && !cDate.isEmpty()
+                && (cLat >= LAT_MIN)
+                && (cLat <= LAT_MAX)
+                && (cLon <= LONG_MAX)
+                && (cLon >= LONG_MIN)) {
             return 0;
         } else if (!(cLat >= LAT_MIN)
                 || !(cLat <= LAT_MAX)

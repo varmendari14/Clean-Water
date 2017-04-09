@@ -5,6 +5,7 @@ package com.example.otteramazement.clean_water;
  * A Historical Report that can be made by Workers and Managers
  */
 
+@SuppressWarnings("ChainedMethodCall")
 class HistoricalReport {
 
     private final int reportNum;

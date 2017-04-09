@@ -22,6 +22,7 @@ import java.util.List;
 /**
  * This class controls the google map
  */
+@SuppressWarnings("ChainedMethodCall")
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     //private GoogleApiClient mGoogleApiClient;

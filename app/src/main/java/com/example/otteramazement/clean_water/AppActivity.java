@@ -16,6 +16,7 @@ import android.widget.TextView;
  * Authors: Mary, Violet
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class AppActivity extends Activity {
 
     @Override

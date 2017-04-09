@@ -33,7 +33,8 @@ public class WaterAvailabilityActivity extends Activity {
         click.setTypeface(font);
 
 
-        ImageView backButton = (ImageView) findViewById(R.id.water_availability_backbutton_imageView);
+        ImageView backButton =
+                (ImageView) findViewById(R.id.water_availability_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

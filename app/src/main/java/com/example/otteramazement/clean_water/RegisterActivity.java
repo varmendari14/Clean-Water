@@ -23,6 +23,7 @@ import java.util.List;
  * Authors: Violet, Avery, Mary, Cat, Emma
  */
 
+@SuppressWarnings("ChainedMethodCall")
 public class RegisterActivity extends Activity {
 
     private EditText nameInput;
@@ -35,7 +36,8 @@ public class RegisterActivity extends Activity {
     //private static HashMap<String, UserProfile> userMap = new HashMap<>();
 
 
-    private static final List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER, ProfileType.WORKER,
+    private static final List<ProfileType> ProfileAdapter = Arrays.asList(ProfileType.USER,
+            ProfileType.WORKER,
             ProfileType.MANAGER, ProfileType.ADMIN);
 
 
@@ -102,7 +104,8 @@ public class RegisterActivity extends Activity {
         //Spinner
 
         typeSpinner = (Spinner) findViewById(R.id.register_typeSpinner);
-        ArrayAdapter<ProfileType> typeAdapter = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, ProfileAdapter);
+        ArrayAdapter<ProfileType> typeAdapter =
+                new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, ProfileAdapter);
         typeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         typeSpinner.setAdapter(typeAdapter);
 
@@ -134,8 +137,8 @@ public class RegisterActivity extends Activity {
     void register(String password, String passRedo, String username,
                           String name, ProfileType type, boolean bool) {
         if (password.equals(passRedo)
-                && username.length() >= 3
-                && name.length() > 1
+                && (username.length() >= 3)
+                && (name.length() > 1)
                 && !OurHashMap.userMap.containsKey(username)) {
             UserProfile newUser;
             if (type.equals(ProfileType.MANAGER)) {
@@ -179,15 +182,17 @@ public class RegisterActivity extends Activity {
                     alert.setMessage("Your passwords do not match");
                     alert.show();
 
-                } else if (username.length() < 3 ||
+                } else if ((username.length() < 3) ||
                         name.isEmpty()) {
 
-                    AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                    AlertDialog.Builder nameProblem =
+                            new AlertDialog.Builder(RegisterActivity.this);
                     nameProblem.setTitle("Invalid Registration");
                     nameProblem.setMessage("Your name or username isn't long enough");
                     nameProblem.show();
                 } else if (OurHashMap.userMap.containsKey(username)) {
-                    AlertDialog.Builder nameProblem = new AlertDialog.Builder(RegisterActivity.this);
+                    AlertDialog.Builder nameProblem =
+                            new AlertDialog.Builder(RegisterActivity.this);
                     nameProblem.setTitle("Invalid Registration");
                     nameProblem.setMessage("This username is already being used.");
                     nameProblem.show();

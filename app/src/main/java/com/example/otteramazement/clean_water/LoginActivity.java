@@ -43,6 +43,7 @@ package com.example.otteramazement.clean_water;
 /**
  * A login screen that offers login via email/password.
  */
+@SuppressWarnings("ChainedMethodCall")
 public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     /**
@@ -85,13 +86,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
-        OurHashMap.userMap.put("Ollie", new UserProfile(ProfileType.USER, "Ollie", "Ollie", "I<3water"));
+        OurHashMap.userMap.put("Ollie",
+                new UserProfile(ProfileType.USER, "Ollie", "Ollie", "I<3water"));
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                if ((id == R.id.login) || (id == EditorInfo.IME_NULL)) {
                     attemptLogin();
                     return true;
                 }
@@ -99,7 +101,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         });
 
-        ImageView mEmailSignInButton = (ImageView) findViewById(R.id.email_sign_in_button_imageView);
+        ImageView mEmailSignInButton =
+                (ImageView) findViewById(R.id.email_sign_in_button_imageView);
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -162,7 +165,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         if (requestCode == REQUEST_READ_CONTACTS) {
-            if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            if ((grantResults.length == 1) && (grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                 populateAutoComplete();
             }
         }
@@ -230,7 +233,8 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
     }
 
     private boolean isPasswordValid(String password, String email) {
-        return credentials.containsKey(email) && (credentials.get(email).getPassword().equals(password));
+        return (credentials.containsKey(email)
+                && (credentials.get(email).getPassword().equals(password)));
     }
 
     /**

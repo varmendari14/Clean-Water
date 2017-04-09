@@ -36,7 +36,8 @@ public class SourceReportChoiceActivity extends Activity {
 
 
         //button functionality
-        ImageView sourceButtonImage = (ImageView) findViewById(R.id.sourceReportChoice_newReport_imageView);
+        ImageView sourceButtonImage =
+                (ImageView) findViewById(R.id.sourceReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +46,8 @@ public class SourceReportChoiceActivity extends Activity {
             }
         });
 
-        ImageView listButtonImage = (ImageView) findViewById(R.id.sourceReportChoice_listReports_imageView);
+        ImageView listButtonImage =
+                (ImageView) findViewById(R.id.sourceReportChoice_listReports_imageView);
         listButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +56,8 @@ public class SourceReportChoiceActivity extends Activity {
             }
         });
 
-        ImageView backButton = (ImageView) findViewById(R.id.sourceReportChoice_backbutton_imageView);
+        ImageView backButton =
+                (ImageView) findViewById(R.id.sourceReportChoice_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

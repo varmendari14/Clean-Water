@@ -102,7 +102,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.SOURCEREPORTACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.SOURCEREPORTACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -112,7 +113,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.SOURCEREPORTCHOICEACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.SOURCEREPORTCHOICEACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -122,7 +124,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.SOURCEREPORTLISTACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.SOURCEREPORTLISTACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -132,7 +135,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.WATERAVAILABILITYACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.WATERAVAILABILITYACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -142,7 +146,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTCHOICEACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.PURITYREPORTCHOICEACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -152,7 +157,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.PURITYREPORTACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -162,7 +168,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.PURITYREPORTLISTEACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.PURITYREPORTLISTEACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -172,7 +179,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.HISTORICALREPORTACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.HISTORICALREPORTACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -182,7 +190,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.HISTORICALREPORTCHOICEACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.HISTORICALREPORTCHOICEACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -192,7 +201,8 @@
             android:label="Clean-Water">
             android:theme="@android:style/Full_Background"
             <intent-filter>
-                <action android:name="com.example.otteramazement.clean_water.HISTORICALREPORTGRAPHACTIVITY" />
+                <action android:name=
+                    "com.example.otteramazement.clean_water.HISTORICALREPORTGRAPHACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

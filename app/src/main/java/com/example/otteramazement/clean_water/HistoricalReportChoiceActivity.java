@@ -35,7 +35,8 @@ public class HistoricalReportChoiceActivity extends Activity {
 
 
         //button functionality
-        ImageView sourceButtonImage = (ImageView) findViewById(R.id.historicalReportChoice_newReport_imageView);
+        ImageView sourceButtonImage =
+                (ImageView) findViewById(R.id.historicalReportChoice_newReport_imageView);
         sourceButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,16 +45,19 @@ public class HistoricalReportChoiceActivity extends Activity {
             }
         });
 
-        ImageView listButtonImage = (ImageView) findViewById(R.id.historicalReportChoice_graphReports_imageView);
+        ImageView listButtonImage =
+                (ImageView) findViewById(R.id.historicalReportChoice_graphReports_imageView);
         listButtonImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent listIntent = new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
+                Intent listIntent =
+                        new Intent(getBaseContext(), HistoricalReportGraphActivity.class);
                 startActivity(listIntent);
             }
         });
 
-        ImageView backButton = (ImageView) findViewById(R.id.historicalReportChoice_backbutton_imageView);
+        ImageView backButton =
+                (ImageView) findViewById(R.id.historicalReportChoice_backbutton_imageView);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -181,7 +181,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/dash"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        tools:ignore="HardcodedText" />
 
                     <EditText
                         android:layout_width="195dp"
@@ -189,7 +190,8 @@
                         android:inputType="number"
                         android:ems="10"
                         android:id="@+id/long_input"
-                        android:hint="        Long" />
+                        android:hint="        Long"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 

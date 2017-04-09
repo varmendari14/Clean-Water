@@ -43,7 +43,8 @@ public class PurityReportListActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.purity_report_list);
         assert listView != null;
         ArrayAdapter reportAdapter =
-                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, WaterReportList.waterPurityList);
+                new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+                        WaterReportList.waterPurityList);
         listView.setAdapter(reportAdapter);
     }
 
