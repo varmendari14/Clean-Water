@@ -52,7 +52,7 @@ public class HistoricalReportMonthDateTest {
         String arrIncorrect[] = {"00/01/2017", "Mar 21 2017", "August 1 2017",
                 "2017/01/01", "3200/02/02", "Hello",
                 "MAR 21 2017", "AUGUST 21 2017", "35/01/2017",
-                "1/2/2017", "1/2/17", "1/02/20  17"};
+                "1/2/2017", "1/2/17", "1/02/2017"};
 
         int j = 0;
         for(String date : arrIncorrect) {
