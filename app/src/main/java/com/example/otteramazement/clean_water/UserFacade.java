@@ -106,14 +106,14 @@ public final class UserFacade {
              */
             Gson gson = new Gson();
             String outString = "";
-            if (file.getName().equals("user.json")) {
+            if ("user.json".equals(file.getName())) {
                 // convert our objects to a string for output
                 outString = gson.toJson(OurHashMap.userMap);
-            } else if (file.getName().equals("source.json")) {
+            } else if ("source.json".equals(file.getName())) {
                 outString = gson.toJson(WaterReportList.waterSourceList);
-            } else if (file.getName().equals("purity.json")) {
+            } else if ("purity.json".equals(file.getName())) {
                 outString = gson.toJson(WaterReportList.waterPurityList);
-            } else if (file.getName().equals("historical.json")) {
+            } else if ("historical.json".equals(file.getName())) {
                 outString = gson.toJson(WaterReportList.historicalReportList);
             }
             Log.d("DEBUG", "JSON Saved: " + outString);
