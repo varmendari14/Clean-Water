@@ -63,19 +63,19 @@ public final class UserFacade {
             Gson gson = new Gson();
             //Then we use the G son library to recreate
             //the object references and links automatically
-            if (file.getName().equals("user.json")) {
+            if ("user.json".equals(file.getName())) {
                 Type hashType = new TypeToken<HashMap<String, UserProfile>>() {
                 }.getType();
                 OurHashMap.userMap = gson.fromJson(inString, hashType);
-            } else if (file.getName().equals("source.json")) {
+            } else if ("source.json".equals(file.getName())) {
                 Type listType = new TypeToken<List<WaterSourceReport>>() {
                 }.getType();
                 WaterReportList.waterSourceList = gson.fromJson(inString, listType);
-            } else if (file.getName().equals("purity.json")) {
+            } else if ("purity.json".equals(file.getName())) {
                 Type listType = new TypeToken<List<PurityReport>>() {
                 }.getType();
                 WaterReportList.waterPurityList = gson.fromJson(inString, listType);
-            } else if (file.getName().equals("historical.json")) {
+            } else if ("historical.json".equals(file.getName())) {
                 Type listType = new TypeToken<List<HistoricalReport>>() {
                 }.getType();
                 WaterReportList.historicalReportList = gson.fromJson(inString, listType);
